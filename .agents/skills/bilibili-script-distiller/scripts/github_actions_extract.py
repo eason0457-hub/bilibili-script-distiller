@@ -375,6 +375,14 @@ def main() -> int:
             "right": args.subtitle_crop_right,
         },
     }
+    print(f"Hard subtitle OCR enabled: {hardsub['enabled']}", flush=True)
+    if hardsub["enabled"]:
+        print(
+            "Hard subtitle OCR config: "
+            f"range={hardsub['start_time']}..{hardsub['end_time']}, "
+            f"position={hardsub['position']}, language={hardsub['language']}, fps={hardsub['sample_fps']}",
+            flush=True,
+        )
     items = []
     for index, value in enumerate(urls, start=1):
         print(f"Processing {index}/{len(urls)}: {value}", flush=True)
