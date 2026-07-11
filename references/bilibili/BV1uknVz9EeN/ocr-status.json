@@ -15,17 +15,168 @@
   },
   "sample_fps": 2.0,
   "ocr_language": "ch",
-  "average_confidence": 0.0,
-  "low_confidence_segments": [],
-  "success": false,
-  "failure_reason": "ImportError: numpy.core.multiarray failed to import",
+  "average_confidence": 0.8277174358839517,
+  "low_confidence_segments": [
+    {
+      "start": 3.0,
+      "end": 3.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 7.0,
+      "end": 7.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 14.0,
+      "end": 16.0,
+      "text": "222227",
+      "confidence": 0.6149515509605408
+    },
+    {
+      "start": 16.0,
+      "end": 16.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 18.5,
+      "end": 19.0,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 22.0,
+      "end": 22.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 25.5,
+      "end": 26.0,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 32.0,
+      "end": 32.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 35.5,
+      "end": 38.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 43.0,
+      "end": 43.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 57.0,
+      "end": 57.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 61.5,
+      "end": 62.0,
+      "text": "ano酱.你长",
+      "confidence": 0.6408575773239136
+    },
+    {
+      "start": 68.5,
+      "end": 69.0,
+      "text": "222227",
+      "confidence": 0.6073865294456482
+    },
+    {
+      "start": 69.0,
+      "end": 69.5,
+      "text": "222277",
+      "confidence": 0.6211732625961304
+    },
+    {
+      "start": 69.5,
+      "end": 70.5,
+      "text": "222227",
+      "confidence": 0.6169506907463074
+    },
+    {
+      "start": 84.5,
+      "end": 85.0,
+      "text": "听啊",
+      "confidence": 0.624902069568634
+    },
+    {
+      "start": 92.5,
+      "end": 97.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 99.0,
+      "end": 99.5,
+      "text": "大家..紧急消·..",
+      "confidence": 0.6437737345695496
+    },
+    {
+      "start": 101.0,
+      "end": 101.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 113.0,
+      "end": 113.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 117.0,
+      "end": 117.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 135.5,
+      "end": 136.0,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 152.5,
+      "end": 153.0,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 161.5,
+      "end": 162.0,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 177.0,
+      "end": 177.5,
+      "text": "[无法识别]",
+      "confidence": 0.0
+    }
+  ],
+  "success": true,
+  "failure_reason": null,
   "diagnostics": {
-    "video_path": null,
-    "video_resolution": null,
-    "frame_count": 0,
-    "ocr_call_count": 0,
-    "raw_ocr_result_count": 0,
-    "filtered_result_count": 0
+    "video_path": "115272191053896.P1.32659473044.mp4",
+    "video_resolution": "640x360",
+    "frame_count": 360,
+    "ocr_call_count": 360,
+    "raw_ocr_result_count": 329,
+    "filtered_result_count": 182
   },
-  "processed_at": "2026-07-11T12:50:08+00:00"
+  "processed_at": "2026-07-11T13:04:16+00:00"
 }

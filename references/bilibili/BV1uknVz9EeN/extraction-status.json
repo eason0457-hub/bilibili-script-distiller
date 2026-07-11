@@ -3,12 +3,14 @@
   "source_type": "hardcoded_subtitle_ocr",
   "bvid": "BV1uknVz9EeN",
   "title": "千早爱音一睡不起#1[完]",
-  "success": false,
-  "failure_reason": "ImportError: numpy.core.multiarray failed to import",
+  "success": true,
+  "failure_reason": null,
   "bbdown_exit_code": 0,
-  "subtitle_files_found": [],
-  "selected_subtitle_file": null,
-  "subtitle_language": null,
+  "subtitle_files_found": [
+    "subtitle-ocr.srt"
+  ],
+  "selected_subtitle_file": "subtitle-ocr.srt",
+  "subtitle_language": "ch",
   "login_warning": true,
-  "processed_at": "2026-07-11T12:50:05+00:00"
+  "processed_at": "2026-07-11T13:04:13+00:00"
 }
