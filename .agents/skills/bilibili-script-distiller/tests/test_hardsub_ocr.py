@@ -46,6 +46,15 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertIn("RapidOCR", source)
         self.assertNotIn("from paddleocr import PaddleOCR", source)
 
+    def test_similar_frame_signatures_reuse_previous_ocr(self):
+        same = bytes([0, 1, 0, 1] * 100)
+        slightly_changed = bytearray(same)
+        slightly_changed[0] = 1
+        different = bytes([1 - value for value in same])
+        self.assertTrue(MODULE.should_reuse_ocr(same, bytes(slightly_changed)))
+        self.assertFalse(MODULE.should_reuse_ocr(same, different))
+        self.assertEqual(MODULE.signature_distance(same, same), 0.0)
+
     def test_ocr_status_has_required_diagnostics(self):
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp)
@@ -59,6 +68,7 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertFalse(status["success"])
         self.assertIn("frame_count", saved)
         self.assertIn("ocr_call_count", saved)
+        self.assertIn("ocr_reused_frame_count", saved)
 
 
 if __name__ == "__main__":
