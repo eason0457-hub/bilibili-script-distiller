@@ -25,6 +25,20 @@ class MultilineInputTests(unittest.TestCase):
         )
         self.assertEqual(len(MODULE.parse_inputs(raw)), 3)
 
+    def test_three_space_separated_links_remain_three_items(self):
+        raw = (
+            "https://b23.tv/example1 "
+            "https://b23.tv/example2 "
+            "https://b23.tv/example3"
+        )
+        self.assertEqual(len(MODULE.parse_inputs(raw)), 3)
+
+    def test_duplicate_inputs_are_removed(self):
+        raw = "BV1uknVz9EeN, BV1uknVz9EeN\nBV1xx411c7mD"
+        self.assertEqual(
+            MODULE.parse_inputs(raw), ["BV1uknVz9EeN", "BV1xx411c7mD"]
+        )
+
     def test_cli_reports_three_inputs_before_network_access(self):
         raw = (
             "https://b23.tv/example1\n"
@@ -40,9 +54,9 @@ class MultilineInputTests(unittest.TestCase):
                 str(Path(temp) / "summary.json"),
             ]
             fake_result = {
-                "original_input": "mock",
+                "input": "mock",
                 "success": False,
-                "video_id": None,
+                "bvid": None,
                 "failure_reason": "mocked; no network request",
                 "result_dir": str(Path(temp) / "output"),
             }
@@ -77,7 +91,7 @@ class MultilineInputTests(unittest.TestCase):
 
     def test_validation_is_per_item(self):
         values = MODULE.parse_inputs(
-            "BV1uknVz9EeN\nnot a url\nAV170001\nhttps://b23.tv/example1"
+            "BV1uknVz9EeN\ninvalid-input\nAV170001\nhttps://b23.tv/example1"
         )
         self.assertEqual(
             [MODULE.is_supported_input(value) for value in values],
