@@ -9,15 +9,17 @@ import hashlib
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import tempfile
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 BV_RE = re.compile(r"\b(BV[0-9A-Za-z]{10})\b")
 AV_RE = re.compile(r"\b(?:av|AV)(\d+)\b")
-SUPPORTED = {".srt", ".vtt", ".ass", ".ssa"}
+SUPPORTED = {".srt", ".vtt", ".ass", ".ssa", ".json", ".xml"}
 NUMBER_PREFIX_RE = re.compile(
     r"^\s*(?:(?:\d+)\s*[.．、)）:]|[（(]\s*\d+\s*[）)])\s*"
 )
@@ -28,15 +30,18 @@ def now_iso() -> str:
 
 
 def parse_inputs(raw_input: str) -> list[str]:
-    """Preserve line boundaries and normalize optional human list markers."""
+    """Parse newline, whitespace, comma, and numbered input without merging URLs."""
     items: list[str] = []
+    seen: set[str] = set()
     for raw_line in raw_input.splitlines():
-        line = raw_line.strip()
-        if not line:
-            continue
-        line = NUMBER_PREFIX_RE.sub("", line, count=1).strip()
-        if line:
-            items.append(line)
+        line = NUMBER_PREFIX_RE.sub("", raw_line.strip(), count=1).strip()
+        for token in re.split(r"[\s,，]+", line):
+            token = NUMBER_PREFIX_RE.sub("", token.strip(), count=1).strip()
+            if not token or re.fullmatch(r"\d+[.．、)）:]?", token):
+                continue
+            if token not in seen:
+                seen.add(token)
+                items.append(token)
     return items
 
 
@@ -127,7 +132,59 @@ def ass_to_markdown(text: str) -> str:
 
 def convert_track(path: Path) -> str:
     text = path.read_text(encoding="utf-8-sig", errors="replace")
-    return ass_to_markdown(text) if path.suffix.lower() in {".ass", ".ssa"} else srt_or_vtt_to_markdown(text)
+    suffix = path.suffix.lower()
+    if suffix in {".ass", ".ssa"}:
+        return ass_to_markdown(text)
+    if suffix == ".json":
+        return json_to_markdown(text)
+    if suffix == ".xml":
+        return xml_to_markdown(text)
+    return srt_or_vtt_to_markdown(text)
+
+
+def json_to_markdown(text: str) -> str:
+    data = json.loads(text)
+    cues = data.get("body", data) if isinstance(data, dict) else data
+    if not isinstance(cues, list):
+        raise ValueError("JSON subtitle did not contain a cue list")
+    out = ["# 原始字幕", ""]
+    for cue in cues:
+        if not isinstance(cue, dict):
+            continue
+        start = cue.get("from", cue.get("start", cue.get("start_time")))
+        end = cue.get("to", cue.get("end", cue.get("end_time")))
+        content = cue.get("content", cue.get("text", cue.get("body")))
+        if start is None or end is None or content is None:
+            continue
+        out.extend([f"[{timestamp(float(start))} --> {timestamp(float(end))}]", str(content), ""])
+    if len(out) == 2:
+        raise ValueError("JSON subtitle contained no recognized timed cues")
+    return "\n".join(out).rstrip() + "\n"
+
+
+def xml_to_markdown(text: str) -> str:
+    root = ET.fromstring(text)
+    out = ["# 原始字幕", ""]
+    for node in root.iter():
+        if node.tag.lower().split("}")[-1] not in {"text", "p", "d"}:
+            continue
+        start = node.attrib.get("start") or node.attrib.get("from")
+        duration = node.attrib.get("dur") or node.attrib.get("duration")
+        end = node.attrib.get("end") or node.attrib.get("to")
+        content = "".join(node.itertext()).strip()
+        if not content:
+            continue
+        if start is None and "p" in node.attrib:
+            parts = node.attrib["p"].split(",")
+            start = parts[0] if parts else None
+        if start is None:
+            continue
+        start_value = float(start)
+        end_value = float(end) if end is not None else start_value + float(duration or 0)
+        out.extend([f"[{timestamp(start_value)} --> {timestamp(end_value)}]", content, ""])
+    if len(out) == 2:
+        raise ValueError("XML subtitle contained no recognized timed cues")
+    return "\n".join(out).rstrip() + "\n"
 
 
 def track_score(path: Path) -> tuple[int, str, str]:
@@ -154,17 +211,18 @@ def extract_title(log: str) -> str | None:
     return None
 
 
-def run_one(raw_input: str, output_root: Path) -> dict:
+def run_one(raw_input: str, output_root: Path, *, command_runner=subprocess.run) -> dict:
     status = {
-        "original_input": raw_input,
-        "final_video_url": None,
-        "video_id": None,
-        "video_title": None,
+        "input": raw_input,
+        "bvid": None,
+        "title": None,
         "success": False,
-        "subtitle_track_type": None,
-        "subtitle_language": None,
-        "available_tracks": [],
         "failure_reason": None,
+        "bbdown_exit_code": None,
+        "subtitle_files_found": [],
+        "selected_subtitle_file": None,
+        "subtitle_language": None,
+        "login_warning": False,
         "processed_at": now_iso(),
     }
     fallback = f"failed-{hashlib.sha256(raw_input.encode()).hexdigest()[:8]}"
@@ -173,49 +231,63 @@ def run_one(raw_input: str, output_root: Path) -> dict:
         if not is_supported_input(raw_input):
             raise ValueError("input must be an http/https URL, BV ID, or AV ID")
         final_url, resolved_id = resolve_input(raw_input)
-        status["final_video_url"] = final_url
-        status["video_id"] = resolved_id
+        status["bvid"] = resolved_id if resolved_id and resolved_id.startswith("BV") else None
+        result_dir = output_root / safe_name(resolved_id or fallback)
+        result_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Normalized BV ID: {status['bvid'] or resolved_id or 'pending BBDown response'}", flush=True)
         with tempfile.TemporaryDirectory(prefix="bili-sub-") as temp_name:
             temp = Path(temp_name)
             command = [
                 "BBDown", final_url, "--sub-only", "--skip-ai=false",
                 "-F", "<bvid>", "--work-dir", str(temp),
             ]
-            process = subprocess.run(command, text=True, capture_output=True, timeout=180, check=False)
-            log = (process.stdout or "") + "\n" + (process.stderr or "")
-            status["video_title"] = extract_title(log)
-            if not status["video_id"]:
-                match = BV_RE.search(log) or AV_RE.search(log)
+            print("BBDown command: " + " ".join(shlex.quote(part) for part in command), flush=True)
+            process = command_runner(
+                command, text=True, capture_output=True, timeout=180, check=False
+            )
+            stdout = process.stdout or ""
+            stderr = process.stderr or ""
+            log = stdout + "\n" + stderr
+            status["bbdown_exit_code"] = process.returncode
+            status["title"] = extract_title(log)
+            status["login_warning"] = bool(
+                re.search(r"尚未登录|未登录|not logged|login.*required|需要登录", log, re.I)
+            )
+            if not status["bvid"]:
+                match = BV_RE.search(log)
                 if match:
-                    status["video_id"] = match.group(1) if match.re is BV_RE else f"av{match.group(1)}"
+                    status["bvid"] = match.group(1)
+            print(f"BBDown exit code: {process.returncode}", flush=True)
             tracks = sorted(path for path in temp.rglob("*") if path.is_file() and path.suffix.lower() in SUPPORTED)
             ranked = sorted((track_score(path), path) for path in tracks)
-            status["available_tracks"] = [
-                {"file": path.name, "type": score[1], "language": score[2]}
-                for score, path in ranked
-            ]
-            key = safe_name(status["video_id"] or status["video_title"] or fallback)
-            result_dir = output_root / key
-            result_dir.mkdir(parents=True, exist_ok=True)
+            status["subtitle_files_found"] = [str(path.relative_to(temp)) for _, path in ranked]
+            print(f"Found subtitle files: {len(ranked)}", flush=True)
+            if process.returncode != 0:
+                last_line = next(
+                    (line.strip() for line in reversed(log.splitlines()) if line.strip()),
+                    "BBDown failed without an error message",
+                )
+                status["failure_reason"] = f"BBDown exited with code {process.returncode}: {last_line}"
+                return status | {"result_dir": str(result_dir)}
             if not ranked:
-                status["failure_reason"] = (log.strip()[-1000:] or f"BBDown exited with code {process.returncode}")
+                status["failure_reason"] = "BBDown completed, but no subtitle file was produced."
                 return status | {"result_dir": str(result_dir)}
             score, selected = ranked[0]
+            print(f"Selected subtitle file: {selected.name}", flush=True)
             (result_dir / "subtitle-raw.md").write_text(convert_track(selected), encoding="utf-8")
-            status["subtitle_track_type"] = score[1]
+            status["selected_subtitle_file"] = str(selected.relative_to(temp))
             status["subtitle_language"] = score[2]
             status["success"] = True
             return status | {"result_dir": str(result_dir)}
     except Exception as exc:
         status["failure_reason"] = f"{type(exc).__name__}: {exc}"
-        result_dir = result_dir or output_root / safe_name(status["video_id"] or status["video_title"] or fallback)
+        result_dir = result_dir or output_root / safe_name(status["bvid"] or fallback)
         result_dir.mkdir(parents=True, exist_ok=True)
         return status | {"result_dir": str(result_dir)}
     finally:
         if result_dir:
-            serializable = {key: value for key, value in status.items()}
             (result_dir / "extraction-status.json").write_text(
-                json.dumps(serializable, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
 
 
@@ -250,19 +322,23 @@ def main() -> int:
         item = run_one(value, args.output_root)
         items.append(item)
         if item["success"]:
-            print(f"Success {index}: {item.get('video_id') or value}", flush=True)
+            print(f"Success {index}: {item.get('bvid') or value}", flush=True)
         else:
             reason = item.get("failure_reason") or "unknown extraction error"
             print(f"::error title=Input {index} failed::{reason}", flush=True)
+        print(
+            f"Final extraction status: {'success' if item['success'] else 'failed'}",
+            flush=True,
+        )
     summary = {
         "processed": len(items),
         "successful": sum(bool(item["success"]) for item in items),
         "failed": sum(not item["success"] for item in items),
         "items": [
             {
-                "input": item["original_input"],
+                "input": item["input"],
                 "success": item["success"],
-                "video_id": item["video_id"],
+                "video_id": item["bvid"],
                 "failure_reason": item["failure_reason"],
                 "result_dir": item["result_dir"],
             }
