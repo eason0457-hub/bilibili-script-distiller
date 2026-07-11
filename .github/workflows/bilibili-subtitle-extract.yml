@@ -176,6 +176,15 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
+      - name: Upload OCR speaker debug Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bilibili-ocr-speaker-debug-${{ github.run_id }}
+          path: ${{ runner.temp }}/bilibili-ocr-debug/
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Write run summary
         if: always()
         shell: bash
