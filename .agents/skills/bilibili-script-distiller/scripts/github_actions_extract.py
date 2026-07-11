@@ -369,7 +369,7 @@ def main() -> int:
     parser.add_argument("--end-time", type=parse_time_value)
     parser.add_argument("--subtitle-position", choices=["bottom", "top", "custom"], default="bottom")
     parser.add_argument("--ocr-language", default="ch")
-    parser.add_argument("--sample-fps", type=float, default=2.0)
+    parser.add_argument("--sample-fps", type=float, default=1.0)
     parser.add_argument("--subtitle-crop-top", type=float)
     parser.add_argument("--subtitle-crop-bottom", type=float)
     parser.add_argument("--subtitle-crop-left", type=float)
@@ -401,7 +401,7 @@ def main() -> int:
         "end_time": args.end_time,
         "position": args.subtitle_position,
         "language": args.ocr_language,
-        "sample_fps": min(4.0, max(2.0, args.sample_fps)),
+        "sample_fps": min(4.0, max(1.0, args.sample_fps)),
         "crop_overrides": {
             "top": args.subtitle_crop_top,
             "bottom": args.subtitle_crop_bottom,
