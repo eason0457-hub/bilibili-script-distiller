@@ -18,6 +18,9 @@ class WorkflowFFmpegTests(unittest.TestCase):
     def test_ubuntu_latest_runner_is_preserved(self):
         self.assertIn("runs-on: ubuntu-latest", self.text)
 
+    def test_full_video_ocr_has_a_ninety_minute_timeout(self):
+        self.assertIn("timeout-minutes: 90", self.text)
+
     def test_ffmpeg_is_installed_and_verified(self):
         required = [
             "- name: Install FFmpeg",
