@@ -57,6 +57,14 @@ class WorkflowFFmpegTests(unittest.TestCase):
         self.assertIn("::error::video_urls is empty", self.text)
         self.assertIn("HH:MM:SS", self.text)
 
+    def test_paddleocr_uses_numpy_one_abi_and_checks_imports(self):
+        self.assertIn('"numpy==1.26.4"', self.text)
+        self.assertIn('"opencv-python==4.6.0.66"', self.text)
+        self.assertIn('"opencv-contrib-python==4.6.0.66"', self.text)
+        self.assertIn("--force-reinstall --no-deps", self.text)
+        self.assertIn("from paddleocr import PaddleOCR", self.text)
+        self.assertIn("PaddleOCR import check: OK", self.text)
+
 
 if __name__ == "__main__":
     unittest.main()
