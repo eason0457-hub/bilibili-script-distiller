@@ -36,6 +36,40 @@ def now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
 
 
+def parse_time_value(value: str) -> float:
+    """Accept seconds or HH:MM:SS / MM:SS workflow input."""
+    raw = value.strip()
+    try:
+        if ":" not in raw:
+            seconds = float(raw)
+        else:
+            parts = raw.split(":")
+            if len(parts) not in {2, 3}:
+                raise ValueError
+            numbers = [float(part) for part in parts]
+            if any(number < 0 for number in numbers):
+                raise ValueError
+            if len(numbers) == 2:
+                minutes, seconds_part = numbers
+                if seconds_part >= 60:
+                    raise ValueError
+                seconds = minutes * 60 + seconds_part
+            else:
+                hours, minutes, seconds_part = numbers
+                if minutes >= 60 or seconds_part >= 60:
+                    raise ValueError
+                seconds = hours * 3600 + minutes * 60 + seconds_part
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(
+            f"invalid time {value!r}; use seconds, MM:SS, or HH:MM:SS"
+        ) from exc
+    if seconds < 0:
+        raise argparse.ArgumentTypeError(
+            f"invalid time {value!r}; time cannot be negative"
+        )
+    return seconds
+
+
 def parse_inputs(raw_input: str) -> list[str]:
     """Parse newline, whitespace, comma, and numbered input without merging URLs."""
     items: list[str] = []
@@ -331,8 +365,8 @@ def main() -> int:
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--summary-json", type=Path, required=True)
     parser.add_argument("--enable-hardsub-ocr", action="store_true")
-    parser.add_argument("--start-time", type=float)
-    parser.add_argument("--end-time", type=float)
+    parser.add_argument("--start-time", type=parse_time_value)
+    parser.add_argument("--end-time", type=parse_time_value)
     parser.add_argument("--subtitle-position", choices=["bottom", "top", "custom"], default="bottom")
     parser.add_argument("--ocr-language", default="ch")
     parser.add_argument("--sample-fps", type=float, default=2.0)
