@@ -81,7 +81,7 @@ jobs:
             echo "Extractor script not found at $SCRIPT" >&2
             exit 1
           fi
-          python "$SCRIPT" --inputs "$VIDEO_URLS" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json"
+          python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json"
           code=$?
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
