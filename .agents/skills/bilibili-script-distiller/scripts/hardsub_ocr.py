@@ -96,7 +96,7 @@ def extract_ocr_lines(image: Path, ocr) -> tuple[str, float]:
         text_parts.append(str(text))
         confidences.append(float(confidence))
     text = "".join(text_parts).strip() or "[无法识别]"
-    return text, (sum(confidences) / len(confidences) if confidences else 0.0)
+    return text, (sum(confidences) / len(confidences) if confidences else 0.0), len(lines or [])
 
 
 def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path, sample_fps: float,
@@ -115,6 +115,14 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
         "low_confidence_segments": [],
         "success": False,
         "failure_reason": None,
+        "diagnostics": {
+            "video_path": None,
+            "video_resolution": None,
+            "frame_count": 0,
+            "ocr_call_count": 0,
+            "raw_ocr_result_count": 0,
+            "filtered_result_count": 0,
+        },
         "processed_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
     }
     try:
@@ -132,6 +140,16 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             videos = sorted(path for path in video_dir.rglob("*") if path.suffix.lower() in {".mp4", ".mkv", ".flv", ".webm"})
             if not videos:
                 raise RuntimeError("BBDown completed, but no low-quality video file was produced")
+            status["diagnostics"]["video_path"] = videos[0].name
+            probe = subprocess.run(
+                ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "json", str(videos[0])],
+                text=True, capture_output=True, check=False,
+            )
+            if probe.returncode == 0:
+                stream = (json.loads(probe.stdout).get("streams") or [{}])[0]
+                status["diagnostics"]["video_resolution"] = f"{stream.get('width')}x{stream.get('height')}"
+            print(f"OCR video path: {videos[0]}", flush=True)
+            print(f"OCR video resolution: {status['diagnostics']['video_resolution']}", flush=True)
             vf = f"fps={sample_fps},crop=iw*{region['right']-region['left']}:ih*{region['bottom']-region['top']}:iw*{region['left']}:ih*{region['top']}"
             frames_cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error"]
             if start_time is not None:
@@ -144,13 +162,25 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
                 frames_cmd += ["-t", str(duration)]
             frames_cmd += ["-vf", vf, str(frames / "frame_%08d.png")]
             subprocess.run(frames_cmd, check=True, timeout=600)
+            images = sorted(frames.glob("*.png"))
+            status["diagnostics"]["frame_count"] = len(images)
+            print(f"OCR crop region: {region}", flush=True)
+            print(f"OCR extracted frames: {len(images)}", flush=True)
+            if not images:
+                raise RuntimeError("FFmpeg completed, but produced no subtitle-region frames")
             ocr = PaddleOCR(use_angle_cls=False, lang=language)
             offset = start_time or 0.0
             samples = []
-            for index, image in enumerate(sorted(frames.glob("*.png"))):
-                text, confidence = extract_ocr_lines(image, ocr)
+            for index, image in enumerate(images):
+                text, confidence, raw_count = extract_ocr_lines(image, ocr)
+                status["diagnostics"]["ocr_call_count"] += 1
+                status["diagnostics"]["raw_ocr_result_count"] += raw_count
                 samples.append({"time": offset + index / sample_fps, "text": text, "confidence": confidence})
             segments = merge_samples(samples, 1 / sample_fps)
+            status["diagnostics"]["filtered_result_count"] = len(segments)
+            print(f"OCR calls: {status['diagnostics']['ocr_call_count']}", flush=True)
+            print(f"OCR raw results: {status['diagnostics']['raw_ocr_result_count']}", flush=True)
+            print(f"OCR merged segments: {len(segments)}", flush=True)
             if not segments or not any(item["text"] != "[无法识别]" for item in segments):
                 raise RuntimeError("OCR completed, but no readable subtitle text was produced")
             output_dir.mkdir(parents=True, exist_ok=True)
