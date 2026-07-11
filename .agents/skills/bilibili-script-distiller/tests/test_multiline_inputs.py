@@ -98,6 +98,28 @@ class MultilineInputTests(unittest.TestCase):
         self.assertEqual(MODULE.parse_time_value("03:00"), 180.0)
         self.assertEqual(MODULE.parse_time_value("00:03:00"), 180.0)
 
+    def test_hardsub_ocr_defaults_to_one_frame_per_second(self):
+        raw = "BV1uknVz9EeN"
+        with tempfile.TemporaryDirectory() as temp:
+            argv = [
+                str(SCRIPT),
+                "--output-root", str(Path(temp) / "output"),
+                "--summary-json", str(Path(temp) / "summary.json"),
+                "--enable-hardsub-ocr",
+            ]
+            result = {
+                "input": raw, "source_type": "hardcoded_subtitle_ocr",
+                "success": True, "bvid": raw, "failure_reason": None,
+                "result_dir": str(Path(temp) / "output"),
+            }
+            with (
+                mock.patch.dict(os.environ, {"VIDEO_URLS": raw}),
+                mock.patch.object(sys, "argv", argv),
+                mock.patch.object(MODULE, "run_one", return_value=result) as run_one,
+            ):
+                self.assertEqual(MODULE.main(), 0)
+        self.assertEqual(run_one.call_args.kwargs["hardsub"]["sample_fps"], 1.0)
+
     def test_numbered_links_are_normalized(self):
         raw = (
             "1. https://b23.tv/example1\n"
