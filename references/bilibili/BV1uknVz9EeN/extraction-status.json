@@ -1,12 +1,13 @@
 {
-  "original_input": "BV1uknVz9EeN",
-  "final_video_url": "https://www.bilibili.com/video/BV1uknVz9EeN/",
-  "video_id": "BV1uknVz9EeN",
-  "video_title": "千早爱音一睡不起#1[完]",
+  "input": "BV1uknVz9EeN",
+  "bvid": "BV1uknVz9EeN",
+  "title": "千早爱音一睡不起#1[完]",
   "success": false,
-  "subtitle_track_type": null,
+  "failure_reason": "BBDown completed, but no subtitle file was produced.",
+  "bbdown_exit_code": 0,
+  "subtitle_files_found": [],
+  "selected_subtitle_file": null,
   "subtitle_language": null,
-  "available_tracks": [],
-  "failure_reason": "BBDown version 1.6.3, Bilibili Downloader.\n遇到问题请首先到以下地址查阅有无相关信息：\nhttps://github.com/nilaoda/BBDown/issues\n\n[2026-07-11 08:46:42.334] - 检测账号登录...\n[2026-07-11 08:46:42.813] - 你尚未登录B站账号, 解析可能受到限制\n[2026-07-11 08:46:42.813] - 获取aid...\n[2026-07-11 08:46:43.434] - 获取aid结束: 115272191053896\n[2026-07-11 08:46:43.434] - 获取视频信息...\n[2026-07-11 08:46:43.688] - 视频标题: 千早爱音一睡不起#1[完]\n[2026-07-11 08:46:43.688] - 发布时间: 2025-09-27 03:30:00 +00:00\n[2026-07-11 08:46:43.688] - UP主页: https://space.bilibili.com/3546719411243591\n[2026-07-11 08:46:43.688] - P1: [32659473044] [千早爱音一睡不起#1[完]] [32m44s]\n[2026-07-11 08:46:43.688] - 共计 1 个分P, 已选择：ALL\n[2026-07-11 08:46:43.688] - 开始解析P1: 115272191053896... (1 of 1)\n[2026-07-11 08:46:44.953] - 任务完成",
-  "processed_at": "2026-07-11T08:46:42+00:00"
+  "login_warning": true,
+  "processed_at": "2026-07-11T08:55:46+00:00"
 }
