@@ -225,9 +225,35 @@ def main() -> int:
     parser.add_argument("--summary-json", type=Path, required=True)
     args = parser.parse_args()
     raw_input = os.environ.get("VIDEO_URLS", "")
-    inputs = parse_inputs(raw_input)
+    urls = parse_inputs(raw_input)
+    print(f"Raw input characters: {len(raw_input)}", flush=True)
+    print(f"Parsed inputs: {len(urls)}", flush=True)
+    for index, value in enumerate(urls, start=1):
+        print(f"Input {index}: {value}", flush=True)
+    if not raw_input.strip() or not urls:
+        print("::error::VIDEO_URLS is empty", flush=True)
+        args.summary_json.parent.mkdir(parents=True, exist_ok=True)
+        args.summary_json.write_text(
+            json.dumps(
+                {"processed": 0, "successful": 0, "failed": 0, "items": []},
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        return 2
     args.output_root.mkdir(parents=True, exist_ok=True)
-    items = [run_one(value, args.output_root) for value in inputs]
+    items = []
+    for index, value in enumerate(urls, start=1):
+        print(f"Processing {index}/{len(urls)}: {value}", flush=True)
+        item = run_one(value, args.output_root)
+        items.append(item)
+        if item["success"]:
+            print(f"Success {index}: {item.get('video_id') or value}", flush=True)
+        else:
+            reason = item.get("failure_reason") or "unknown extraction error"
+            print(f"::error title=Input {index} failed::{reason}", flush=True)
     summary = {
         "processed": len(items),
         "successful": sum(bool(item["success"]) for item in items),
