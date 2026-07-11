@@ -29,6 +29,14 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install FFmpeg
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          command -v ffmpeg
+          ffmpeg -version
+
       - name: Install BBDown subtitle extractor
         shell: bash
         run: |
@@ -72,6 +80,10 @@ jobs:
           VIDEO_URLS: ${{ github.event.inputs.video_urls }}
         run: |
           set -uo pipefail
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            echo "::error::FFmpeg is not installed or not available in PATH"
+            exit 1
+          fi
           SCRIPT=".agents/skills/bilibili-script-distiller/scripts/github_actions_extract.py"
           if [[ -z "$SCRIPT" ]]; then
             echo "Extractor script not found" >&2
