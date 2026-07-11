@@ -40,6 +40,20 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertEqual(crop["top"], 0.70)
         self.assertEqual(crop["bottom"], 0.98)
 
+    def test_ocr_status_has_required_diagnostics(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp)
+            status = MODULE.run_hardsub_ocr(
+                bvid="BV1uknVz9EeN", title="test", url="invalid", output_dir=output,
+                sample_fps=2.0, position="bottom", language="ch",
+                start_time=0.0, end_time=3.0,
+                crop_overrides={"top": None, "bottom": None, "left": None, "right": None},
+            )
+            saved = (output / "ocr-status.json").read_text(encoding="utf-8")
+        self.assertFalse(status["success"])
+        self.assertIn("frame_count", saved)
+        self.assertIn("ocr_call_count", saved)
+
 
 if __name__ == "__main__":
     unittest.main()
