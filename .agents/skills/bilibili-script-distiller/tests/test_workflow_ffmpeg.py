@@ -51,6 +51,12 @@ class WorkflowFFmpegTests(unittest.TestCase):
         self.assertIn("ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}", self.text)
         self.assertIn('case "${ENABLE_HARDSUB_OCR,,}" in', self.text)
 
+    def test_dispatch_input_is_validated_and_uses_inputs_context(self):
+        self.assertIn("- name: Validate workflow inputs", self.text)
+        self.assertIn("VIDEO_URLS: ${{ inputs.video_urls }}", self.text)
+        self.assertIn("::error::video_urls is empty", self.text)
+        self.assertIn("HH:MM:SS", self.text)
+
 
 if __name__ == "__main__":
     unittest.main()
