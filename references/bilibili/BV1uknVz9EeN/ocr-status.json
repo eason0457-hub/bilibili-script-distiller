@@ -4,8 +4,8 @@
   "source_type": "hardcoded_subtitle_ocr",
   "downloaded_quality": "360P preferred, 480P fallback",
   "processed_time_range": {
-    "start_time": 0.0,
-    "end_time": 180.0
+    "start_time": null,
+    "end_time": null
   },
   "crop_region": {
     "top": 0.7,
@@ -13,159 +13,576 @@
     "left": 0.0,
     "right": 1.0
   },
-  "sample_fps": 2.0,
+  "speaker_crop_region": {
+    "top": 0.0,
+    "bottom": 0.35,
+    "left": 0.0,
+    "right": 1.0
+  },
+  "sample_fps": 1.0,
   "ocr_language": "ch",
-  "average_confidence": 0.8277174358839517,
+  "ocr_engine": "rapidocr_onnxruntime",
+  "average_confidence": 0.8782815747641481,
   "low_confidence_segments": [
     {
-      "start": 3.0,
-      "end": 3.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 7.0,
-      "end": 7.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
       "start": 14.0,
+      "end": 15.0,
+      "speaker": "旁白",
+      "text": "ZZ2227",
+      "confidence": 0.5118600130081177
+    },
+    {
+      "start": 15.0,
       "end": 16.0,
+      "speaker": "旁白",
       "text": "222227",
-      "confidence": 0.6149515509605408
+      "confidence": 0.6201896270116171
     },
     {
-      "start": 16.0,
-      "end": 16.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 18.5,
-      "end": 19.0,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 22.0,
-      "end": 22.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 25.5,
-      "end": 26.0,
-      "text": "[无法识别]",
-      "confidence": 0.0
+      "start": 19.0,
+      "end": 20.0,
+      "speaker": "旁白",
+      "text": "三盘直",
+      "confidence": 0.6407095889250437
     },
     {
       "start": 32.0,
-      "end": 32.5,
+      "end": 38.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 35.5,
-      "end": 38.5,
+      "start": 52.0,
+      "end": 53.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 43.0,
-      "end": 43.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 57.0,
-      "end": 57.5,
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 61.5,
-      "end": 62.0,
-      "text": "ano酱.你长",
-      "confidence": 0.6408575773239136
-    },
-    {
-      "start": 68.5,
-      "end": 69.0,
+      "start": 68.0,
+      "end": 71.0,
+      "speaker": "旁白",
       "text": "222227",
-      "confidence": 0.6073865294456482
+      "confidence": 0.5047393540541331
     },
     {
-      "start": 69.0,
-      "end": 69.5,
-      "text": "222277",
-      "confidence": 0.6211732625961304
-    },
-    {
-      "start": 69.5,
-      "end": 70.5,
-      "text": "222227",
-      "confidence": 0.6169506907463074
-    },
-    {
-      "start": 84.5,
-      "end": 85.0,
-      "text": "听啊",
-      "confidence": 0.624902069568634
-    },
-    {
-      "start": 92.5,
-      "end": 97.5,
+      "start": 88.0,
+      "end": 89.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 99.0,
-      "end": 99.5,
-      "text": "大家..紧急消·..",
-      "confidence": 0.6437737345695496
-    },
-    {
-      "start": 101.0,
-      "end": 101.5,
+      "start": 95.0,
+      "end": 97.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 113.0,
-      "end": 113.5,
+      "start": 97.0,
+      "end": 98.0,
+      "speaker": "biibili",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 117.0,
-      "end": 117.5,
+      "start": 155.0,
+      "end": 156.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 135.5,
-      "end": 136.0,
+      "start": 159.0,
+      "end": 160.0,
+      "speaker": "旁白",
+      "text": "唉唉喉你",
+      "confidence": 0.6427778825163841
+    },
+    {
+      "start": 190.0,
+      "end": 193.0,
+      "speaker": "旁白",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 152.5,
-      "end": 153.0,
+      "start": 193.0,
+      "end": 194.0,
+      "speaker": "Liibii",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 161.5,
-      "end": 162.0,
+      "start": 194.0,
+      "end": 195.0,
+      "speaker": "biibili",
       "text": "[无法识别]",
       "confidence": 0.0
     },
     {
-      "start": 177.0,
-      "end": 177.5,
+      "start": 264.0,
+      "end": 265.0,
+      "speaker": "旁白",
+      "text": "1E",
+      "confidence": 0.6184870600700378
+    },
+    {
+      "start": 287.0,
+      "end": 290.0,
+      "speaker": "旁白",
+      "text": "啊.啊呦",
+      "confidence": 0.6499620527029037
+    },
+    {
+      "start": 293.0,
+      "end": 294.0,
+      "speaker": "bilibili",
+      "text": "[oeo",
+      "confidence": 0.5353561490774155
+    },
+    {
+      "start": 304.0,
+      "end": 305.0,
+      "speaker": "bilbili",
       "text": "[无法识别]",
       "confidence": 0.0
+    },
+    {
+      "start": 324.0,
+      "end": 325.0,
+      "speaker": "口",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 325.0,
+      "end": 326.0,
+      "speaker": "Liibii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 326.0,
+      "end": 327.0,
+      "speaker": "Liibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 434.0,
+      "end": 436.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 450.0,
+      "end": 455.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 541.0,
+      "end": 542.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 564.0,
+      "end": 565.0,
+      "speaker": "旁白",
+      "text": "这..公",
+      "confidence": 0.6162574589252472
+    },
+    {
+      "start": 575.0,
+      "end": 576.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 657.0,
+      "end": 661.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 661.0,
+      "end": 662.0,
+      "speaker": "旁白",
+      "text": "Z",
+      "confidence": 0.5651170611381531
+    },
+    {
+      "start": 662.0,
+      "end": 664.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 664.0,
+      "end": 665.0,
+      "speaker": "bilbii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 665.0,
+      "end": 666.0,
+      "speaker": "biibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 682.0,
+      "end": 683.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 685.0,
+      "end": 686.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 796.0,
+      "end": 797.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 837.0,
+      "end": 838.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 838.0,
+      "end": 840.0,
+      "speaker": "旁白",
+      "text": "呵啊..",
+      "confidence": 0.5873186215758324
+    },
+    {
+      "start": 909.0,
+      "end": 910.0,
+      "speaker": "旁白",
+      "text": "T",
+      "confidence": 0.5069208145141602
+    },
+    {
+      "start": 939.0,
+      "end": 942.0,
+      "speaker": "biibii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 965.0,
+      "end": 970.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 980.0,
+      "end": 983.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 983.0,
+      "end": 984.0,
+      "speaker": "旁白",
+      "text": "外",
+      "confidence": 0.5745505690574646
+    },
+    {
+      "start": 984.0,
+      "end": 985.0,
+      "speaker": "biibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 990.0,
+      "end": 992.0,
+      "speaker": "旁白",
+      "text": "好...好的..·希酱..",
+      "confidence": 0.5916116145940927
+    },
+    {
+      "start": 1017.0,
+      "end": 1018.0,
+      "speaker": "叶",
+      "text": "家",
+      "confidence": 0.5355650782585144
+    },
+    {
+      "start": 1057.0,
+      "end": 1060.0,
+      "speaker": "旁白",
+      "text": "(*_）家",
+      "confidence": 0.6167632527649403
+    },
+    {
+      "start": 1139.0,
+      "end": 1140.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1169.0,
+      "end": 1171.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1171.0,
+      "end": 1172.0,
+      "speaker": "旁白",
+      "text": "1",
+      "confidence": 0.5757030844688416
+    },
+    {
+      "start": 1181.0,
+      "end": 1182.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1198.0,
+      "end": 1199.0,
+      "speaker": "Liibii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1199.0,
+      "end": 1200.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1216.0,
+      "end": 1217.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1266.0,
+      "end": 1269.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1327.0,
+      "end": 1328.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1328.0,
+      "end": 1329.0,
+      "speaker": "biibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1378.0,
+      "end": 1379.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1385.0,
+      "end": 1390.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1425.0,
+      "end": 1426.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1507.0,
+      "end": 1510.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1512.0,
+      "end": 1515.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1520.0,
+      "end": 1525.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1593.0,
+      "end": 1594.0,
+      "speaker": "biibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1622.0,
+      "end": 1623.0,
+      "speaker": "biibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1623.0,
+      "end": 1625.0,
+      "speaker": "biibili",
+      "text": "啊啊..好..",
+      "confidence": 0.6348308367388589
+    },
+    {
+      "start": 1625.0,
+      "end": 1626.0,
+      "speaker": "Liibili",
+      "text": "啊啊..好.",
+      "confidence": 0.5976707885662714
+    },
+    {
+      "start": 1630.0,
+      "end": 1631.0,
+      "speaker": "bilibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1640.0,
+      "end": 1641.0,
+      "speaker": "Lilibii",
+      "text": "H+",
+      "confidence": 0.6070994585752487
+    },
+    {
+      "start": 1641.0,
+      "end": 1643.0,
+      "speaker": "Lilibii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1658.0,
+      "end": 1663.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1693.0,
+      "end": 1694.0,
+      "speaker": "旁白",
+      "text": "++++",
+      "confidence": 0.5669281557202339
+    },
+    {
+      "start": 1700.0,
+      "end": 1701.0,
+      "speaker": "Liibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1770.0,
+      "end": 1772.0,
+      "speaker": "Lilibili",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1802.0,
+      "end": 1804.0,
+      "speaker": "Liibili",
+      "text": "+*+*44",
+      "confidence": 0.5407176315784454
+    },
+    {
+      "start": 1810.0,
+      "end": 1811.0,
+      "speaker": "bilibii",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1811.0,
+      "end": 1813.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1898.0,
+      "end": 1901.0,
+      "speaker": "叶",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1922.0,
+      "end": 1925.0,
+      "speaker": "叶",
+      "text": "444444",
+      "confidence": 0.5759542435407639
+    },
+    {
+      "start": 1929.0,
+      "end": 1934.0,
+      "speaker": "叶",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1952.0,
+      "end": 1955.0,
+      "speaker": "叶",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 1955.0,
+      "end": 1956.0,
+      "speaker": "叶",
+      "text": "咖一",
+      "confidence": 0.5978157669305801
     }
   ],
   "success": true,
@@ -173,10 +590,16 @@
   "diagnostics": {
     "video_path": "115272191053896.P1.32659473044.mp4",
     "video_resolution": "640x360",
-    "frame_count": 360,
-    "ocr_call_count": 360,
-    "raw_ocr_result_count": 329,
-    "filtered_result_count": 182
+    "frame_count": 1964,
+    "speaker_frame_count": 1964,
+    "ocr_call_count": 1051,
+    "ocr_reused_frame_count": 913,
+    "speaker_ocr_call_count": 1270,
+    "speaker_reused_frame_count": 694,
+    "speaker_identified_frame_count": 655,
+    "raw_ocr_result_count": 1065,
+    "filtered_result_count": 996,
+    "frame_similarity_threshold": 0.02
   },
-  "processed_at": "2026-07-11T13:04:16+00:00"
+  "processed_at": "2026-07-11T15:01:55+00:00"
 }

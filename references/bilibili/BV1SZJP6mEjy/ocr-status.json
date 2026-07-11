@@ -1,0 +1,185 @@
+{
+  "bvid": "BV1SZJP6mEjy",
+  "video_title": "千早爱音死了 #1（完）",
+  "source_type": "hardcoded_subtitle_ocr",
+  "downloaded_quality": "360P preferred, 480P fallback",
+  "processed_time_range": {
+    "start_time": null,
+    "end_time": null
+  },
+  "crop_region": {
+    "top": 0.7,
+    "bottom": 0.98,
+    "left": 0.0,
+    "right": 1.0
+  },
+  "speaker_crop_region": {
+    "top": 0.0,
+    "bottom": 0.35,
+    "left": 0.0,
+    "right": 1.0
+  },
+  "sample_fps": 1.0,
+  "ocr_language": "ch",
+  "ocr_engine": "rapidocr_onnxruntime",
+  "average_confidence": 0.9074845795744122,
+  "low_confidence_segments": [
+    {
+      "start": 18.0,
+      "end": 19.0,
+      "speaker": "灵",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 47.0,
+      "end": 48.0,
+      "speaker": "灵",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 48.0,
+      "end": 49.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 68.0,
+      "end": 71.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 71.0,
+      "end": 72.0,
+      "speaker": "灵",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 91.0,
+      "end": 92.0,
+      "speaker": "二正EZ",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 109.0,
+      "end": 110.0,
+      "speaker": "TEEZ",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 110.0,
+      "end": 111.0,
+      "speaker": "TEZ",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 111.0,
+      "end": 112.0,
+      "speaker": "旁白",
+      "text": "自街达",
+      "confidence": 0.6186843067407608
+    },
+    {
+      "start": 112.0,
+      "end": 114.0,
+      "speaker": "TEZ",
+      "text": "快自档",
+      "confidence": 0.5277732958396276
+    },
+    {
+      "start": 220.0,
+      "end": 221.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 245.0,
+      "end": 246.0,
+      "speaker": "灵",
+      "text": "E",
+      "confidence": 0.6220636367797852
+    },
+    {
+      "start": 246.0,
+      "end": 247.0,
+      "speaker": "灵",
+      "text": "美音",
+      "confidence": 0.5727614462375641
+    },
+    {
+      "start": 360.0,
+      "end": 361.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 381.0,
+      "end": 382.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 382.0,
+      "end": 383.0,
+      "speaker": "旁白",
+      "text": "全川",
+      "confidence": 0.5209178179502487
+    },
+    {
+      "start": 386.0,
+      "end": 387.0,
+      "speaker": "biibii",
+      "text": "伙全快质栏",
+      "confidence": 0.51897913813591
+    },
+    {
+      "start": 387.0,
+      "end": 388.0,
+      "speaker": "灵",
+      "text": "七",
+      "confidence": 0.5006242394447327
+    },
+    {
+      "start": 528.0,
+      "end": 529.0,
+      "speaker": "EEZ",
+      "text": "于是图",
+      "confidence": 0.5443018227815628
+    },
+    {
+      "start": 571.0,
+      "end": 572.0,
+      "speaker": "三",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    }
+  ],
+  "success": true,
+  "failure_reason": null,
+  "diagnostics": {
+    "video_path": "116747998858528.P1.39113392614.mp4",
+    "video_resolution": "640x360",
+    "frame_count": 611,
+    "speaker_frame_count": 611,
+    "ocr_call_count": 449,
+    "ocr_reused_frame_count": 162,
+    "speaker_ocr_call_count": 289,
+    "speaker_reused_frame_count": 322,
+    "speaker_identified_frame_count": 521,
+    "raw_ocr_result_count": 876,
+    "filtered_result_count": 306,
+    "frame_similarity_threshold": 0.02
+  },
+  "processed_at": "2026-07-11T15:44:11+00:00"
+}
