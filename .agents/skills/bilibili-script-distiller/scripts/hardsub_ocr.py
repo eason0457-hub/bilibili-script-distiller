@@ -5,7 +5,6 @@ from __future__ import annotations
 import datetime as dt
 import difflib
 import json
-import os
 import re
 import shutil
 import subprocess
@@ -85,26 +84,19 @@ def crop_for(position: str, overrides: dict[str, float | None]) -> dict[str, flo
     return region
 
 
-def paddleocr_cpu_options(language: str) -> dict:
-    """Use conservative CPU settings that work on heterogeneous CI runners."""
-    return {
-        "use_angle_cls": False,
-        "lang": language,
-        "use_gpu": False,
-        "enable_mkldnn": False,
-        "ir_optim": False,
-        "cpu_threads": 1,
-        "show_log": False,
-    }
+def build_ocr_engine() -> tuple[object, str]:
+    """Use PP-OCR models through ONNX Runtime, avoiding Paddle CPU SIGILL on CI."""
+    from rapidocr_onnxruntime import RapidOCR
+    return RapidOCR(), "rapidocr_onnxruntime"
 
 
 def extract_ocr_lines(image: Path, ocr) -> tuple[str, float, int]:
-    result = ocr.ocr(str(image), cls=False)
-    lines = result[0] if result else []
+    result, _elapsed = ocr(str(image))
+    lines = result or []
     text_parts, confidences = [], []
     for line in lines or []:
         try:
-            text, confidence = line[1]
+            text, confidence = line[1], line[2]
         except (IndexError, TypeError):
             continue
         text_parts.append(str(text))
@@ -125,6 +117,7 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
         "crop_region": None,
         "sample_fps": sample_fps,
         "ocr_language": language,
+        "ocr_engine": "rapidocr_onnxruntime",
         "average_confidence": 0.0,
         "low_confidence_segments": [],
         "success": False,
@@ -142,9 +135,6 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
     try:
         region = crop_for(position, crop_overrides)
         status["crop_region"] = region
-        os.environ.setdefault("OMP_NUM_THREADS", "1")
-        os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
-        from paddleocr import PaddleOCR
         with tempfile.TemporaryDirectory(prefix="bili-hardsub-") as temp_name:
             temp = Path(temp_name)
             video_dir, frames = temp / "video", temp / "frames"
@@ -184,13 +174,9 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             print(f"OCR extracted frames: {len(images)}", flush=True)
             if not images:
                 raise RuntimeError("FFmpeg completed, but produced no subtitle-region frames")
-            ocr_options = paddleocr_cpu_options(language)
-            print(
-                "PaddleOCR CPU config: "
-                "use_gpu=False, enable_mkldnn=False, ir_optim=False, cpu_threads=1",
-                flush=True,
-            )
-            ocr = PaddleOCR(**ocr_options)
+            ocr, engine_name = build_ocr_engine()
+            status["ocr_engine"] = engine_name
+            print(f"OCR engine: {engine_name}", flush=True)
             offset = start_time or 0.0
             samples = []
             for index, image in enumerate(images):
