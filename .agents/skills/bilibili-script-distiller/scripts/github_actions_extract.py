@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -17,10 +18,35 @@ from pathlib import Path
 BV_RE = re.compile(r"\b(BV[0-9A-Za-z]{10})\b")
 AV_RE = re.compile(r"\b(?:av|AV)(\d+)\b")
 SUPPORTED = {".srt", ".vtt", ".ass", ".ssa"}
+NUMBER_PREFIX_RE = re.compile(
+    r"^\s*(?:(?:\d+)\s*[.．、)）:]|[（(]\s*\d+\s*[）)])\s*"
+)
 
 
 def now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+
+
+def parse_inputs(raw_input: str) -> list[str]:
+    """Preserve line boundaries and normalize optional human list markers."""
+    items: list[str] = []
+    for raw_line in raw_input.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        line = NUMBER_PREFIX_RE.sub("", line, count=1).strip()
+        if line:
+            items.append(line)
+    return items
+
+
+def is_supported_input(value: str) -> bool:
+    value = value.strip()
+    return bool(
+        re.match(r"^https?://\S+$", value, re.I)
+        or re.fullmatch(r"BV[0-9A-Za-z]{10}", value)
+        or re.fullmatch(r"(?:av|AV)\d+", value)
+    )
 
 
 def resolve_input(value: str) -> tuple[str, str | None]:
@@ -144,6 +170,8 @@ def run_one(raw_input: str, output_root: Path) -> dict:
     fallback = f"failed-{hashlib.sha256(raw_input.encode()).hexdigest()[:8]}"
     result_dir: Path | None = None
     try:
+        if not is_supported_input(raw_input):
+            raise ValueError("input must be an http/https URL, BV ID, or AV ID")
         final_url, resolved_id = resolve_input(raw_input)
         status["final_video_url"] = final_url
         status["video_id"] = resolved_id
@@ -193,11 +221,11 @@ def run_one(raw_input: str, output_root: Path) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--inputs", required=True, help="One input per line")
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--summary-json", type=Path, required=True)
     args = parser.parse_args()
-    inputs = [line.strip() for line in args.inputs.splitlines() if line.strip() and not line.lstrip().startswith("#")]
+    raw_input = os.environ.get("VIDEO_URLS", "")
+    inputs = parse_inputs(raw_input)
     args.output_root.mkdir(parents=True, exist_ok=True)
     items = [run_one(value, args.output_root) for value in inputs]
     summary = {
@@ -222,4 +250,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
