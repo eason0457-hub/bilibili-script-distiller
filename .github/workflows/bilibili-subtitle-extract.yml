@@ -162,3 +162,10 @@ jobs:
               echo "- Files were not written back to the repository. Download the Artifact from this run."
             fi
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail workflow when all inputs failed
+        if: always() && steps.extract.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          echo "::error::All subtitle extractions failed"
+          exit 1
