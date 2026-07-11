@@ -90,6 +90,29 @@ def build_ocr_engine() -> tuple[object, str]:
     return RapidOCR(), "rapidocr_onnxruntime"
 
 
+def frame_signature(image: Path) -> bytes:
+    """Build a small edge mask so unchanged subtitle frames can reuse OCR."""
+    from PIL import Image, ImageFilter
+
+    with Image.open(image) as source:
+        edges = (
+            source.convert("L")
+            .resize((96, 24))
+            .filter(ImageFilter.FIND_EDGES)
+        )
+        return bytes(1 if pixel >= 40 else 0 for pixel in edges.getdata())
+
+
+def signature_distance(left: bytes, right: bytes) -> float:
+    if not left or len(left) != len(right):
+        return 1.0
+    return sum(a != b for a, b in zip(left, right)) / len(left)
+
+
+def should_reuse_ocr(previous: bytes | None, current: bytes, threshold: float = 0.02) -> bool:
+    return previous is not None and signature_distance(previous, current) <= threshold
+
+
 def extract_ocr_lines(image: Path, ocr) -> tuple[str, float, int]:
     result, _elapsed = ocr(str(image))
     lines = result or []
@@ -127,8 +150,10 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             "video_resolution": None,
             "frame_count": 0,
             "ocr_call_count": 0,
+            "ocr_reused_frame_count": 0,
             "raw_ocr_result_count": 0,
             "filtered_result_count": 0,
+            "frame_similarity_threshold": 0.02,
         },
         "processed_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
     }
@@ -179,14 +204,32 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             print(f"OCR engine: {engine_name}", flush=True)
             offset = start_time or 0.0
             samples = []
+            previous_signature = None
+            previous_result = None
+            similarity_threshold = status["diagnostics"]["frame_similarity_threshold"]
             for index, image in enumerate(images):
-                text, confidence, raw_count = extract_ocr_lines(image, ocr)
-                status["diagnostics"]["ocr_call_count"] += 1
-                status["diagnostics"]["raw_ocr_result_count"] += raw_count
+                signature = frame_signature(image)
+                if should_reuse_ocr(previous_signature, signature, similarity_threshold) and previous_result:
+                    text, confidence, raw_count = previous_result
+                    status["diagnostics"]["ocr_reused_frame_count"] += 1
+                else:
+                    text, confidence, raw_count = extract_ocr_lines(image, ocr)
+                    previous_result = (text, confidence, raw_count)
+                    status["diagnostics"]["ocr_call_count"] += 1
+                    status["diagnostics"]["raw_ocr_result_count"] += raw_count
+                previous_signature = signature
                 samples.append({"time": offset + index / sample_fps, "text": text, "confidence": confidence})
+                if (index + 1) % 250 == 0 or index + 1 == len(images):
+                    print(
+                        f"OCR progress: {index + 1}/{len(images)} frames, "
+                        f"calls={status['diagnostics']['ocr_call_count']}, "
+                        f"reused={status['diagnostics']['ocr_reused_frame_count']}",
+                        flush=True,
+                    )
             segments = merge_samples(samples, 1 / sample_fps)
             status["diagnostics"]["filtered_result_count"] = len(segments)
             print(f"OCR calls: {status['diagnostics']['ocr_call_count']}", flush=True)
+            print(f"OCR reused frames: {status['diagnostics']['ocr_reused_frame_count']}", flush=True)
             print(f"OCR raw results: {status['diagnostics']['raw_ocr_result_count']}", flush=True)
             print(f"OCR merged segments: {len(segments)}", flush=True)
             if not segments or not any(item["text"] != "[无法识别]" for item in segments):
