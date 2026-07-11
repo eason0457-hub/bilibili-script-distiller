@@ -46,7 +46,7 @@ class WorkflowFFmpegTests(unittest.TestCase):
 
     def test_hardsub_ocr_is_opt_in(self):
         self.assertIn("enable_hardsub_ocr:", self.text)
-        self.assertIn("Install PaddleOCR for enabled hard-subtitle fallback", self.text)
+        self.assertIn("Install ONNX OCR for enabled hard-subtitle fallback", self.text)
         self.assertIn("--enable-hardsub-ocr", self.text)
         self.assertIn("ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}", self.text)
         self.assertIn('case "${ENABLE_HARDSUB_OCR,,}" in', self.text)
@@ -57,13 +57,11 @@ class WorkflowFFmpegTests(unittest.TestCase):
         self.assertIn("::error::video_urls is empty", self.text)
         self.assertIn("HH:MM:SS", self.text)
 
-    def test_paddleocr_uses_numpy_one_abi_and_checks_imports(self):
-        self.assertIn('"numpy==1.26.4"', self.text)
-        self.assertIn('"opencv-python==4.6.0.66"', self.text)
-        self.assertIn('"opencv-contrib-python==4.6.0.66"', self.text)
-        self.assertIn("--force-reinstall --no-deps", self.text)
-        self.assertIn("from paddleocr import PaddleOCR", self.text)
-        self.assertIn("PaddleOCR import check: OK", self.text)
+    def test_hardsub_ocr_uses_onnx_runtime_and_checks_imports(self):
+        self.assertIn("Install ONNX OCR for enabled hard-subtitle fallback", self.text)
+        self.assertIn('"rapidocr_onnxruntime"', self.text)
+        self.assertIn("from rapidocr_onnxruntime import RapidOCR", self.text)
+        self.assertIn("RapidOCR ONNX import check: OK", self.text)
 
 
 if __name__ == "__main__":
