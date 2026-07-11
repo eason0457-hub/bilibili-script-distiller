@@ -7,6 +7,46 @@ on:
         description: "One Bilibili URL, b23.tv short link, BV ID, or AV ID per line"
         required: true
         type: string
+      enable_hardsub_ocr:
+        description: "Enable OCR fallback only when no downloadable subtitle track exists"
+        required: false
+        default: false
+        type: boolean
+      start_time:
+        description: "Optional OCR start time in seconds"
+        required: false
+        type: string
+      end_time:
+        description: "Optional OCR end time in seconds"
+        required: false
+        type: string
+      subtitle_position:
+        description: "Subtitle position preset"
+        required: false
+        default: bottom
+        type: choice
+        options: [bottom, top, custom]
+      ocr_language:
+        description: "PaddleOCR language (ch, chinese_cht, japan, en)"
+        required: false
+        default: ch
+        type: string
+      subtitle_crop_top:
+        description: "Optional crop top ratio (0-1)"
+        required: false
+        type: string
+      subtitle_crop_bottom:
+        description: "Optional crop bottom ratio (0-1)"
+        required: false
+        type: string
+      subtitle_crop_left:
+        description: "Optional crop left ratio (0-1)"
+        required: false
+        type: string
+      subtitle_crop_right:
+        description: "Optional crop right ratio (0-1)"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -73,6 +113,13 @@ jobs:
           chmod +x "$HOME/.local/bin/BBDown"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
+      - name: Install PaddleOCR for enabled hard-subtitle fallback
+        if: github.event.inputs.enable_hardsub_ocr == 'true'
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install paddlepaddle paddleocr
+
       - name: Extract existing subtitles
         id: extract
         shell: bash
@@ -94,7 +141,23 @@ jobs:
             exit 1
           fi
           set +e
-          python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json"
+          OCR_ARGS=()
+          if [[ "${{ github.event.inputs.enable_hardsub_ocr }}" == "true" ]]; then
+            OCR_ARGS+=(--enable-hardsub-ocr)
+          fi
+          for pair in \
+            "--start-time|${{ github.event.inputs.start_time }}" \
+            "--end-time|${{ github.event.inputs.end_time }}" \
+            "--subtitle-crop-top|${{ github.event.inputs.subtitle_crop_top }}" \
+            "--subtitle-crop-bottom|${{ github.event.inputs.subtitle_crop_bottom }}" \
+            "--subtitle-crop-left|${{ github.event.inputs.subtitle_crop_left }}" \
+            "--subtitle-crop-right|${{ github.event.inputs.subtitle_crop_right }}"; do
+            flag=${pair%%|*}; value=${pair#*|}
+            if [[ -n "$value" ]]; then OCR_ARGS+=("$flag" "$value"); fi
+          done
+          python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json" \
+            --subtitle-position "${{ github.event.inputs.subtitle_position }}" \
+            --ocr-language "${{ github.event.inputs.ocr_language }}" "${OCR_ARGS[@]}"
           code=$?
           set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
@@ -152,7 +215,8 @@ jobs:
           print(f"- Failed: {data.get('failed', 0)}")
           for item in data.get("items", []):
               mark = "✅" if item.get("success") else "❌"
-              print(f"- {mark} `{item.get('input', '')}` — {item.get('video_id') or item.get('failure_reason') or 'unknown'}")
+              mode = item.get("source_type", "unknown")
+              print(f"- {mark} `{item.get('input', '')}` — {mode}: {item.get('video_id') or item.get('failure_reason') or 'unknown'}")
           PY
             fi
             echo "- Save mode: ${{ steps.publish.outputs.mode || 'unknown' }}"
