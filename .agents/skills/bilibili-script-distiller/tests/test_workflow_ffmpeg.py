@@ -44,21 +44,27 @@ class WorkflowFFmpegTests(unittest.TestCase):
             "::error::FFmpeg is not installed or not available in PATH", self.text
         )
 
-    def test_hardsub_ocr_is_opt_in(self):
-        self.assertIn("enable_hardsub_ocr:", self.text)
-        self.assertIn("Install ONNX OCR for enabled hard-subtitle fallback", self.text)
+    def test_hardsub_ocr_is_always_enabled_with_fixed_defaults(self):
+        self.assertNotIn("enable_hardsub_ocr:", self.text)
+        self.assertIn("Install ONNX OCR fallback", self.text)
         self.assertIn("--enable-hardsub-ocr", self.text)
-        self.assertIn("ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}", self.text)
-        self.assertIn('case "${ENABLE_HARDSUB_OCR,,}" in', self.text)
+        self.assertIn('ENABLE_HARDSUB_OCR: "true"', self.text)
+        self.assertIn("OCR_START_TIME: \"\"", self.text)
+        self.assertIn("OCR_END_TIME: \"\"", self.text)
+        self.assertIn("OCR_SUBTITLE_POSITION: bottom", self.text)
+        self.assertIn("OCR_LANGUAGE: ch", self.text)
 
     def test_dispatch_input_is_validated_and_uses_inputs_context(self):
         self.assertIn("- name: Validate workflow inputs", self.text)
         self.assertIn("VIDEO_URLS: ${{ inputs.video_urls }}", self.text)
         self.assertIn("::error::video_urls is empty", self.text)
-        self.assertIn("HH:MM:SS", self.text)
+        dispatch = self.text.split("permissions:", 1)[0]
+        self.assertEqual(dispatch.count("required:"), 1)
+        self.assertNotIn("start_time:", dispatch)
+        self.assertNotIn("end_time:", dispatch)
 
     def test_hardsub_ocr_uses_onnx_runtime_and_checks_imports(self):
-        self.assertIn("Install ONNX OCR for enabled hard-subtitle fallback", self.text)
+        self.assertIn("Install ONNX OCR fallback", self.text)
         self.assertIn('"rapidocr_onnxruntime"', self.text)
         self.assertIn("from rapidocr_onnxruntime import RapidOCR", self.text)
         self.assertIn("RapidOCR ONNX import check: OK", self.text)
