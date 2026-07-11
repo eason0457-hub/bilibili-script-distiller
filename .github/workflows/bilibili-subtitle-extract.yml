@@ -114,17 +114,26 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install PaddleOCR for enabled hard-subtitle fallback
-        if: github.event.inputs.enable_hardsub_ocr == 'true'
+        if: ${{ inputs.enable_hardsub_ocr }}
         shell: bash
         run: |
           python -m pip install --upgrade pip
-          python -m pip install paddlepaddle paddleocr
+          python -m pip install "paddlepaddle==2.6.2" "paddleocr==2.7.3"
 
       - name: Extract existing subtitles
         id: extract
         shell: bash
         env:
           VIDEO_URLS: ${{ github.event.inputs.video_urls }}
+          ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}
+          OCR_START_TIME: ${{ inputs.start_time }}
+          OCR_END_TIME: ${{ inputs.end_time }}
+          OCR_SUBTITLE_POSITION: ${{ inputs.subtitle_position }}
+          OCR_LANGUAGE: ${{ inputs.ocr_language }}
+          OCR_CROP_TOP: ${{ inputs.subtitle_crop_top }}
+          OCR_CROP_BOTTOM: ${{ inputs.subtitle_crop_bottom }}
+          OCR_CROP_LEFT: ${{ inputs.subtitle_crop_left }}
+          OCR_CROP_RIGHT: ${{ inputs.subtitle_crop_right }}
         run: |
           set -uo pipefail
           if ! command -v ffmpeg >/dev/null 2>&1; then
@@ -142,22 +151,24 @@ jobs:
           fi
           set +e
           OCR_ARGS=()
-          if [[ "${{ github.event.inputs.enable_hardsub_ocr }}" == "true" ]]; then
+          case "${ENABLE_HARDSUB_OCR,,}" in
+            true|1|yes|on)
             OCR_ARGS+=(--enable-hardsub-ocr)
-          fi
+            ;;
+          esac
           for pair in \
-            "--start-time|${{ github.event.inputs.start_time }}" \
-            "--end-time|${{ github.event.inputs.end_time }}" \
-            "--subtitle-crop-top|${{ github.event.inputs.subtitle_crop_top }}" \
-            "--subtitle-crop-bottom|${{ github.event.inputs.subtitle_crop_bottom }}" \
-            "--subtitle-crop-left|${{ github.event.inputs.subtitle_crop_left }}" \
-            "--subtitle-crop-right|${{ github.event.inputs.subtitle_crop_right }}"; do
+            "--start-time|$OCR_START_TIME" \
+            "--end-time|$OCR_END_TIME" \
+            "--subtitle-crop-top|$OCR_CROP_TOP" \
+            "--subtitle-crop-bottom|$OCR_CROP_BOTTOM" \
+            "--subtitle-crop-left|$OCR_CROP_LEFT" \
+            "--subtitle-crop-right|$OCR_CROP_RIGHT"; do
             flag=${pair%%|*}; value=${pair#*|}
             if [[ -n "$value" ]]; then OCR_ARGS+=("$flag" "$value"); fi
           done
           python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json" \
-            --subtitle-position "${{ github.event.inputs.subtitle_position }}" \
-            --ocr-language "${{ github.event.inputs.ocr_language }}" "${OCR_ARGS[@]}"
+            --subtitle-position "$OCR_SUBTITLE_POSITION" \
+            --ocr-language "$OCR_LANGUAGE" "${OCR_ARGS[@]}"
           code=$?
           set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
