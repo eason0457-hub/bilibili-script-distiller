@@ -48,6 +48,8 @@ class WorkflowFFmpegTests(unittest.TestCase):
         self.assertIn("enable_hardsub_ocr:", self.text)
         self.assertIn("Install PaddleOCR for enabled hard-subtitle fallback", self.text)
         self.assertIn("--enable-hardsub-ocr", self.text)
+        self.assertIn("ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}", self.text)
+        self.assertIn('case "${ENABLE_HARDSUB_OCR,,}" in', self.text)
 
 
 if __name__ == "__main__":
