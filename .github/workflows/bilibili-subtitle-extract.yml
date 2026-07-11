@@ -14,7 +14,7 @@ permissions:
 jobs:
   extract:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     env:
       ARTIFACT_NAME: bilibili-subtitle-results-${{ github.run_id }}
       VIDEO_URLS: ${{ inputs.video_urls }}
