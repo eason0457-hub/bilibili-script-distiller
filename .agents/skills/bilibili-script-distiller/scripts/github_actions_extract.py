@@ -12,10 +12,17 @@ import re
 import shlex
 import shutil
 import subprocess
+import sys
 import tempfile
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from hardsub_ocr import run_hardsub_ocr
 
 BV_RE = re.compile(r"\b(BV[0-9A-Za-z]{10})\b")
 AV_RE = re.compile(r"\b(?:av|AV)(\d+)\b")
@@ -211,9 +218,10 @@ def extract_title(log: str) -> str | None:
     return None
 
 
-def run_one(raw_input: str, output_root: Path, *, command_runner=subprocess.run) -> dict:
+def run_one(raw_input: str, output_root: Path, *, hardsub: dict | None = None, command_runner=subprocess.run) -> dict:
     status = {
         "input": raw_input,
+        "source_type": "subtitle_track",
         "bvid": None,
         "title": None,
         "success": False,
@@ -271,6 +279,33 @@ def run_one(raw_input: str, output_root: Path, *, command_runner=subprocess.run)
                 return status | {"result_dir": str(result_dir)}
             if not ranked:
                 status["failure_reason"] = "BBDown completed, but no subtitle file was produced."
+                if hardsub and hardsub["enabled"]:
+                    print("No subtitle track found; starting enabled hard-subtitle OCR fallback", flush=True)
+                    ocr_status = run_hardsub_ocr(
+                        bvid=status["bvid"] or safe_name(resolved_id or fallback),
+                        title=status["title"],
+                        url=final_url,
+                        output_dir=result_dir,
+                        sample_fps=hardsub["sample_fps"],
+                        position=hardsub["position"],
+                        language=hardsub["language"],
+                        start_time=hardsub["start_time"],
+                        end_time=hardsub["end_time"],
+                        crop_overrides=hardsub["crop_overrides"],
+                    )
+                    if ocr_status["success"]:
+                        status["source_type"] = "hardcoded_subtitle_ocr"
+                        status["success"] = True
+                        status["failure_reason"] = None
+                        status["subtitle_files_found"] = ["subtitle-ocr.srt"]
+                        status["selected_subtitle_file"] = "subtitle-ocr.srt"
+                        status["subtitle_language"] = hardsub["language"]
+                    else:
+                        status["source_type"] = "hardcoded_subtitle_ocr"
+                        status["failure_reason"] = ocr_status["failure_reason"] or status["failure_reason"]
+                else:
+                    status["source_type"] = "no_subtitle_track_user_not_enabled"
+                    print("No subtitle track found; hard-subtitle OCR not enabled", flush=True)
                 return status | {"result_dir": str(result_dir)}
             score, selected = ranked[0]
             print(f"Selected subtitle file: {selected.name}", flush=True)
@@ -295,6 +330,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--summary-json", type=Path, required=True)
+    parser.add_argument("--enable-hardsub-ocr", action="store_true")
+    parser.add_argument("--start-time", type=float)
+    parser.add_argument("--end-time", type=float)
+    parser.add_argument("--subtitle-position", choices=["bottom", "top", "custom"], default="bottom")
+    parser.add_argument("--ocr-language", default="ch")
+    parser.add_argument("--sample-fps", type=float, default=2.0)
+    parser.add_argument("--subtitle-crop-top", type=float)
+    parser.add_argument("--subtitle-crop-bottom", type=float)
+    parser.add_argument("--subtitle-crop-left", type=float)
+    parser.add_argument("--subtitle-crop-right", type=float)
     args = parser.parse_args()
     raw_input = os.environ.get("VIDEO_URLS", "")
     urls = parse_inputs(raw_input)
@@ -316,10 +361,24 @@ def main() -> int:
         )
         return 2
     args.output_root.mkdir(parents=True, exist_ok=True)
+    hardsub = {
+        "enabled": args.enable_hardsub_ocr,
+        "start_time": args.start_time,
+        "end_time": args.end_time,
+        "position": args.subtitle_position,
+        "language": args.ocr_language,
+        "sample_fps": min(4.0, max(2.0, args.sample_fps)),
+        "crop_overrides": {
+            "top": args.subtitle_crop_top,
+            "bottom": args.subtitle_crop_bottom,
+            "left": args.subtitle_crop_left,
+            "right": args.subtitle_crop_right,
+        },
+    }
     items = []
     for index, value in enumerate(urls, start=1):
         print(f"Processing {index}/{len(urls)}: {value}", flush=True)
-        item = run_one(value, args.output_root)
+        item = run_one(value, args.output_root, hardsub=hardsub)
         items.append(item)
         if item["success"]:
             print(f"Success {index}: {item.get('bvid') or value}", flush=True)
@@ -340,6 +399,7 @@ def main() -> int:
                 "success": item["success"],
                 "video_id": item["bvid"],
                 "failure_reason": item["failure_reason"],
+                "source_type": item["source_type"],
                 "result_dir": item["result_dir"],
             }
             for item in items
