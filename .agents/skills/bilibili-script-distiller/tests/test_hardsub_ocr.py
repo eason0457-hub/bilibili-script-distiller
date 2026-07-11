@@ -25,15 +25,36 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertEqual(segments[0]["start"], 0.0)
         self.assertEqual(segments[0]["end"], 1.0)
 
+    def test_same_text_from_different_speakers_does_not_merge(self):
+        segments = MODULE.merge_samples(
+            [
+                {"time": 0.0, "speaker": "爱音", "text": "嗯", "confidence": 0.9},
+                {"time": 0.5, "speaker": "旁白", "text": "嗯", "confidence": 0.9},
+            ],
+            0.5,
+        )
+        self.assertEqual(len(segments), 2)
+
+    def test_short_high_confidence_upper_tag_is_a_speaker(self):
+        self.assertEqual(MODULE.normalize_speaker_label("【千早爱音】", 0.95), "千早爱音")
+        self.assertIsNone(MODULE.normalize_speaker_label("一段很长的普通旁白文字不应当当作名字", 0.99))
+        self.assertIsNone(MODULE.normalize_speaker_label("爱音", 0.5))
+
     def test_srt_and_raw_markdown_preserve_text_and_timestamps(self):
-        segments = [{"start": 1.0, "end": 2.5, "text": "啊，等等……", "confidence": 0.9}]
+        segments = [{
+            "start": 1.0, "end": 2.5, "speaker": "爱音",
+            "text": "啊，等等……", "confidence": 0.9,
+        }]
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp) / "subtitle-ocr.srt"
             MODULE.write_srt(segments, output)
             srt = output.read_text(encoding="utf-8")
         self.assertIn("00:00:01,000 --> 00:00:02,500", srt)
+        self.assertIn("【爱音】", srt)
         self.assertIn("啊，等等……", srt)
-        self.assertIn("OCR confidence: 0.900", MODULE.srt_to_markdown(segments))
+        raw = MODULE.srt_to_markdown(segments)
+        self.assertIn("爱音：", raw)
+        self.assertIn("OCR confidence: 0.900", raw)
 
     def test_default_bottom_crop_is_valid(self):
         crop = MODULE.crop_for("bottom", {"top": None, "bottom": None, "left": None, "right": None})
@@ -69,6 +90,7 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertIn("frame_count", saved)
         self.assertIn("ocr_call_count", saved)
         self.assertIn("ocr_reused_frame_count", saved)
+        self.assertIn("speaker_ocr_call_count", saved)
 
 
 if __name__ == "__main__":
