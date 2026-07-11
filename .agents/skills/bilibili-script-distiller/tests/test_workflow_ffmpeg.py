@@ -72,6 +72,11 @@ class WorkflowFFmpegTests(unittest.TestCase):
         self.assertIn("from rapidocr_onnxruntime import RapidOCR", self.text)
         self.assertIn("RapidOCR ONNX import check: OK", self.text)
 
+    def test_speaker_debug_images_are_artifact_only(self):
+        self.assertIn("Upload OCR speaker debug Artifact", self.text)
+        self.assertIn("${{ runner.temp }}/bilibili-ocr-debug/", self.text)
+        self.assertNotIn("git add -- $RUNNER_TEMP", self.text)
+
 
 if __name__ == "__main__":
     unittest.main()
