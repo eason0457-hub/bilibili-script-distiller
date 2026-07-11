@@ -1,0 +1,42 @@
+{
+  "characters": [
+    {
+      "canonical": "千早爱音",
+      "aliases": ["千早爱音", "爱音", "干早爱音"]
+    },
+    {
+      "canonical": "灯",
+      "aliases": ["高松灯", "灯"]
+    },
+    {
+      "canonical": "素世",
+      "aliases": ["长崎素世", "素世"]
+    },
+    {
+      "canonical": "立希",
+      "aliases": ["椎名立希", "立希", "立希I"]
+    },
+    {
+      "canonical": "乐奈",
+      "aliases": ["要乐奈", "乐奈"]
+    },
+    {
+      "canonical": "祥子",
+      "aliases": ["丰川祥子", "祥子", "样子"]
+    },
+    {
+      "canonical": "睦",
+      "aliases": ["若叶睦", "睦"]
+    }
+  ],
+  "blocked_terms": [
+    "bilibili",
+    "哔哩哔哩",
+    "UP主",
+    "弹幕",
+    "关注",
+    "点赞",
+    "投币",
+    "收藏"
+  ]
+}
