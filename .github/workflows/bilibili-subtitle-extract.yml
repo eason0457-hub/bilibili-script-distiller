@@ -13,11 +13,11 @@ on:
         default: false
         type: boolean
       start_time:
-        description: "Optional OCR start time in seconds"
+        description: "Optional OCR start time (seconds, MM:SS, or HH:MM:SS)"
         required: false
         type: string
       end_time:
-        description: "Optional OCR end time in seconds"
+        description: "Optional OCR end time (seconds, MM:SS, or HH:MM:SS)"
         required: false
         type: string
       subtitle_position:
@@ -57,6 +57,8 @@ jobs:
     timeout-minutes: 30
     env:
       ARTIFACT_NAME: bilibili-subtitle-results-${{ github.run_id }}
+      VIDEO_URLS: ${{ inputs.video_urls }}
+      ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}
 
     steps:
       - name: Check out repository
@@ -68,6 +70,19 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Validate workflow inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          raw="${VIDEO_URLS:-}"
+          compact="$(printf '%s' "$raw" | tr -d '[:space:]')"
+          echo "VIDEO_URLS characters: ${#raw}"
+          echo "Requested hard-subtitle OCR: ${ENABLE_HARDSUB_OCR:-false}"
+          if [[ -z "$compact" ]]; then
+            echo "::error::video_urls is empty. Paste at least one Bilibili URL, BV ID, or AV ID."
+            exit 2
+          fi
 
       - name: Install FFmpeg
         shell: bash
@@ -124,8 +139,6 @@ jobs:
         id: extract
         shell: bash
         env:
-          VIDEO_URLS: ${{ github.event.inputs.video_urls }}
-          ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}
           OCR_START_TIME: ${{ inputs.start_time }}
           OCR_END_TIME: ${{ inputs.end_time }}
           OCR_SUBTITLE_POSITION: ${{ inputs.subtitle_position }}
