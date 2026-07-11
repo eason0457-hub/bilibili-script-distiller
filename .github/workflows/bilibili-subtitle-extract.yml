@@ -132,8 +132,28 @@ jobs:
         if: ${{ inputs.enable_hardsub_ocr }}
         shell: bash
         run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
-          python -m pip install "paddlepaddle==2.6.2" "paddleocr==2.7.3"
+          python -m pip install \
+            "numpy==1.26.4" \
+            "opencv-python==4.6.0.66" \
+            "opencv-contrib-python==4.6.0.66" \
+            "paddlepaddle==2.6.2" \
+            "paddleocr==2.7.3"
+          # Guard against a transitive dependency upgrading NumPy to the
+          # incompatible 2.x ABI after Paddle/OpenCV wheels are installed.
+          python -m pip install --force-reinstall --no-deps "numpy==1.26.4"
+          python - <<'PY'
+          import cv2
+          import numpy
+          import paddle
+          from paddleocr import PaddleOCR
+
+          print(f"NumPy version: {numpy.__version__}")
+          print(f"OpenCV version: {cv2.__version__}")
+          print(f"Paddle version: {paddle.__version__}")
+          print("PaddleOCR import check: OK")
+          PY
 
       - name: Extract existing subtitles
         id: extract
