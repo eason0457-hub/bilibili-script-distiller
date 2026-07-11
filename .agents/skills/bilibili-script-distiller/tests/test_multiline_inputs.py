@@ -1,6 +1,12 @@
 import importlib.util
+import io
+import os
+import sys
+import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 
 SCRIPT = Path(__file__).parents[1] / "scripts" / "github_actions_extract.py"
@@ -18,6 +24,41 @@ class MultilineInputTests(unittest.TestCase):
             "https://b23.tv/example3\r\n"
         )
         self.assertEqual(len(MODULE.parse_inputs(raw)), 3)
+
+    def test_cli_reports_three_inputs_before_network_access(self):
+        raw = (
+            "https://b23.tv/example1\n"
+            "https://b23.tv/example2\n"
+            "https://b23.tv/example3\n"
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            argv = [
+                str(SCRIPT),
+                "--output-root",
+                str(Path(temp) / "output"),
+                "--summary-json",
+                str(Path(temp) / "summary.json"),
+            ]
+            fake_result = {
+                "original_input": "mock",
+                "success": False,
+                "video_id": None,
+                "failure_reason": "mocked; no network request",
+                "result_dir": str(Path(temp) / "output"),
+            }
+            output = io.StringIO()
+            with (
+                mock.patch.dict(os.environ, {"VIDEO_URLS": raw}),
+                mock.patch.object(sys, "argv", argv),
+                mock.patch.object(MODULE, "run_one", return_value=fake_result),
+                redirect_stdout(output),
+            ):
+                MODULE.main()
+        log = output.getvalue()
+        self.assertIn("Parsed inputs: 3", log)
+        first_processing = log.find("Processing 1/3")
+        parsed = log.find("Parsed inputs: 3")
+        self.assertGreater(first_processing, parsed)
 
     def test_numbered_links_are_normalized(self):
         raw = (
