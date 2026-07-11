@@ -77,12 +77,17 @@ class MultilineInputTests(unittest.TestCase):
 
     def test_validation_is_per_item(self):
         values = MODULE.parse_inputs(
-            "BV1xx411c7mD\nnot a url\nAV170001\nhttps://b23.tv/example1"
+            "BV1uknVz9EeN\nnot a url\nAV170001\nhttps://b23.tv/example1"
         )
         self.assertEqual(
             [MODULE.is_supported_input(value) for value in values],
             [True, False, True, True],
         )
+
+    def test_confirmed_bv_id_is_parsed(self):
+        final_url, video_id = MODULE.resolve_input("BV1uknVz9EeN")
+        self.assertEqual(video_id, "BV1uknVz9EeN")
+        self.assertEqual(final_url, "https://www.bilibili.com/video/BV1uknVz9EeN/")
 
 
 if __name__ == "__main__":
