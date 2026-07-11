@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import difflib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -84,7 +85,20 @@ def crop_for(position: str, overrides: dict[str, float | None]) -> dict[str, flo
     return region
 
 
-def extract_ocr_lines(image: Path, ocr) -> tuple[str, float]:
+def paddleocr_cpu_options(language: str) -> dict:
+    """Use conservative CPU settings that work on heterogeneous CI runners."""
+    return {
+        "use_angle_cls": False,
+        "lang": language,
+        "use_gpu": False,
+        "enable_mkldnn": False,
+        "ir_optim": False,
+        "cpu_threads": 1,
+        "show_log": False,
+    }
+
+
+def extract_ocr_lines(image: Path, ocr) -> tuple[str, float, int]:
     result = ocr.ocr(str(image), cls=False)
     lines = result[0] if result else []
     text_parts, confidences = [], []
@@ -128,6 +142,8 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
     try:
         region = crop_for(position, crop_overrides)
         status["crop_region"] = region
+        os.environ.setdefault("OMP_NUM_THREADS", "1")
+        os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
         from paddleocr import PaddleOCR
         with tempfile.TemporaryDirectory(prefix="bili-hardsub-") as temp_name:
             temp = Path(temp_name)
@@ -168,7 +184,13 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             print(f"OCR extracted frames: {len(images)}", flush=True)
             if not images:
                 raise RuntimeError("FFmpeg completed, but produced no subtitle-region frames")
-            ocr = PaddleOCR(use_angle_cls=False, lang=language)
+            ocr_options = paddleocr_cpu_options(language)
+            print(
+                "PaddleOCR CPU config: "
+                "use_gpu=False, enable_mkldnn=False, ir_optim=False, cpu_threads=1",
+                flush=True,
+            )
+            ocr = PaddleOCR(**ocr_options)
             offset = start_time or 0.0
             samples = []
             for index, image in enumerate(images):
