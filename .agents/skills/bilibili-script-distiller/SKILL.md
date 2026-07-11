@@ -19,6 +19,7 @@ Build evidence-based visual-novel writing rules from existing Bilibili subtitles
 - Read `references/distillation-rules.md` before cleaning or analyzing a single source.
 - Read `references/source-card-template.md` when creating `source-card.md`.
 - Read `references/multi-video-merge-rules.md` only when the user asks to merge/update a collection or supplies multiple similar videos and explicitly requests a merge.
+- Read `references/character-name-dictionary.json` when hard-subtitle OCR must identify or normalize speaker labels. Extend aliases instead of hard-coding guessed names in the script.
 
 ## Use the two-stage architecture
 
@@ -34,11 +35,11 @@ Separate acquisition from distillation while keeping both stages inside this one
    - Supply one input per line in `video_urls`.
    - Wait for the workflow to commit only `references/bilibili/` results.
    - If the workflow cannot push, use the named Artifact reported in the run summary and place its `references/bilibili/` contents into the repository.
-4. When BBDown completes but no subtitle file exists, treat it as “no subtitle track”, not as proof that the video has no visible subtitles. Only when the user enables `enable_hardsub_ocr` may the Action download a low-quality temporary video, OCR the configured subtitle crop, then write `subtitle-ocr.srt`, `subtitle-raw.md`, and `ocr-status.json`.
+4. When BBDown completes but no subtitle file exists, treat it as “no subtitle track”, not as proof that the video has no visible subtitles. The Action may automatically download a low-quality temporary video, OCR the configured dialogue/name crops, then write `subtitle-ocr.srt`, `subtitle-raw.md`, and `ocr-status.json`.
 5. Do not claim extraction is complete until `subtitle-raw.md` and either a successful `extraction-status.json` or `ocr-status.json` are present in the repository.
 5. When the Action result is committed, pull/refresh the current branch before Stage 2. When it is delivered as an Artifact, confirm that its files are present before Stage 2.
 
-The Action resolves b23.tv links externally, processes inputs independently, ranks Chinese human subtitles before Chinese platform/AI subtitles and Japanese subtitles, records all discovered tracks, and continues after individual failures. When hard-subtitle OCR is explicitly enabled, it downloads a temporary 360P-preferred/480P-fallback video, crops the subtitle region, samples 2–4 frames per second, OCRs it with PaddleOCR, merges near-duplicate frames, then deletes the temporary video and frames. It saves only `subtitle-ocr.srt`, `subtitle-raw.md`, and `ocr-status.json`.
+The Action resolves b23.tv links externally, processes inputs independently, ranks Chinese human subtitles before Chinese platform/AI subtitles and Japanese subtitles, records all discovered tracks, and continues after individual failures. Hard-subtitle OCR downloads a temporary 360P-preferred/480P-fallback video, samples one frame per second, recognizes the dialogue body separately from left/center speaker tags with RapidOCR ONNX, normalizes reliable names through the editable dictionary, and treats missing labels as narration. It merges near-duplicate frames and deletes temporary video/frames. Up to 20 speaker-change debug bundles are uploaded as an Artifact and are never committed.
 
 ### Stage 2: distill available subtitles
 
