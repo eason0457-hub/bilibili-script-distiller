@@ -55,6 +55,7 @@ class MultilineInputTests(unittest.TestCase):
             ]
             fake_result = {
                 "input": "mock",
+                "source_type": "subtitle_track",
                 "success": False,
                 "bvid": None,
                 "failure_reason": "mocked; no network request",
