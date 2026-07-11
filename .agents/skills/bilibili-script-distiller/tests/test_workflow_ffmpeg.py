@@ -44,6 +44,11 @@ class WorkflowFFmpegTests(unittest.TestCase):
             "::error::FFmpeg is not installed or not available in PATH", self.text
         )
 
+    def test_hardsub_ocr_is_opt_in(self):
+        self.assertIn("enable_hardsub_ocr:", self.text)
+        self.assertIn("Install PaddleOCR for enabled hard-subtitle fallback", self.text)
+        self.assertIn("--enable-hardsub-ocr", self.text)
+
 
 if __name__ == "__main__":
     unittest.main()
