@@ -69,7 +69,7 @@ jobs:
         id: extract
         shell: bash
         env:
-          VIDEO_URLS: ${{ inputs.video_urls }}
+          VIDEO_URLS: ${{ github.event.inputs.video_urls }}
         run: |
           set -uo pipefail
           SCRIPT=".agents/skills/bilibili-script-distiller/scripts/github_actions_extract.py"
@@ -81,8 +81,10 @@ jobs:
             echo "Extractor script not found at $SCRIPT" >&2
             exit 1
           fi
+          set +e
           python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json"
           code=$?
+          set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
 
