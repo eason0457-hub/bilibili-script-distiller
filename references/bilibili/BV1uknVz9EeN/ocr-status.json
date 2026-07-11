@@ -1,0 +1,31 @@
+{
+  "bvid": "BV1uknVz9EeN",
+  "video_title": "千早爱音一睡不起#1[完]",
+  "source_type": "hardcoded_subtitle_ocr",
+  "downloaded_quality": "360P preferred, 480P fallback",
+  "processed_time_range": {
+    "start_time": 0.0,
+    "end_time": 180.0
+  },
+  "crop_region": {
+    "top": 0.7,
+    "bottom": 0.98,
+    "left": 0.0,
+    "right": 1.0
+  },
+  "sample_fps": 2.0,
+  "ocr_language": "ch",
+  "average_confidence": 0.0,
+  "low_confidence_segments": [],
+  "success": false,
+  "failure_reason": "ImportError: numpy.core.multiarray failed to import",
+  "diagnostics": {
+    "video_path": null,
+    "video_resolution": null,
+    "frame_count": 0,
+    "ocr_call_count": 0,
+    "raw_ocr_result_count": 0,
+    "filtered_result_count": 0
+  },
+  "processed_at": "2026-07-11T12:50:08+00:00"
+}
