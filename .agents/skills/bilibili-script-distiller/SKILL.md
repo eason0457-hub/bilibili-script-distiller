@@ -12,7 +12,7 @@ Build evidence-based visual-novel writing rules from existing Bilibili subtitles
 - Accept full `bilibili.com/video/...` links, `b23.tv` short links, BV IDs, and AV/av IDs.
 - Accept uploaded SRT, ASS, VTT, TXT, MD, and DOCX subtitle or transcript files.
 - Prefer inputs in this order: uploaded subtitles; downloadable subtitles exposed by Bilibili/BBDown; audio or video only after explicit user permission.
-- Do not download full video, install Whisper, run speech recognition, search alternate subtitle sources, install WebGAL, or visit unrelated pages by default.
+- Do not download video, install Whisper, run speech recognition, search alternate subtitle sources, install WebGAL, or visit unrelated pages by default. A low-quality temporary video may be downloaded only when the user explicitly enables `enable_hardsub_ocr` and BBDown completed with zero subtitle tracks.
 
 ## Load references
 
@@ -34,10 +34,11 @@ Separate acquisition from distillation while keeping both stages inside this one
    - Supply one input per line in `video_urls`.
    - Wait for the workflow to commit only `references/bilibili/` results.
    - If the workflow cannot push, use the named Artifact reported in the run summary and place its `references/bilibili/` contents into the repository.
-4. Do not claim extraction is complete until `subtitle-raw.md` and `extraction-status.json` are present in the repository.
+4. When BBDown completes but no subtitle file exists, treat it as “no subtitle track”, not as proof that the video has no visible subtitles. Only when the user enables `enable_hardsub_ocr` may the Action download a low-quality temporary video, OCR the configured subtitle crop, then write `subtitle-ocr.srt`, `subtitle-raw.md`, and `ocr-status.json`.
+5. Do not claim extraction is complete until `subtitle-raw.md` and either a successful `extraction-status.json` or `ocr-status.json` are present in the repository.
 5. When the Action result is committed, pull/refresh the current branch before Stage 2. When it is delivered as an Artifact, confirm that its files are present before Stage 2.
 
-The Action resolves b23.tv links externally, processes inputs independently, downloads subtitle tracks only, ranks Chinese human subtitles before Chinese platform/AI subtitles and Japanese subtitles, records all discovered tracks, and continues after individual failures.
+The Action resolves b23.tv links externally, processes inputs independently, ranks Chinese human subtitles before Chinese platform/AI subtitles and Japanese subtitles, records all discovered tracks, and continues after individual failures. When hard-subtitle OCR is explicitly enabled, it downloads a temporary 360P-preferred/480P-fallback video, crops the subtitle region, samples 2–4 frames per second, OCRs it with PaddleOCR, merges near-duplicate frames, then deletes the temporary video and frames. It saves only `subtitle-ocr.srt`, `subtitle-raw.md`, and `ocr-status.json`.
 
 ### Stage 2: distill available subtitles
 
@@ -56,8 +57,7 @@ command -v BBDown
 Extract existing subtitles to a temporary directory:
 
 ```bash
-python3 "$SKILL_ROOT/scripts/github_actions_extract.py" \
-  --inputs "<URL_OR_ID>" \
+VIDEO_URLS="<URL_OR_ID>" python3 "$SKILL_ROOT/scripts/github_actions_extract.py" \
   --output-root "$PROJECT_ROOT/references/bilibili" \
   --summary-json "<TEMP_DIR>/extraction-summary.json"
 ```
