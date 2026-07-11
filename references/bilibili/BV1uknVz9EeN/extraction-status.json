@@ -1,0 +1,12 @@
+{
+  "original_input": "BV1uknVz9EeN",
+  "final_video_url": "https://www.bilibili.com/video/BV1uknVz9EeN/",
+  "video_id": "BV1uknVz9EeN",
+  "video_title": null,
+  "success": false,
+  "subtitle_track_type": null,
+  "subtitle_language": null,
+  "available_tracks": [],
+  "failure_reason": "BBDown version 1.6.3, Bilibili Downloader.\n遇到问题请首先到以下地址查阅有无相关信息：\nhttps://github.com/nilaoda/BBDown/issues\n\n找不到可执行的ffmpeg文件\n请尝试升级到最新版本后重试!",
+  "processed_at": "2026-07-11T08:41:42+00:00"
+}
