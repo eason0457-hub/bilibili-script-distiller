@@ -75,6 +75,29 @@ class MultilineInputTests(unittest.TestCase):
         parsed = log.find("Parsed inputs: 3")
         self.assertGreater(first_processing, parsed)
 
+    def test_empty_environment_input_reports_the_specific_error(self):
+        with tempfile.TemporaryDirectory() as temp:
+            argv = [
+                str(SCRIPT),
+                "--output-root",
+                str(Path(temp) / "output"),
+                "--summary-json",
+                str(Path(temp) / "summary.json"),
+            ]
+            output = io.StringIO()
+            with (
+                mock.patch.dict(os.environ, {"VIDEO_URLS": "\r\n  \n"}),
+                mock.patch.object(sys, "argv", argv),
+                redirect_stdout(output),
+            ):
+                self.assertEqual(MODULE.main(), 2)
+        self.assertIn("::error::VIDEO_URLS is empty", output.getvalue())
+
+    def test_time_input_accepts_seconds_and_clock_format(self):
+        self.assertEqual(MODULE.parse_time_value("180"), 180.0)
+        self.assertEqual(MODULE.parse_time_value("03:00"), 180.0)
+        self.assertEqual(MODULE.parse_time_value("00:03:00"), 180.0)
+
     def test_numbered_links_are_normalized(self):
         raw = (
             "1. https://b23.tv/example1\n"
