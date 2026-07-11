@@ -40,13 +40,11 @@ class HardSubtitleOcrTests(unittest.TestCase):
         self.assertEqual(crop["top"], 0.70)
         self.assertEqual(crop["bottom"], 0.98)
 
-    def test_ci_cpu_config_disables_unsafe_inference_optimizations(self):
-        options = MODULE.paddleocr_cpu_options("ch")
-        self.assertFalse(options["use_gpu"])
-        self.assertFalse(options["enable_mkldnn"])
-        self.assertFalse(options["ir_optim"])
-        self.assertEqual(options["cpu_threads"], 1)
-        self.assertEqual(options["lang"], "ch")
+    def test_ocr_backend_uses_onnx_runtime_not_paddle_native_inference(self):
+        source = SCRIPT.read_text(encoding="utf-8")
+        self.assertIn("rapidocr_onnxruntime", source)
+        self.assertIn("RapidOCR", source)
+        self.assertNotIn("from paddleocr import PaddleOCR", source)
 
     def test_ocr_status_has_required_diagnostics(self):
         with tempfile.TemporaryDirectory() as temp:
