@@ -1,6 +1,6 @@
 ---
 name: bilibili-script-distiller
-description: Acquire existing subtitles for Bilibili full links, b23.tv short links, BV IDs, or AV IDs either directly when network access works or through the repository's GitHub Actions extractor when it does not; ingest uploaded SRT, ASS, VTT, TXT, MD, and DOCX files; preserve natural spoken irregularities; analyze character voice, relationship-conditioned dialogue, scene rhythm, subtle action/description, and anti-AI mechanisms; produce per-video source cards and executable writing rules; and merge multiple completed videos into an incremental script-writing distillation collection. Use when the user sends Bilibili links or subtitle/text files for dialogue analysis, asks to extract or distill one or more videos into visual-novel writing rules, asks to continue after Action-produced subtitle files arrive, or asks to merge/update a multi-video distillation collection.
+description: Acquire existing subtitles for Bilibili full links, b23.tv short links, BV IDs, or AV IDs either directly when network access works or through the repository's GitHub Actions extractor when it does not; ingest uploaded SRT, ASS, VTT, TXT, MD, and DOCX files; preserve natural spoken irregularities; analyze character voice, relationship-conditioned dialogue, scene rhythm, subtle action/description, and anti-AI mechanisms; produce per-video source cards, speaker-attributed evidence, deterministic keyword inventories, executable writing rules, and cross-video character voice profiles. Use when the user sends Bilibili links or subtitle/text files for dialogue analysis, asks to extract or distill one or more videos into visual-novel writing rules, asks to continue after Action-produced subtitle files arrive, asks to build or verify character voice/personality evidence, or asks to merge/update a multi-video distillation collection.
 ---
 
 # Bilibili Script Distiller
@@ -20,6 +20,7 @@ Build evidence-based visual-novel writing rules from existing Bilibili subtitles
 - Read `references/source-card-template.md` when creating `source-card.md`.
 - Read `references/multi-video-merge-rules.md` only when the user asks to merge/update a collection or supplies multiple similar videos and explicitly requests a merge.
 - Read `references/character-name-dictionary.json` when hard-subtitle OCR must identify or normalize speaker labels. Extend aliases instead of hard-coding guessed names in the script.
+- Read `PROJECT_ROOT/references/characters/character-registry.yaml` before speaker attribution or character-level aggregation. It is the editable canonical-name, alias, nickname, and OCR-confusion source.
 
 ## Use the two-stage architecture
 
@@ -81,6 +82,16 @@ Use exit code `0` when at least one input succeeds and `2` when the batch produc
 8. Analyze each major speaker separately. Use `说话者A`, `说话者B`, and `未知说话者` when identity is not evidenced. Never guess identities.
 9. Convert observations into executable rules with conditions, risks, evidence timestamps, and star confidence. Do not write a generic summary or long plot recap.
 10. Do not update the multi-video collection for a single link unless the user explicitly requests a merge/update.
+
+### Stage 2B: attribute speakers and aggregate character evidence
+
+Run `SKILL_ROOT/scripts/character_evidence_pipeline.py --project-root PROJECT_ROOT` after successful source subtitles are available when the user asks for character-level evidence or when this pipeline has been requested for a batch.
+
+1. Scan only successful, non-`failed-` source directories with a nonempty `subtitle-raw.md` or `subtitle-ocr.srt`.
+2. Generate `subtitle-speaker-tagged.md`, `character-observations.md`, `speech-patterns.md`, `keyword-inventory.raw.csv`, and `keyword-lexicon.md` separately for each source.
+3. Treat a direct reliable name label as `high`; a clear self-identification as `medium`; otherwise use `UNKNOWN` with `low` and `无法判断`. Never assign a speaker from plot familiarity, a name merely being addressed, or an OCR/watermark fragment.
+4. Generate the registry-backed `references/characters/<canonical-name>/` profiles only from the per-video structured speaker evidence, not by rereading all raw subtitles. When reliable evidence is sparse, write only uncertainty and required manual checks; do not manufacture personality or stable-voice conclusions.
+5. Generate the raw keyword CSV with the deterministic script before interpreting it. Do not present frequency alone as a catchphrase or a personality fact.
 
 ## Process a batch
 
