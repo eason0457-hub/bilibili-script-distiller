@@ -1,422 +1,258 @@
 #!/usr/bin/env python3
-"""Build conservative speaker evidence and character-level writing artifacts.
+"""Generate conservative speaker evidence and character writing references.
 
-This tool never infers a speaker from plot familiarity alone.  It only accepts a
-known source label or an explicit self-identification; all other dialogue remains
-UNKNOWN so later aggregation cannot turn OCR noise into character facts.
+Named speakers require an exact registered label or explicit self-introduction.
+OCR error names, addressee names and plot familiarity never become character facts.
+A video is eligible when it has a real, non-empty dialogue subtitle, even if a stale
+status JSON is missing or false. Existing manual tagged files are preserved unless
+the source subtitle is newer or --force-rebuild-tagged is supplied.
 """
-
 from __future__ import annotations
 
-import argparse
-import csv
-import json
-import re
-import statistics
+import argparse, csv, json, re, statistics
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable
-
 import yaml
 
-
 UNKNOWN = "UNKNOWN"
-BLOCKED_LABELS = {"bilibili", "biibili", "bilbili", "lilibili", "liibili", "旁白", "未知说话者"}
-NOISE_RE = re.compile(r"^(?:\[无法识别\]|[\d+*#_\-.,，。！？!?\sA-Za-z]{1,8})$")
-ENTRY_RE = re.compile(
-    r"^\[(?P<start>[^\]]+?)\s*-->\s*(?P<end>[^\]]+?)\]\s*\n(?P<body>.*?)(?=^\[[^\]]+?\s*-->|\Z)",
-    re.M | re.S,
-)
-SELF_ID_RE = re.compile(r"(?:我(?:是|叫(?:做)?|名叫))(?P<name>[\u3400-\u9fffA-Za-z]+)")
-PATTERN_TERMS = ("不对", "等一下", "就是", "总之", "看来", "我说", "不是", "好吧", "没事", "最后")
-FILLERS = ("啊", "嗯", "呃", "诶", "欸", "那个", "就是")
+BLOCKED = {"bilibili", "biibili", "bilbili", "lilibili", "liibili", "旁白", "未知说话者", "unknown", "tez", "灵", "正", "二正ez"}
+NON_DIALOGUE = re.compile(r"^[\s♪♫♬🎵🎶【】\[\]（）()<>—–\-_.:：,，]*(?:音乐|纯音乐|music|bgm|soundtrack|音效|无对白)[\s♪♫♬🎵🎶【】\[\]（）()<>—–\-_.:：,，]*$", re.I)
+ENTRY = re.compile(r"^\[(?P<s>[^\]]+?)\s*-->\s*(?P<e>[^\]]+?)\]\s*\n(?P<b>.*?)(?=^\[[^\]]+?\s*-->|\Z)", re.M | re.S)
+SRT = re.compile(r"(?:^|\n)(?:\d+\s*\n)?(?P<s>\d{1,2}:\d{2}:\d{2}[,.]\d{3})\s*-->\s*(?P<e>\d{1,2}:\d{2}:\d{2}[,.]\d{3})[^\n]*\n(?P<b>.*?)(?=\n\s*\n|\Z)", re.S)
+SELF_ID = re.compile(r"(?:我(?:是|叫(?:做)?|名叫)|我的名字是)(?P<n>[\u3400-\u9fffA-Za-z]{1,12})")
+PATTERNS = ("不对", "等一下", "就是", "总之", "看来", "我说", "不是", "好吧", "没事", "最后", "为什么", "怎么办", "真的吗", "等等", "所以", "但是", "可是")
+FILLERS = ("啊", "嗯", "呃", "诶", "欸", "那个", "就是", "这个", "嘛", "啦", "吧")
+SCORE = {"high": 3, "medium": 2, "low": 1}
 
 
 class Cue:
-    def __init__(self, start: str, end: str, source_label: str, raw_text: str,
-                 cleaned_text: str, character: str, confidence: str, basis: str):
-        self.start = start
-        self.end = end
-        self.source_label = source_label
-        self.raw_text = raw_text
-        self.cleaned_text = cleaned_text
-        self.character = character
-        self.confidence = confidence
-        self.basis = basis
+    def __init__(self, s: str, e: str, label: str, raw: str, text: str, char: str, conf: str, basis: str):
+        self.start, self.end, self.label, self.raw = s, e, label, raw
+        self.text, self.character, self.confidence, self.basis = text, char, conf, basis
 
 
-def read_registry(path: Path) -> list[dict]:
+def norm(v: str) -> str:
+    return re.sub(r"[\s【】\[\]（）()：:·.、，,!?！？'\"“”]", "", v or "").casefold()
+
+
+def registry(path: Path) -> list[dict]:
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    characters = data.get("characters", [])
-    if not isinstance(characters, list):
-        raise ValueError("character-registry.yaml must contain a characters list")
-    for item in characters:
-        if not item.get("canonical_name"):
-            raise ValueError("every registry character needs canonical_name")
-    return characters
+    chars = data.get("characters", [])
+    if not isinstance(chars, list) or any(not x.get("canonical_name") for x in chars):
+        raise ValueError("character-registry.yaml must contain characters with canonical_name")
+    return chars
 
 
-def normalize(value: str) -> str:
-    return re.sub(r"[\s【】\[\]（）()：:·.、，,!?！？'\"“”]", "", value or "").casefold()
-
-
-def alias_lookup(registry: Iterable[dict]) -> dict[str, str]:
-    lookup: dict[str, str] = {}
-    for item in registry:
+def lookup(chars: Iterable[dict]) -> dict[str, str]:
+    out = {}
+    for item in chars:
         canonical = item["canonical_name"]
         for value in [canonical, *item.get("aliases", []), *item.get("nicknames", [])]:
-            key = normalize(str(value))
-            if key:
-                lookup[key] = canonical
-    return lookup
+            key = norm(str(value))
+            if key and key not in BLOCKED:
+                out[key] = canonical
+    return out
 
 
-def clean_text(value: str) -> str:
-    value = re.sub(r"<!--.*?-->", "", value, flags=re.S).strip()
-    value = value.replace("\r", "").replace("\n", "")
-    value = re.sub(r"\s+", " ", value)
-    value = value.replace("...", "……").replace("..", "……")
-    return value.strip()
+def clean(v: str) -> str:
+    v = re.sub(r"<!--.*?-->|<[^>]+>", "", v, flags=re.S)
+    v = v.replace("\r", "").replace("\\N", "\n")
+    v = re.sub(r"\s*\n\s*", " ", v)
+    return re.sub(r"\s+", " ", v).replace("...", "……").replace("..", "……").strip()
 
 
-def is_valid_text(value: str) -> bool:
-    return bool(value and not NOISE_RE.fullmatch(value) and re.search(r"[\u3400-\u9fffA-Za-z]", value))
+def valid(v: str) -> bool:
+    return bool(v and not NON_DIALOGUE.fullmatch(v) and re.search(r"[\u3400-\u9fffA-Za-z]", re.sub(r"[\s♪♫♬🎵🎶]", "", v)))
 
 
-def parse_raw_markdown(path: Path, registry: list[dict]) -> list[Cue]:
-    lookup = alias_lookup(registry)
-    cues: list[Cue] = []
-    for match in ENTRY_RE.finditer(path.read_text(encoding="utf-8")):
-        lines = [line.strip() for line in match.group("body").splitlines() if line.strip() and not line.startswith("<!--")]
-        if not lines:
+def split_body(body: str) -> tuple[str, str]:
+    lines = [x.strip() for x in body.splitlines() if x.strip() and not x.lstrip().startswith("<!--")]
+    if not lines:
+        return "", ""
+    if lines[0].endswith(("：", ":")) and len(lines[0]) <= 24:
+        return lines[0][:-1], "".join(lines[1:])
+    m = re.match(r"^([^：:\n]{1,16})[：:](.*)$", lines[0])
+    return (m.group(1), "".join([m.group(2), *lines[1:]])) if m else ("", "".join(lines))
+
+
+def assign(label: str, text: str, names: dict[str, str]) -> tuple[str, str, str]:
+    key = norm(label)
+    if key and key not in BLOCKED and key in names:
+        return names[key], "high", "画面姓名标签与角色表精确匹配"
+    for m in SELF_ID.finditer(text):
+        key = norm(m.group("n"))
+        if key in names:
+            return names[key], "medium", "台词中明确自报姓名"
+    return UNKNOWN, "low", "无法可靠判断"
+
+
+def parse_file(path: Path, chars: list[dict]) -> list[Cue]:
+    names, out = lookup(chars), []
+    raw = path.read_text(encoding="utf-8-sig", errors="replace").replace("\r\n", "\n")
+    pattern = ENTRY if path.suffix.lower() == ".md" else SRT
+    for m in pattern.finditer(raw):
+        label, source = split_body(m.group("b"))
+        text = clean(source)
+        if not valid(text):
             continue
-        source_label = ""
-        if lines[0].endswith(("：", ":")):
-            source_label, lines = lines[0][:-1], lines[1:]
-        raw_text = "".join(lines).strip()
-        cleaned = clean_text(raw_text)
-        if not is_valid_text(cleaned):
-            continue
-        character, confidence, basis = attribute_cue(source_label, cleaned, lookup)
-        cues.append(Cue(match.group("start"), match.group("end"), source_label or "—", raw_text, cleaned, character, confidence, basis))
-    return cues
+        char, conf, basis = assign(label, text, names)
+        out.append(Cue(m.group("s").replace(",", "."), m.group("e").replace(",", "."), label or "—", source, text, char, conf, basis))
+    return out
 
 
-def attribute_cue(source_label: str, text: str, lookup: dict[str, str]) -> tuple[str, str, str]:
-    """Use only direct label/self-name evidence; never turn addressees into speakers."""
-    label = normalize(source_label)
-    if label and label not in BLOCKED_LABELS and label in lookup:
-        return lookup[label], "high", "画面姓名标签（已有 OCR 标签与角色表精确匹配）"
-    for match in SELF_ID_RE.finditer(text):
-        candidate = normalize(match.group("name"))
-        if candidate in lookup:
-            return lookup[candidate], "medium", "明确称呼（台词中的自报姓名）"
-    return UNKNOWN, "low", "无法判断"
+def source(video: Path, chars: list[dict]) -> tuple[Path | None, list[Cue]]:
+    for name in ("subtitle-raw.md", "subtitle-ocr.srt"):
+        path = video / name
+        if path.exists() and path.stat().st_size:
+            cues = parse_file(path, chars)
+            if cues:
+                return path, cues
+    return None, []
 
 
-def cue_to_markdown(cue: Cue) -> str:
-    return "\n".join([
-        f"## [{cue.start} --> {cue.end}]",
-        f"- canonical_name: {cue.character}",
-        f"- raw_text: {cue.raw_text}",
-        f"- cleaned_text: {cue.cleaned_text}",
-        f"- assignment_confidence: {cue.confidence}",
-        f"- assignment_basis: {cue.basis}",
-        "",
-    ])
-
-
-def write_tagged(path: Path, source_bv: str, cues: list[Cue]) -> None:
-    count = Counter((cue.character, cue.confidence) for cue in cues)
-    header = [
-        f"# 说话者归属字幕：{source_bv}",
-        "",
-        "> 归属只接受画面姓名标签精确匹配或台词中的明确自报姓名。称呼他人、剧情常识、OCR 残片均不足以指派说话者；因此 `UNKNOWN` 是保守结果，不是待自动补全的空值。",
-        "",
-        "## 归属统计",
-        "",
-        "| 规范角色名 | high | medium | low |",
-        "| --- | ---: | ---: | ---: |",
-    ]
-    for name in sorted({cue.character for cue in cues}):
-        header.append(f"| {name} | {count[(name, 'high')]} | {count[(name, 'medium')]} | {count[(name, 'low')]} |")
-    path.write_text("\n".join(header) + "\n\n" + "\n".join(cue_to_markdown(cue) for cue in cues), encoding="utf-8")
-
-
-def split_expressions(text: str) -> list[tuple[str, str]]:
-    """Deterministically emit ASCII words and 1–4 CJK-character expressions."""
-    expressions: list[tuple[str, str]] = []
-    for ascii_word in re.findall(r"[A-Za-z]+", text):
-        expressions.append((ascii_word, "word"))
-    for run in re.findall(r"[\u3400-\u9fff]+", text):
-        for index, _char in enumerate(run):
-            for length in range(1, min(4, len(run) - index) + 1):
-                token = run[index:index + length]
-                expressions.append((token, "word" if length == 1 else f"phrase_{length}char"))
-    for term in PATTERN_TERMS:
-        if term in text:
-            expressions.append((term, "fixed_pattern"))
-    for term in FILLERS:
-        if term in text:
-            expressions.append((term, "filler"))
-    for term in ("……", "？", "！"):
-        if text.endswith(term):
-            expressions.append((term, "sentence_end"))
-    return expressions
-
-
-def build_inventory(cues: list[Cue], source_bv: str) -> list[dict]:
-    records: dict[tuple[str, str, str], dict] = {}
-    for cue in cues:
-        for expression, expression_type in split_expressions(cue.cleaned_text):
-            key = (cue.character, expression, expression_type)
-            row = records.setdefault(key, {
-                "character": cue.character,
-                "expression": expression,
-                "normalized_expression": normalize(expression),
-                "type": expression_type,
-                "count": 0,
-                "contexts": [],
-                "timestamps": [],
-                "confidence": cue.confidence,
-                "source_bv": source_bv,
-            })
-            row["count"] += 1
-            if len(row["contexts"]) < 1:
-                row["contexts"].append(cue.cleaned_text[:80])
-            if len(row["timestamps"]) < 3:
-                row["timestamps"].append(cue.start)
-            if {"high": 3, "medium": 2, "low": 1}[cue.confidence] > {"high": 3, "medium": 2, "low": 1}[row["confidence"]]:
-                row["confidence"] = cue.confidence
-    # Retain every attributed expression. UNKNOWN is a review bucket, so retain
-    # recurring n-grams and all explicit discourse markers rather than exporting
-    # thousands of one-frame OCR fragments as faux keywords.
-    filtered = [
-        row for row in records.values()
-        if row["character"] != UNKNOWN
-        or row["type"] in {"fixed_pattern", "filler", "sentence_end"}
-        or row["count"] >= 3
-    ]
-    return sorted(filtered, key=lambda row: (row["character"], -row["count"], row["type"], row["expression"]))
-
-
-def write_inventory(path: Path, rows: list[dict]) -> None:
-    fields = ["character", "expression", "normalized_expression", "type", "count", "contexts", "timestamps", "confidence", "source_bv"]
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
-        writer.writeheader()
-        for row in rows:
-            out = dict(row)
-            out["contexts"] = json.dumps(out["contexts"], ensure_ascii=False)
-            out["timestamps"] = json.dumps(out["timestamps"], ensure_ascii=False)
-            writer.writerow(out)
-
-
-def cues_for(cues: list[Cue], character: str) -> list[Cue]:
-    return [cue for cue in cues if cue.character == character]
-
-
-def write_video_observations(path: Path, registry: list[dict], cues: list[Cue], source_bv: str) -> None:
-    lines = [f"# 单视频人物证据：{source_bv}", "", "> 仅记录有归属证据的台词。没有可靠归属时，不从剧情或称呼反推角色。", ""]
-    for person in registry:
-        name = person["canonical_name"]
-        evidence = cues_for(cues, name)
-        high_medium = [cue for cue in evidence if cue.confidence in {"high", "medium"}]
-        lines += [f"## {name}", ""]
-        if len(high_medium) < 3:
-            points = "、".join(cue.start for cue in high_medium) or "无"
-            lines += [
-                "- 可直接观察到的行为：没有足量的可靠归属台词；不能将出现姓名或被他人称呼当成其本人发言。",
-                "- 可推断的性格特征：不作确定性结论。",
-                f"- 推断依据：可靠台词 {len(high_medium)} 条；时间点：{points}。",
-                "- 触发条件：需要姓名标签、明确自报姓名或人工确认轮次后才能扩充。",
-                "- 例外情况：二创/梦境/类型模仿语境不能直接等同于原作人格。",
-                "- 可信度：★☆☆☆☆（证据不足）。",
-                "",
-            ]
-        else:
-            lines += [
-                "- 可直接观察到的行为：见下列可靠归属台词的可见语言/行动。",
-                "- 可推断的性格特征：仅按多处可复现证据单列，不使用空泛形容词。",
-                "- 推断依据：" + "、".join(cue.start for cue in high_medium[:8]) + "。",
-                "- 触发条件、例外情况与可信度：见本视频 `speech-patterns.md` 和跨视频档案。",
-                "",
-            ]
-    path.write_text("\n".join(lines), encoding="utf-8")
-
-
-def write_speech_patterns(path: Path, registry: list[dict], cues: list[Cue], source_bv: str) -> None:
-    lines = [f"# 说话模式统计：{source_bv}", "", "> 统计只使用已归属到规范角色的 high/medium 台词；`UNKNOWN` 不会被平均分摊给人物。", ""]
-    for person in registry:
-        name = person["canonical_name"]
-        evidence = [cue for cue in cues_for(cues, name) if cue.confidence in {"high", "medium"}]
-        lengths = [len(re.sub(r"\s", "", cue.cleaned_text)) for cue in evidence]
-        lines += [f"## {name}", ""]
-        if len(evidence) < 3:
-            lines += [
-                f"- 可靠台词：{len(evidence)} 条（high {sum(c.confidence == 'high' for c in evidence)} / medium {sum(c.confidence == 'medium' for c in evidence)}）。",
-                "- 自称、称呼、句长、开头/句尾、语气词、填充词、停顿、重复、改口、打断、反问、回避、否定/请求/拒绝、关心/冲突、压力变化与关系差异：证据不足，均不统计为角色稳定特征。",
-                "- 需人工确认：姓名标签出现处及其后续同一轮次。",
-                "",
-            ]
-            continue
-        lines += [
-            f"- 可靠台词：{len(evidence)} 条；平均句长：{statistics.mean(lengths):.1f} 字。",
-            "- 其余模式：由确定性关键词表和多处证据填写；不得把 UNKNOWN 台词归入本角色。",
-            "",
-        ]
-    path.write_text("\n".join(lines), encoding="utf-8")
-
-
-def write_keyword_lexicon(path: Path, registry: list[dict], rows: list[dict], source_bv: str) -> None:
-    lines = [f"# 关键词词典：{source_bv}", "", "> 词频来自 `keyword-inventory.raw.csv` 的确定性 n-gram 统计。词频不等于口癖；只有有足量 high/medium 角色归属的表达才可进入角色档案。", ""]
-    for person in registry:
-        name = person["canonical_name"]
-        selected = [row for row in rows if row["character"] == name and row["confidence"] in {"high", "medium"}]
-        lines += [f"## {name}", ""]
-        if not selected:
-            lines += ["- 稳定口癖：证据不足。", "- 高频普通词：证据不足。", "- 关系型称呼：证据不足。", "- 情绪触发词：证据不足。", "- 场景限定词：证据不足。", "- 一次性剧情词：不纳入角色词典。", "- 疑似 OCR 错误：见原始字幕。", "- 证据不足表达：全部。", ""]
-            continue
-        top = ", ".join(f"{row['expression']}({row['count']})" for row in selected[:10])
-        lines += [
-            "- 稳定口癖：证据不足（单视频且可靠台词量不足）。",
-            f"- 高频普通词：{top}",
-            "- 关系型称呼：需更多已归属轮次。",
-            "- 情绪触发词：需更多已归属轮次。",
-            "- 场景限定词：本片为二创梦境/类型模仿语境，不能泛化。",
-            "- 一次性剧情词：不纳入角色词典。",
-            "- 疑似 OCR 错误：低可信标签与断裂文字不纳入。",
-            "- 证据不足表达：以上所有仅作为待验证候选。",
-            "",
-        ]
-    unknown = [row for row in rows if row["character"] == UNKNOWN]
-    lines += ["## UNKNOWN（不归入任何角色）", "", f"- 可统计表达数：{len(unknown)}；只用于人工复核，不进入人物口癖或人格结论。", ""]
-    path.write_text("\n".join(lines), encoding="utf-8")
+def write_tagged(path: Path, bv: str, cues: list[Cue]) -> None:
+    counts = Counter((c.character, c.confidence) for c in cues)
+    lines = [f"# 说话者归属字幕：{bv}", "", "> 只接受精确姓名标签或明确自报姓名；OCR 错误姓名和被称呼对象不用于自动归属。", "", "## 归属统计", "", "| 规范角色名 | high | medium | low |", "| --- | ---: | ---: | ---: |"]
+    for name in sorted({c.character for c in cues}):
+        lines.append(f"| {name} | {counts[(name,'high')]} | {counts[(name,'medium')]} | {counts[(name,'low')]} |")
+    for c in cues:
+        lines += ["", f"## [{c.start} --> {c.end}]", f"- canonical_name: {c.character}", f"- source_label: {c.label}", f"- raw_text: {c.raw}", f"- cleaned_text: {c.text}", f"- assignment_confidence: {c.confidence}", f"- assignment_basis: {c.basis}"]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def parse_tagged(path: Path) -> list[Cue]:
-    block_re = re.compile(r"^## \[(?P<start>.+?) --> (?P<end>.+?)\]\n(?P<body>.*?)(?=^## \[|\Z)", re.M | re.S)
-    records = []
-    for match in block_re.finditer(path.read_text(encoding="utf-8")):
-        fields = dict(re.findall(r"^- ([a-z_]+): ?(.*)$", match.group("body"), re.M))
-        if not fields:
-            continue
-        records.append(Cue(match.group("start"), match.group("end"), "—", fields.get("raw_text", ""), fields.get("cleaned_text", ""), fields.get("canonical_name", UNKNOWN), fields.get("assignment_confidence", "low"), fields.get("assignment_basis", "无法判断")))
-    return records
+    blocks = re.compile(r"^## \[(?P<s>.+?) --> (?P<e>.+?)\]\n(?P<b>.*?)(?=^## \[|\Z)", re.M | re.S)
+    out = []
+    for m in blocks.finditer(path.read_text(encoding="utf-8", errors="replace")):
+        f = dict(re.findall(r"^- ([a-z_]+): ?(.*)$", m.group("b"), re.M))
+        if f:
+            out.append(Cue(m.group("s"), m.group("e"), f.get("source_label", "—"), f.get("raw_text", ""), f.get("cleaned_text", ""), f.get("canonical_name", UNKNOWN), f.get("assignment_confidence", "low"), f.get("assignment_basis", "无法可靠判断")))
+    return out
 
 
-def collect_inventory_rows(path: Path, character: str) -> list[dict]:
-    if not path.exists():
-        return []
-    with path.open(encoding="utf-8", newline="") as handle:
-        return [row for row in csv.DictReader(handle) if row["character"] == character]
+def expressions(text: str) -> list[tuple[str, str]]:
+    out = [(x, "word") for x in re.findall(r"[A-Za-z]+", text)]
+    for run in re.findall(r"[\u3400-\u9fff]+", text):
+        for i in range(len(run)):
+            for n in range(1, min(4, len(run)-i)+1):
+                out.append((run[i:i+n], "word" if n == 1 else f"phrase_{n}char"))
+    out += [(x, "fixed_pattern") for x in PATTERNS if x in text]
+    out += [(x, "filler") for x in FILLERS if x in text]
+    out += [(x, "sentence_end") for x in ("……", "？", "！", "。", "吧", "啊", "呢", "吗") if text.endswith(x)]
+    return out
 
 
-def write_character_aggregate(character_root: Path, registry: list[dict], video_dirs: list[Path]) -> dict[str, Counter]:
-    character_root.mkdir(parents=True, exist_ok=True)
-    evidence_by_name: dict[str, list[tuple[str, Cue]]] = defaultdict(list)
-    for video_dir in video_dirs:
-        bv = video_dir.name
-        for cue in parse_tagged(video_dir / "subtitle-speaker-tagged.md"):
-            if cue.character != UNKNOWN:
-                evidence_by_name[cue.character].append((bv, cue))
-    stats: dict[str, Counter] = {}
-    for person in registry:
-        name = person["canonical_name"]
-        evidence = evidence_by_name.get(name, [])
-        counter = Counter(cue.confidence for _bv, cue in evidence)
-        stats[name] = counter
-        folder = character_root / name
-        folder.mkdir(parents=True, exist_ok=True)
-        indexed = [(bv, cue) for bv, cue in evidence if cue.confidence in {"high", "medium"}]
-        support_videos = len({bv for bv, _cue in indexed})
-        insufficient = len(indexed) < 3 or support_videos < 2
-        status = "证据不足：不生成确定性角色结论。" if insufficient else "可形成待复核的跨视频候选结论。"
-        common = [
-            f"# {name}：声音档案", "", f"- 支持视频数：{support_videos}", f"- 已归属台词：high {counter['high']} / medium {counter['medium']} / low {counter['low']}", f"- 结论状态：{status}", "",
-            "## 正常状态示例结构", "- 证据不足；不要从本片的梦境/二创语境造出常态句型。", "", "## 紧张状态示例结构", "- 证据不足。", "", "## 心虚状态示例结构", "- 证据不足。", "", "## 生气状态示例结构", "- 证据不足。", "", "## 面对不同角色的变化", "- 没有足量的双向可靠归属台词。", "", "## 应避免的写法", "- 不要把 UNKNOWN 台词、被他人称呼的名字、或类型模仿语境强行写成此角色的口癖。", "", "## 容易与其他角色串台的特征", "- 当前所有未验证语气均可能来自其他声部或 OCR；禁止以功能声部替代角色名。", "", "## 写完台词后的自检问题", "- 这句话是否至少有姓名标签、明确自报姓名或人工确认轮次支持？若没有，应写为未知而非归属给本角色。", "",
-        ]
-        (folder / "voice-profile.md").write_text("\n".join(common), encoding="utf-8")
-        (folder / "personality-profile.md").write_text("\n".join([
-            f"# {name}：人格证据档案", "", f"- 支持视频数：{support_videos}", f"- 可用可靠台词数：{len(indexed)}", "", "## 已观察到的行为", "- " + ("仅见单处自报/标签证据；不能扩展为稳定行为。" if indexed else "无可靠归属行为。"), "", "## 可推断性格特征", "- 不作确定性结论：" + ("本片属于二创/梦境类型模仿，且证据量不足。" if insufficient else "待人工复核。"), "", "## 反例与例外", "- 同一文本中的称呼、旁白、类型梗不能视为说话者证据。", "",
-        ]), encoding="utf-8")
-        (folder / "behavior-rules.md").write_text("\n".join([
-            f"# {name}：行为规则", "", "- 当前规则状态：证据不足，不输出可执行的人格规则。", "- 升级条件：至少 3 条 high/medium 归属台词，且来自至少 2 个视频；每条规则需列出反例、场景、关系对象与来源时间点。", "",
-        ]), encoding="utf-8")
-        inventory = []
-        for video_dir in video_dirs:
-            inventory.extend(collect_inventory_rows(video_dir / "keyword-inventory.raw.csv", name))
-        fields = ["character", "expression", "normalized_expression", "type", "count", "contexts", "timestamps", "confidence", "source_bv"]
-        with (folder / "keyword-lexicon.csv").open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields)
-            writer.writeheader(); writer.writerows(inventory)
-        (folder / "relationship-voice-map.md").write_text("\n".join([
-            f"# {name}：关系语音图", "", "- 可用关系对象：无（缺少双方可靠说话者归属）。", "- 不把被叫到名字的对象误当成说话者。", "",
-        ]), encoding="utf-8")
-        evidence_lines = [f"# {name}：证据索引", "", "| 来源BV | 时间点 | 归属依据 | 可信度 |", "| --- | --- | --- | --- |"]
-        for bv, cue in indexed:
-            evidence_lines.append(f"| {bv} | {cue.start} | {cue.basis} | {cue.confidence} |")
-        if not indexed:
-            evidence_lines.append("| — | — | 暂无可靠归属 | — |")
-        (folder / "evidence-index.md").write_text("\n".join(evidence_lines) + "\n", encoding="utf-8")
-        unknown_times = []
-        for video_dir in video_dirs:
-            for cue in parse_tagged(video_dir / "subtitle-speaker-tagged.md"):
-                if cue.character == UNKNOWN:
-                    unknown_times.append(f"{video_dir.name} {cue.start}")
-        (folder / "uncertain-evidence.md").write_text("\n".join([
-            f"# {name}：待确认与不确定证据", "", f"- 当前可归属证据：high {counter['high']} / medium {counter['medium']} / low {counter['low']}。", "- 需要人工确认：画面姓名标签、同一对话框的轮次、以及 OCR 断裂字。", "- 未归属样本（前 20 条，仅供复核，不代表本角色）：", *[f"  - {item}" for item in unknown_times[:20]], "",
-        ]), encoding="utf-8")
+def inventory(cues: list[Cue], bv: str) -> list[dict]:
+    rows = {}
+    for c in cues:
+        for exp, typ in expressions(c.text):
+            row = rows.setdefault((c.character, exp, typ), {"character": c.character, "expression": exp, "normalized_expression": norm(exp), "type": typ, "count": 0, "contexts": [], "timestamps": [], "confidence": c.confidence, "source_bv": bv})
+            row["count"] += 1
+            if c.text not in row["contexts"] and len(row["contexts"]) < 3: row["contexts"].append(c.text[:100])
+            if len(row["timestamps"]) < 5: row["timestamps"].append(c.start)
+            if SCORE[c.confidence] > SCORE[row["confidence"]]: row["confidence"] = c.confidence
+    keep = [r for r in rows.values() if r["character"] != UNKNOWN or r["type"] in {"fixed_pattern", "filler", "sentence_end"} or r["count"] >= 3]
+    return sorted(keep, key=lambda r: (r["character"], -r["count"], r["type"], r["expression"]))
+
+
+def write_csv(path: Path, rows: list[dict]) -> None:
+    fields = ["character", "expression", "normalized_expression", "type", "count", "contexts", "timestamps", "confidence", "source_bv"]
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields); w.writeheader()
+        for row in rows:
+            out = dict(row); out["contexts"] = json.dumps(out["contexts"], ensure_ascii=False); out["timestamps"] = json.dumps(out["timestamps"], ensure_ascii=False); w.writerow(out)
+
+
+def reliable(cues: list[Cue], name: str) -> list[Cue]:
+    return [c for c in cues if c.character == name and c.confidence in {"high", "medium"}]
+
+
+def top(cues: list[Cue], types: set[str], limit=10) -> list[tuple[str, int]]:
+    counter = Counter(exp for c in cues for exp, typ in expressions(c.text) if typ in types)
+    return counter.most_common(limit)
+
+
+def write_video_files(video: Path, chars: list[dict], cues: list[Cue], rows: list[dict]) -> None:
+    bv = video.name
+    obs = [f"# 单视频人物证据：{bv}", "", "> 每个视频独立分析；UNKNOWN 不分摊给人物。", ""]
+    pat = [f"# 说话模式统计：{bv}", "", "> 仅统计 high/medium 归属台词；词频不自动等于口癖。", ""]
+    lex = [f"# 关键词词典：{bv}", "", "> 来自确定性 n-gram 统计，单视频结果只作候选。", ""]
+    for item in chars:
+        name, ev = item["canonical_name"], reliable(cues, item["canonical_name"])
+        obs += [f"## {name}", "", f"- 可靠台词数：{len(ev)}。", "- 性格结论：" + ("存在多条可复核证据，但仍需跨视频确认。" if len(ev) >= 3 else "证据不足，不作确定性结论。"), "- 证据：" + ("；".join(f"{c.start}「{c.text[:32]}」" for c in ev[:5]) or "无"), ""]
+        lengths = [len(re.sub(r"\s", "", c.text)) for c in ev]
+        pat += [f"## {name}", "", f"- 可靠台词：{len(ev)} 条。", f"- 平均句长：{statistics.mean(lengths):.1f} 字。" if lengths else "- 平均句长：证据不足。", "- 固定表达候选：" + ("、".join(f"{x}({n})" for x,n in top(ev,{"fixed_pattern"},8)) or "无"), "- 填充词候选：" + ("、".join(f"{x}({n})" for x,n in top(ev,{"filler"},8)) or "无"), "- 使用边界：需跨视频重复后才能写入稳定角色规则。", ""]
+        selected = [r for r in rows if r["character"] == name and r["confidence"] in {"high", "medium"}]
+        candidates = [r for r in selected if r["type"] in {"fixed_pattern", "filler", "sentence_end"}][:15]
+        lex += [f"## {name}", "", "- 稳定口癖：单视频不能定论。", "- 话语标记候选：" + ("、".join(f"{r['expression']}({r['count']})" for r in candidates) or "证据不足"), "- OCR 错误姓名与低可信标签不进入正式人物档案。", ""]
+    lex += ["## UNKNOWN（不归入任何角色）", "", f"- 候选表达数：{sum(r['character']==UNKNOWN for r in rows)}；只用于人工复核。", ""]
+    (video/"character-observations.md").write_text("\n".join(obs), encoding="utf-8")
+    (video/"speech-patterns.md").write_text("\n".join(pat), encoding="utf-8")
+    (video/"keyword-lexicon.md").write_text("\n".join(lex), encoding="utf-8")
+
+
+def aggregate(root: Path, chars: list[dict], videos: list[Path]) -> dict[str, Counter]:
+    evidence = defaultdict(list)
+    for v in videos:
+        for c in parse_tagged(v/"subtitle-speaker-tagged.md"):
+            if c.character != UNKNOWN: evidence[c.character].append((v.name,c))
+    stats = {}
+    for item in chars:
+        name, data = item["canonical_name"], evidence.get(item["canonical_name"], [])
+        count = Counter(c.confidence for _,c in data); stats[name] = count
+        good = [(bv,c) for bv,c in data if c.confidence in {"high","medium"}]
+        support = len({bv for bv,_ in good}); cues = [c for _,c in good]
+        folder = root/name; folder.mkdir(parents=True, exist_ok=True)
+        status = "可形成跨视频候选，仍需人工复核。" if len(good)>=5 and support>=2 else "证据不足，不生成确定性人格结论。"
+        lengths = [len(re.sub(r"\s", "",c.text)) for c in cues]
+        (folder/"voice-profile.md").write_text("\n".join([f"# {name}：声音档案","",f"- 支持视频数：{support}",f"- 台词：high {count['high']} / medium {count['medium']} / low {count['low']}",f"- 状态：{status}","", "## 可量化声音特征", f"- 平均句长：{statistics.mean(lengths):.1f} 字。" if lengths else "- 平均句长：证据不足。", "- 固定表达候选："+("、".join(f"{x}({n})" for x,n in top(cues,{"fixed_pattern"})) or "证据不足"), "- 填充词候选："+("、".join(f"{x}({n})" for x,n in top(cues,{"filler"})) or "证据不足"), "", "## 使用边界", "- 不把 UNKNOWN、OCR 错误姓名或单次二创梗写成稳定口癖。", "- 情绪状态和关系差异需人工场景标注后再补充。", ""]), encoding="utf-8")
+        (folder/"personality-profile.md").write_text("\n".join([f"# {name}：人格证据档案","",f"- 支持视频数：{support}",f"- 可靠台词数：{len(good)}","", "## 观察证据", "- "+("；".join(f"{bv} {c.start}「{c.text[:32]}」" for bv,c in good[:8]) or "无可靠归属。"),"", "## 结论", f"- {status}", "- 二创、梦境和类型模仿不能直接等同于原作常态。", ""]), encoding="utf-8")
+        (folder/"behavior-rules.md").write_text(f"# {name}：行为规则\n\n- 当前状态：{status}\n- 每条规则必须包含触发条件、表现、反例、关系对象和来源时间点。\n", encoding="utf-8")
+        inv = [r for v in videos for r in read_rows(v/"keyword-inventory.raw.csv", name)]
+        write_csv(folder/"keyword-lexicon.csv", inv)
+        (folder/"relationship-voice-map.md").write_text(f"# {name}：关系语音图\n\n- 自动阶段不根据被称呼对象反推关系语气；需双方轮次可靠归属后再建立。\n", encoding="utf-8")
+        idx = [f"# {name}：证据索引","","| 来源BV | 时间点 | 文本摘要 | 归属依据 | 可信度 |","| --- | --- | --- | --- | --- |"] + [f"| {bv} | {c.start} | {c.text.replace('|','｜')[:60]} | {c.basis} | {c.confidence} |" for bv,c in good]
+        if not good: idx.append("| — | — | — | 暂无可靠归属 | — |")
+        (folder/"evidence-index.md").write_text("\n".join(idx)+"\n", encoding="utf-8")
+        unknown = [f"{v.name} {c.start}" for v in videos for c in parse_tagged(v/"subtitle-speaker-tagged.md") if c.character==UNKNOWN][:20]
+        (folder/"uncertain-evidence.md").write_text("\n".join([f"# {name}：待确认与不确定证据","", "- 需要人工确认姓名标签区域、轮次和 OCR 断裂文本。", *[f"- {x}" for x in unknown], ""]), encoding="utf-8")
     return stats
 
 
-def is_successful_video(directory: Path) -> bool:
-    if directory.name.startswith("failed-") or not directory.is_dir():
-        return False
-    raw = directory / "subtitle-raw.md"
-    srt = directory / "subtitle-ocr.srt"
-    if not ((raw.exists() and raw.stat().st_size) or (srt.exists() and srt.stat().st_size)):
-        return False
-    for status_name in ("extraction-status.json", "ocr-status.json"):
-        status = directory / status_name
-        if status.exists():
-            try:
-                if json.loads(status.read_text(encoding="utf-8")).get("success") is True:
-                    return True
-            except json.JSONDecodeError:
-                continue
-    return False
+def read_rows(path: Path, name: str) -> list[dict]:
+    if not path.exists(): return []
+    with path.open(encoding="utf-8", newline="") as f: return [r for r in csv.DictReader(f) if r.get("character")==name]
 
 
-def run(project_root: Path) -> dict[str, Counter]:
-    registry_path = project_root / "references" / "characters" / "character-registry.yaml"
-    registry = read_registry(registry_path)
-    video_root = project_root / "references" / "bilibili"
-    video_dirs = [path for path in sorted(video_root.iterdir()) if is_successful_video(path)]
-    for video_dir in video_dirs:
-        raw = video_dir / "subtitle-raw.md"
-        if not raw.exists():
-            continue
-        cues = parse_raw_markdown(raw, registry)
-        write_tagged(video_dir / "subtitle-speaker-tagged.md", video_dir.name, cues)
-        inventory = build_inventory(cues, video_dir.name)
-        write_inventory(video_dir / "keyword-inventory.raw.csv", inventory)
-        write_video_observations(video_dir / "character-observations.md", registry, cues, video_dir.name)
-        write_speech_patterns(video_dir / "speech-patterns.md", registry, cues, video_dir.name)
-        write_keyword_lexicon(video_dir / "keyword-lexicon.md", registry, inventory, video_dir.name)
-    return write_character_aggregate(project_root / "references" / "characters", registry, [path for path in video_dirs if (path / "subtitle-speaker-tagged.md").exists()])
+def run(project: Path, force=False) -> dict[str, Counter]:
+    chars = registry(project/"references/characters/character-registry.yaml")
+    video_root = project/"references/bilibili"
+    if not video_root.exists(): raise FileNotFoundError(f"video root not found: {video_root}")
+    done = []
+    for video in sorted(video_root.iterdir()):
+        if not video.is_dir() or video.name.startswith("failed-"): continue
+        src, original = source(video, chars)
+        if not src or not original: continue
+        tagged = video/"subtitle-speaker-tagged.md"
+        if force or not tagged.exists() or tagged.stat().st_mtime < src.stat().st_mtime:
+            write_tagged(tagged, video.name, original); cues = original
+        else:
+            cues = parse_tagged(tagged) or original
+            if not parse_tagged(tagged): write_tagged(tagged, video.name, original)
+        rows = inventory(cues, video.name); write_csv(video/"keyword-inventory.raw.csv", rows); write_video_files(video, chars, cues, rows); done.append(video)
+    stats = aggregate(project/"references/characters", chars, done)
+    summary = project/"references/distilled/character-evidence-summary.md"; summary.parent.mkdir(parents=True, exist_ok=True)
+    lines = ["# 人物证据自动蒸馏总览","","> 确定性统计总览，不替代人工人物分析；无法判断时保持 UNKNOWN。","",f"- 已处理视频：{len(done)}","","| 角色 | high | medium | low |","| --- | ---: | ---: | ---: |"] + [f"| {n} | {c['high']} | {c['medium']} | {c['low']} |" for n,c in stats.items()] + ["","## 视频", *[f"- `{v.name}`" for v in done], "", "- 只有真实对白进入统计，音乐、纯音符和无对白内容不算成功。", ""]
+    summary.write_text("\n".join(lines), encoding="utf-8")
+    return stats
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project-root", type=Path, required=True)
-    args = parser.parse_args()
-    stats = run(args.project_root.resolve())
+    p = argparse.ArgumentParser(description=__doc__); p.add_argument("--project-root", type=Path, default=Path(".")); p.add_argument("--force-rebuild-tagged", action="store_true"); a=p.parse_args()
+    stats = run(a.project_root.resolve(), a.force_rebuild_tagged)
     print("Character evidence pipeline completed")
-    for name, counter in stats.items():
-        print(f"{name}: high={counter['high']} medium={counter['medium']} low={counter['low']}")
+    for name,c in stats.items(): print(f"{name}: high={c['high']} medium={c['medium']} low={c['low']}")
     return 0
 
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+if __name__ == "__main__": raise SystemExit(main())
