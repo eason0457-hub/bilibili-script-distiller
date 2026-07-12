@@ -455,7 +455,7 @@ def main() -> int:
         "end_time": args.end_time,
         "position": args.subtitle_position,
         "language": args.ocr_language,
-        "sample_fps": min(4.0, max(1.0, args.sample_fps)),
+        "sample_fps": min(4.0, max(0.5, args.sample_fps)),
         "crop_overrides": {
             "top": args.subtitle_crop_top,
             "bottom": args.subtitle_crop_bottom,
