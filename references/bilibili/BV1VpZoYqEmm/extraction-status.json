@@ -1,10 +1,10 @@
 {
   "input": "BV1VpZoYqEmm",
-  "source_type": "subtitle_track",
+  "source_type": "subtitle_track_rejected_non_dialogue",
   "bvid": "BV1VpZoYqEmm",
   "title": "（大概是爱素）素世看到的所有人都是千早爱音",
-  "success": true,
-  "failure_reason": null,
+  "success": false,
+  "failure_reason": "Selected subtitle track contained only non-dialogue cues (e.g. music).",
   "bbdown_exit_code": 0,
   "subtitle_files_found": [
     "BV1VpZoYqEmm.ai-zh.srt"
@@ -12,5 +12,11 @@
   "selected_subtitle_file": "BV1VpZoYqEmm.ai-zh.srt",
   "subtitle_language": "zh",
   "login_warning": true,
-  "processed_at": "2026-07-11T16:02:45+00:00"
+  "processed_at": "2026-07-11T16:02:45+00:00",
+  "subtitle_cue_count": 44,
+  "dialogue_cue_count": 0,
+  "rejected_subtitle_tracks": [
+    "BV1VpZoYqEmm.ai-zh.srt"
+  ],
+  "corrected_at": "2026-07-12T02:00:00+00:00"
 }
