@@ -1,0 +1,2383 @@
+# 说话者归属字幕：BV1SZJP6mEjy
+
+> 只接受精确姓名标签或明确自报姓名；OCR 错误姓名和被称呼对象不用于自动归属。
+
+## 归属统计
+
+| 规范角色名 | high | medium | low |
+| --- | ---: | ---: | ---: |
+| UNKNOWN | 0 | 0 | 172 |
+| 丰川祥子 | 17 | 0 | 0 |
+| 千早爱音 | 44 | 0 | 0 |
+| 椎名立希 | 24 | 0 | 0 |
+| 若叶睦 | 1 | 0 | 0 |
+| 长崎素世 | 15 | 0 | 0 |
+| 高松灯 | 23 | 0 | 0 |
+
+## [00:00:00.000 --> 00:00:02.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:02.000 --> 00:00:07.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 鸣鸣···爱音你明明答应过我会回来的为什么突然就走了
+- cleaned_text: 鸣鸣···爱音你明明答应过我会回来的为什么突然就走了
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:07.000 --> 00:00:11.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 爱音同学…·.年纪轻轻鸣鸣，居然就
+- cleaned_text: 爱音同学…·.年纪轻轻鸣鸣，居然就
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:11.000 --> 00:00:15.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 爱音！是我害死你的呀！都是我的错！
+- cleaned_text: 爱音！是我害死你的呀！都是我的错！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:15.000 --> 00:00:18.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 千早爱音的葬礼在一个阳光很好的周二早上举行
+- cleaned_text: 千早爱音的葬礼在一个阳光很好的周二早上举行
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:18.000 --> 00:00:19.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:19.000 --> 00:00:20.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 消息是周一晚上传开的，某个同学在班级群里发了一条
+- cleaned_text: 消息是周一晚上传开的，某个同学在班级群里发了一条
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:20.000 --> 00:00:23.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 消息是周一晚上传开的，某个同学在班级群里发了一条“爱音出事了”，后面跟了一串哭泣的表情包。
+- cleaned_text: 消息是周一晚上传开的，某个同学在班级群里发了一条“爱音出事了”，后面跟了一串哭泣的表情包。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:23.000 --> 00:00:24.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 等班主任去问的时候，得到的说法是爱
+- cleaned_text: 等班主任去问的时候，得到的说法是爱
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:24.000 --> 00:00:25.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 等班主任去问的时候，得到的说法是爱音突然病逝了。因为上周五的爱音就是请了病假才突然
+- cleaned_text: 等班主任去问的时候，得到的说法是爱音突然病逝了。因为上周五的爱音就是请了病假才突然
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:25.000 --> 00:00:28.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 等班主任去问的时候，得到的说法是爱音突然病逝了。因为上周五的爱音就是请了病假才突然离开的
+- cleaned_text: 等班主任去问的时候，得到的说法是爱音突然病逝了。因为上周五的爱音就是请了病假才突然离开的
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:28.000 --> 00:00:29.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 于是周二早上，全校都笼罩在一种沉痛
+- cleaned_text: 于是周二早上，全校都笼罩在一种沉痛
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:29.000 --> 00:00:33.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 于是周二早上，全校都笼罩在一种沉痛的气氛里。羽丘的学生们纷纷为这名少女哀倬。
+- cleaned_text: 于是周二早上，全校都笼罩在一种沉痛的气氛里。羽丘的学生们纷纷为这名少女哀倬。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:33.000 --> 00:00:34.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 校门口的追会是校学生会自发紧急组织的
+- cleaned_text: 校门口的追会是校学生会自发紧急组织的
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:34.000 --> 00:00:38.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 校门口的追倬会是校学生会自发紧急组织的灯作为爱音的朋友被推上来发言，尽管她表现得很紧张，但还
+- cleaned_text: 校门口的追倬会是校学生会自发紧急组织的灯作为爱音的朋友被推上来发言，尽管她表现得很紧张，但还
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:38.000 --> 00:00:39.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: ASVE我制
+- cleaned_text: ASVE我制
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:39.000 --> 00:00:40.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 我和爱音认识很久了。我还记得我们认识的那天，她说她要和我去一个社团我那
+- cleaned_text: 我和爱音认识很久了。我还记得我们认识的那天，她说她要和我去一个社团我那
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:40.000 --> 00:00:44.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 我和爱音·认识很久了。我还记得我们认识的那天，她说她要和我去一个社团，我那个时候真的很开心
+- cleaned_text: 我和爱音·认识很久了。我还记得我们认识的那天，她说她要和我去一个社团，我那个时候真的很开心
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:44.000 --> 00:00:45.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 她临走那天····和我说要我帮她请病假，我还以为她只
+- cleaned_text: 她临走那天····和我说要我帮她请病假，我还以为她只
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:45.000 --> 00:00:47.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 她临走那天·.·和我说要我帮她请病假，我还以为她只是身体不舒服
+- cleaned_text: 她临走那天·.·和我说要我帮她请病假，我还以为她只是身体不舒服
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:47.000 --> 00:00:48.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:48.000 --> 00:00:49.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:49.000 --> 00:00:53.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 呼..·呼·...不行我必须再快一点！赶在那之前！
+- cleaned_text: 呼……·呼·……不行我必须再快一点！赶在那之前！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:53.000 --> 00:00:54.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 爱音？你怎么这么
+- cleaned_text: 爱音？你怎么这么
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:54.000 --> 00:00:56.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 爱音？你怎么这么着急？
+- cleaned_text: 爱音？你怎么这么着急？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:00:56.000 --> 00:00:57.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:00:57.000 --> 00:01:01.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 啊！是灯灯！太好了！你能替我给老师请个假吗？就说我身体不舒
+- cleaned_text: 啊！是灯灯！太好了！你能替我给老师请个假吗？就说我身体不舒
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:01.000 --> 00:01:02.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 可以是可以啦
+- cleaned_text: 可以是可以啦
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:02.000 --> 00:01:04.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 可以是可以啦…不过爱音你这是怎么了？
+- cleaned_text: 可以是可以啦…不过爱音你这是怎么了？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:04.000 --> 00:01:05.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:05.000 --> 00:01:08.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 没时间解释了！我必须现在就走！灯灯靠你了啊啊啊！
+- cleaned_text: 没时间解释了！我必须现在就走！灯灯靠你了啊啊啊！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:08.000 --> 00:01:12.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:12.000 --> 00:01:13.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: TVEy爱首
+- cleaned_text: TVEy爱首
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:13.000 --> 00:01:14.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 爱音同学原来得了这么重的病，只是她一直不愿意在我们面
+- cleaned_text: 爱音同学原来得了这么重的病，只是她一直不愿意在我们面
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:14.000 --> 00:01:18.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 爱音同学原来得了这么重的病，只是她一直不愿意在我们面前表现吗？鸣鸣鸣
+- cleaned_text: 爱音同学原来得了这么重的病，只是她一直不愿意在我们面前表现吗？鸣鸣鸣
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:18.000 --> 00:01:19.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 老师们，同学们。今天我们聚在这里，是为
+- cleaned_text: 老师们，同学们。今天我们聚在这里，是为
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:19.000 --> 00:01:25.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 老师们，同学们。今天我们聚在这里，是为了送别我们共同的同学，也是我们共同的朋友。一十千早爱音同学
+- cleaned_text: 老师们，同学们。今天我们聚在这里，是为了送别我们共同的同学，也是我们共同的朋友。一十千早爱音同学
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:25.000 --> 00:01:26.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子一直把爱音当做自己在学
+- cleaned_text: 祥子一直把爱音当做自己在学
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:26.000 --> 00:01:27.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子一直把爱音当做自己在学校的宿敌，尽管爱音本人并没有意识到这一点。不过不知从什。
+- cleaned_text: 祥子一直把爱音当做自己在学校的宿敌，尽管爱音本人并没有意识到这一点。不过不知从什。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:27.000 --> 00:01:31.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子一直把爱音当做自己在学校的宿敌，尽管爱音本人并没有意识到这一点。不过不知从什么时候开始，祥子就在学习成绩上和爱音暗中较劲
+- cleaned_text: 祥子一直把爱音当做自己在学校的宿敌，尽管爱音本人并没有意识到这一点。不过不知从什么时候开始，祥子就在学习成绩上和爱音暗中较劲
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:31.000 --> 00:01:32.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:32.000 --> 00:01:33.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 如果爱音考了全校第二名，那么祥子就要考第
+- cleaned_text: 如果爱音考了全校第二名，那么祥子就要考第
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:33.000 --> 00:01:34.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 如果爱音考了全校第二名，那么祥子就要考第一名。但不管祥子怎么努力，爱音似乎从采没有把她当成对手
+- cleaned_text: 如果爱音考了全校第二名，那么祥子就要考第一名。但不管祥子怎么努力，爱音似乎从采没有把她当成对手
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:34.000 --> 00:01:39.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 如果爱音考了全校第二名，那么祥子就要考第一名。但不管祥子怎么努力，爱音似乎从来没有把她当成对手，每次碰面都是笑嘻嘻的，甚至会夸她钢琴弹得好好听。
+- cleaned_text: 如果爱音考了全校第二名，那么祥子就要考第一名。但不管祥子怎么努力，爱音似乎从来没有把她当成对手，每次碰面都是笑嘻嘻的，甚至会夸她钢琴弹得好好听。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:39.000 --> 00:01:40.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到
+- cleaned_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:40.000 --> 00:01:41.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到爱音离世时，祥子才意识到对方已经变成了用来提醒自己的榜
+- cleaned_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到爱音离世时，祥子才意识到对方已经变成了用来提醒自己的榜
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:41.000 --> 00:01:44.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到爱音离世时，祥子才意识到对方已经变成了用来提醒自己的榜样。
+- cleaned_text: 祥子觉得这种态度比正面挑鲜更让人生气。直到爱音离世时，祥子才意识到对方已经变成了用来提醒自己的榜样。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:44.000 --> 00:01:45.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子是学校最后
+- cleaned_text: 祥子是学校最后
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:45.000 --> 00:01:49.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子是学校最后一个见过爱音的人，那天下课后爱音在走廊里撞了她一下。
+- cleaned_text: 祥子是学校最后一个见过爱音的人，那天下课后爱音在走廊里撞了她一下。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:49.000 --> 00:01:54.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:54.000 --> 00:01:57.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 对不起对不起！借过一下！
+- cleaned_text: 对不起对不起！借过一下！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:01:57.000 --> 00:01:58.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: MA就是这
+- cleaned_text: MA就是这
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:58.000 --> 00:01:59.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 就是这么一件事，祥子在追悼会之前被至少五个人问过，在爱音走之副
+- cleaned_text: 就是这么一件事，祥子在追悼会之前被至少五个人问过，在爱音走之副
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:59.000 --> 00:02:00.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 就是这么一件事，祥子在追会之前被至少五个人问过，在爱音走之前有没有看到什么异常。
+- cleaned_text: 就是这么一件事，祥子在追会之前被至少五个人问过，在爱音走之前有没有看到什么异常。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:00.000 --> 00:02:03.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 就是这么一件事，祥子在追会之前被至少五个人问过，在爱音走之前有没有看到什么异常。
+- cleaned_text: 就是这么一件事，祥子在追会之前被至少五个人问过，在爱音走之前有没有看到什么异常。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:03.000 --> 00:02:04.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子被问得很烦，因方
+- cleaned_text: 祥子被问得很烦，因方
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:04.000 --> 00:02:05.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子被问得很烦，因为爱音确实什么都没说。其奔跑所产生的动能冲击甚至不
+- cleaned_text: 祥子被问得很烦，因为爱音确实什么都没说。其奔跑所产生的动能冲击甚至不
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:05.000 --> 00:02:09.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 祥子被问得很烦，因为爱音确实什么都没说。其奔跑所产生的动能冲击甚至不像来自一个会病死的人。
+- cleaned_text: 祥子被问得很烦，因为爱音确实什么都没说。其奔跑所产生的动能冲击甚至不像来自一个会病死的人。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:09.000 --> 00:02:10.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 祥子被问得很烦，因为爱音确实什么都没说其奔跑所产生的动能冲击甚至不像来自一个会病死的人。
+- cleaned_text: 祥子被问得很烦，因为爱音确实什么都没说其奔跑所产生的动能冲击甚至不像来自一个会病死的人。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:10.000 --> 00:02:11.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: ASVE今天，我们为被28
+- cleaned_text: ASVE今天，我们为被28
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:11.000 --> 00:02:16.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 今天，我们为被害的爱音哀，明天，我们就要让凶手付出代价！
+- cleaned_text: 今天，我们为被害的爱音哀，明天，我们就要让凶手付出代价！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:16.000 --> 00:02:19.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: （小祥.·.··爱音不是他杀…）
+- cleaned_text: （小祥.·.··爱音不是他杀…）
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:19.000 --> 00:02:22.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 我去，不早说？
+- cleaned_text: 我去，不早说？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:22.000 --> 00:02:25.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 我对不起爱音！我才是有错的那个！
+- cleaned_text: 我对不起爱音！我才是有错的那个！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:25.000 --> 00:02:28.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 如果那天不是我多嘴的话
+- cleaned_text: 如果那天不是我多嘴的话
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:28.000 --> 00:02:29.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: hiehiehiehiehiehiehiehie!biahnahiahlahalitalttah
+- cleaned_text: hiehiehiehiehiehiehiehie!biahnahiahlahalitalttah
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:29.000 --> 00:02:33.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: hiehiehiehiehiehiehiehie!hiahiahiahiahiahiahiahia!
+- cleaned_text: hiehiehiehiehiehiehiehie!hiahiahiahiahiahiahiahia!
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:33.000 --> 00:02:34.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音！我说了
+- cleaned_text: 爱音！我说了
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:34.000 --> 00:02:37.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音！我说了多少次不要在排练的时候打情骂俏！你耳朵聋嘛？！
+- cleaned_text: 爱音！我说了多少次不要在排练的时候打情骂俏！你耳朵聋嘛？！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:37.000 --> 00:02:38.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:38.000 --> 00:02:40.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 龙，可是帝王之征啊！
+- cleaned_text: 龙，可是帝王之征啊！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:40.000 --> 00:02:41.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 恭喜爱音
+- cleaned_text: 恭喜爱音
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:41.000 --> 00:02:43.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 恭喜爱音可以称帝了！
+- cleaned_text: 恭喜爱音可以称帝了！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:43.000 --> 00:02:44.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: Y
+- cleaned_text: Y
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:44.000 --> 00:02:46.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 你·...我··千早爱音，你真该死啊！！
+- cleaned_text: 你·……我··千早爱音，你真该死啊！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:46.000 --> 00:02:48.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 你·.我千早爱音，你真该死啊！！
+- cleaned_text: 你·.我千早爱音，你真该死啊！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:48.000 --> 00:02:49.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 你...·我·.·千早爱音，你真该死啊！！
+- cleaned_text: 你……·我·.·千早爱音，你真该死啊！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:49.000 --> 00:02:50.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 一定是我那天说的话成真了
+- cleaned_text: 一定是我那天说的话成真了
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:50.000 --> 00:02:54.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 一定是我那天说的话成真了，才把你害死的爱音！应该死的人是我，求求你快回来吧
+- cleaned_text: 一定是我那天说的话成真了，才把你害死的爱音！应该死的人是我，求求你快回来吧
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:54.000 --> 00:02:55.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 听我觉得这之间应该没什么因
+- cleaned_text: 听我觉得这之间应该没什么因
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:55.000 --> 00:02:58.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 听我觉得这之间应该没什么因果关系吧
+- cleaned_text: 听我觉得这之间应该没什么因果关系吧
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:02:58.000 --> 00:02:59.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 在重新组织情绪后，台上的几人
+- cleaned_text: 在重新组织情绪后，台上的几人
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:59.000 --> 00:03:01.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 在重新组织情绪后，台上的几人继续宣读爱音的词。
+- cleaned_text: 在重新组织情绪后，台上的几人继续宣读爱音的词。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:01.000 --> 00:03:02.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: SVE爱音的！
+- cleaned_text: SVE爱音的！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:02.000 --> 00:03:06.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音的人缘很好，现场来了不少人，还有很多和她同级的同学哭了出
+- cleaned_text: 爱音的人缘很好，现场来了不少人，还有很多和她同级的同学哭了出
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:06.000 --> 00:03:07.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 现场伴随着演讲和抽泣声
+- cleaned_text: 现场伴随着演讲和抽泣声
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:07.000 --> 00:03:08.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 现场伴随着演讲和抽泣声正常进行。在现场一个僻静冷清的角落里，一名少女毫不起眼
+- cleaned_text: 现场伴随着演讲和抽泣声正常进行。在现场一个僻静冷清的角落里，一名少女毫不起眼
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:08.000 --> 00:03:12.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 现场伴随着演讲和抽泣声正常进行。在现场一个僻静冷清的角落里，一名少女毫不起眼地坐在末排座位上。
+- cleaned_text: 现场伴随着演讲和抽泣声正常进行。在现场一个僻静冷清的角落里，一名少女毫不起眼地坐在末排座位上。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:12.000 --> 00:03:13.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表
+- cleaned_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:13.000 --> 00:03:15.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表情。她的脸上什么都看不出来，因为她和爱音一直保持
+- cleaned_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表情。她的脸上什么都看不出来，因为她和爱音一直保持
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:15.000 --> 00:03:20.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表情。她的脸上什么都看不出来，因为她和爱音一直保持着不咸不淡的关系。
+- cleaned_text: 绘里坐在哭得稀里哗啦的同学周围，全程面无表情。她的脸上什么都看不出来，因为她和爱音一直保持着不咸不淡的关系。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:20.000 --> 00:03:21.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 两人一起值过日，一起打过水，在走
+- cleaned_text: 两人一起值过日，一起打过水，在走
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:21.000 --> 00:03:25.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 两人一起值过日，一起打过水，在走廊里碰到会互相打招呼，在班里也偶尔能说上话。
+- cleaned_text: 两人一起值过日，一起打过水，在走廊里碰到会互相打招呼，在班里也偶尔能说上话。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:25.000 --> 00:03:26.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 没有人知道她每天早上提前十分钟到教至
+- cleaned_text: 没有人知道她每天早上提前十分钟到教至
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:26.000 --> 00:03:30.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 没有人知道她每天早上提前十分钟到教室，是因为爱音也那个时间到，两人可以在空荡的教室里独
+- cleaned_text: 没有人知道她每天早上提前十分钟到教室，是因为爱音也那个时间到，两人可以在空荡的教室里独
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:30.000 --> 00:03:31.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 没有人知道她
+- cleaned_text: 没有人知道她
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:31.000 --> 00:03:32.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 没有人知道她这次期中考试突然考进前五，是因为爱音之前随口说了一句
+- cleaned_text: 没有人知道她这次期中考试突然考进前五，是因为爱音之前随口说了一句
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:32.000 --> 00:03:35.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 没有人知道她这次期中考试突然考进前五，是因为爱音之前随口说了一句考进前五的人可以和她去参加同一个学习竞赛。
+- cleaned_text: 没有人知道她这次期中考试突然考进前五，是因为爱音之前随口说了一句考进前五的人可以和她去参加同一个学习竞赛。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:35.000 --> 00:03:36.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 同样没有人知道的是，当她听到爱音出事的时候，她正
+- cleaned_text: 同样没有人知道的是，当她听到爱音出事的时候，她正
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:36.000 --> 00:03:40.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 同样没有人知道的是，当她听到爱音出事的时候，她正在为爱音准备节日礼物。她为爱音亲手织了一条围币，正在想着用什公理由
+- cleaned_text: 同样没有人知道的是，当她听到爱音出事的时候，她正在为爱音准备节日礼物。她为爱音亲手织了一条围币，正在想着用什公理由
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:40.000 --> 00:03:41.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:41.000 --> 00:03:42.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼
+- cleaned_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:42.000 --> 00:03:45.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- cleaned_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:45.000 --> 00:03:47.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- cleaned_text: 现在这包围巾还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:47.000 --> 00:03:49.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 现在这包围币还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- cleaned_text: 现在这包围币还在绘里怀里抱着。周围有很多人在哭，可绘里表现得很平静，眼泪是属于她们的，绘里已经什么都没有了。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:49.000 --> 00:03:53.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 千早爱音·我们的好同学，学校的好
+- cleaned_text: 千早爱音·我们的好同学，学校的好
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:03:53.000 --> 00:03:55.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: KVy
+- cleaned_text: KVy
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:03:55.000 --> 00:03:56.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 她对同学的友爱和对集体的
+- cleaned_text: 她对同学的友爱和对集体的
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:03:56.000 --> 00:03:59.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 她对同学的友爱和对集体的热忧将永远铭刻在我们记忆
+- cleaned_text: 她对同学的友爱和对集体的热忧将永远铭刻在我们记忆
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:01.000 --> 00:04:03.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 哈？你们咋了？
+- cleaned_text: 哈？你们咋了？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:03.000 --> 00:04:04.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: KL我去！！！！！
+- cleaned_text: KL我去！！！！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:04.000 --> 00:04:05.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 我去！！！！！
+- cleaned_text: 我去！！！！！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:05.000 --> 00:04:06.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: SVE
+- cleaned_text: SVE
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:06.000 --> 00:04:07.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: ORS
+- cleaned_text: ORS
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:07.000 --> 00:04:10.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 嘿嘿！大家早上好呀～RS
+- cleaned_text: 嘿嘿！大家早上好呀～RS
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:10.000 --> 00:04:13.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:13.000 --> 00:04:15.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: VE
+- cleaned_text: VE
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:15.000 --> 00:04:16.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: VE
+- cleaned_text: VE
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:16.000 --> 00:04:19.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: VE
+- cleaned_text: VE
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:19.000 --> 00:04:23.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 我是不是不该用这个颜色出场？
+- cleaned_text: 我是不是不该用这个颜色出场？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:23.000 --> 00:04:24.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 等会这相框上的，是我吗？？
+- cleaned_text: 等会这相框上的，是我吗？？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:24.000 --> 00:04:27.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 等会...这相框上的，是我吗？？
+- cleaned_text: 等会……这相框上的，是我吗？？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:27.000 --> 00:04:28.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: VEy
+- cleaned_text: VEy
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:28.000 --> 00:04:31.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 爱爱音..你活了啊
+- cleaned_text: 爱爱音……你活了啊
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:31.000 --> 00:04:35.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: SVE那、那我用死吗？
+- cleaned_text: SVE那、那我用死吗？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:35.000 --> 00:04:36.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: y等会？？你们难
+- cleaned_text: y等会？？你们难
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:36.000 --> 00:04:39.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 等会？？你们难道以为我死了？！
+- cleaned_text: 等会？？你们难道以为我死了？！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:39.000 --> 00:04:42.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: y
+- cleaned_text: y
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:42.000 --> 00:04:43.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: y
+- cleaned_text: y
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:43.000 --> 00:04:46.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 爱音同学！你给我解释清楚desuwa！
+- cleaned_text: 爱音同学！你给我解释清楚desuwa！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:46.000 --> 00:04:47.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: yC呢这个，这
+- cleaned_text: yC呢这个，这
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:47.000 --> 00:04:49.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 听·…这个，这个..··
+- cleaned_text: 听·…这个，这个……··
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:49.000 --> 00:04:50.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: y
+- cleaned_text: y
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:50.000 --> 00:04:53.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 事情还得从上周五说起
+- cleaned_text: 事情还得从上周五说起
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:53.000 --> 00:04:54.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 羽丘下午，某下课时间。
+- cleaned_text: 羽丘下午，某下课时间。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:54.000 --> 00:04:56.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 羽丘下午，某下课时间。
+- cleaned_text: 羽丘下午，某下课时间。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:04:56.000 --> 00:04:57.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 羽丘下午，某下课时间。
+- cleaned_text: 羽丘下午，某下课时间。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:57.000 --> 00:04:58.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: V
+- cleaned_text: V
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:58.000 --> 00:04:59.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 哼哼哼
+- cleaned_text: 哼哼哼
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:04:59.000 --> 00:05:00.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: （您有
+- cleaned_text: （您有
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:00.000 --> 00:05:02.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: （您有一条未读消息）
+- cleaned_text: （您有一条未读消息）
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:02.000 --> 00:05:05.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 这是什么？点开看看？
+- cleaned_text: 这是什么？点开看看？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:05:05.000 --> 00:05:11.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: （来自“素世世”的消息）
+- cleaned_text: （来自“素世世”的消息）
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:11.000 --> 00:05:14.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:14.000 --> 00:05:15.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不是币现
+- cleaned_text: 不是币现
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:15.000 --> 00:05:17.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不是你以为的那个意思！
+- cleaned_text: 不是你以为的那个意思！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:17.000 --> 00:05:18.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:18.000 --> 00:05:19.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 那你是什么意思呀？你们的学校不是不让带手机巴
+- cleaned_text: 那你是什么意思呀？你们的学校不是不让带手机巴
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:19.000 --> 00:05:23.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 那你是什么意思呀？你们的学校不是不让带手机吗？有什么事情我们不可以回去再说嘛？
+- cleaned_text: 那你是什么意思呀？你们的学校不是不让带手机吗？有什么事情我们不可以回去再说嘛？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:23.000 --> 00:05:24.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 这次真的不行，教导主任我
+- cleaned_text: 这次真的不行，教导主任我
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:24.000 --> 00:05:27.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 这次真的不行，教导主任我带家长来见她
+- cleaned_text: 这次真的不行，教导主任我带家长来见她
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:27.000 --> 00:05:30.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 因为什么叫家长？学习成绩
+- cleaned_text: 因为什么叫家长？学习成绩
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:30.000 --> 00:05:31.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不是就是正常的班
+- cleaned_text: 不是就是正常的班
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:31.000 --> 00:05:35.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不是就是正常的班主任谈话。但是我不想我妈妈因为我的事情担心。
+- cleaned_text: 不是就是正常的班主任谈话。但是我不想我妈妈因为我的事情担心。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:35.000 --> 00:05:36.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 所以我在想，小爱音，能不能请你来
+- cleaned_text: 所以我在想，小爱音，能不能请你来
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:36.000 --> 00:05:37.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- cleaned_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:37.000 --> 00:05:39.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- cleaned_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:05:39.000 --> 00:05:40.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- cleaned_text: 所以我在想，小爱音，能不能请你来假扮我的妈妈？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:40.000 --> 00:05:41.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 好吧，既然你都这么说了我请
+- cleaned_text: 好吧，既然你都这么说了我请
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:41.000 --> 00:05:47.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 好吧，既然你都这么说了我请个假，去把自已这身校服换掉就好了，我记得你妈妈长得挺年
+- cleaned_text: 好吧，既然你都这么说了我请个假，去把自已这身校服换掉就好了，我记得你妈妈长得挺年
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:47.000 --> 00:05:50.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 顺带一提，约定的时间是下午四点。
+- cleaned_text: 顺带一提，约定的时间是下午四点。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:51.000 --> 00:05:55.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 下午四点··.·.就是“一个小时后！！我去！！！！！
+- cleaned_text: 下午四点··.·.就是“一个小时后！！我去！！！！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:05:55.000 --> 00:05:56.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 牙白牙
+- cleaned_text: 牙白牙
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:05:56.000 --> 00:05:58.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 牙白牙白牙白！！！
+- cleaned_text: 牙白牙白牙白！！！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:05:58.000 --> 00:06:00.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:06:00.000 --> 00:06:01.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:06:01.000 --> 00:06:02.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 呼...…呼...不行我必须再快一点
+- cleaned_text: 呼………呼……不行我必须再快一点
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:02.000 --> 00:06:05.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 呼.呼...不行我必须再快一点！赶在那之前！
+- cleaned_text: 呼.呼……不行我必须再快一点！赶在那之前！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:05.000 --> 00:06:08.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 爱音？你怎么这么着急
+- cleaned_text: 爱音？你怎么这么着急
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:08.000 --> 00:06:09.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 啊！是灯灯！太好了！你能替我
+- cleaned_text: 啊！是灯灯！太好了！你能替我
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:09.000 --> 00:06:11.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 啊！是灯灯！太好了！你能替我给老师请个假吗？就说我身体不舒服！
+- cleaned_text: 啊！是灯灯！太好了！你能替我给老师请个假吗？就说我身体不舒服！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:11.000 --> 00:06:12.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 可以是可以啦
+- cleaned_text: 可以是可以啦
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:12.000 --> 00:06:14.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 可以是可以啦不过爱音你这是怎么了？
+- cleaned_text: 可以是可以啦不过爱音你这是怎么了？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:14.000 --> 00:06:15.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 没时间解释了！我必须现在就走！灯灯
+- cleaned_text: 没时间解释了！我必须现在就走！灯灯
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:15.000 --> 00:06:18.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 没时间解释了！我必须现在就走！灯灯靠你了啊啊啊！
+- cleaned_text: 没时间解释了！我必须现在就走！灯灯靠你了啊啊啊！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:18.000 --> 00:06:19.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: （今天
+- cleaned_text: （今天
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:19.000 --> 00:06:21.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: （今天晚上吃什么呢？
+- cleaned_text: （今天晚上吃什么呢？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:21.000 --> 00:06:22.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:06:22.000 --> 00:06:24.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:06:24.000 --> 00:06:26.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 牙白牙白牙白！！对不起祥祥！！
+- cleaned_text: 牙白牙白牙白！！对不起祥祥！！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:26.000 --> 00:06:28.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:06:28.000 --> 00:06:31.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 那后来呢？你和素世怎么样了？
+- cleaned_text: 那后来呢？你和素世怎么样了？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:31.000 --> 00:06:32.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:32.000 --> 00:06:35.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 当然是顺利糊弄过去了。
+- cleaned_text: 当然是顺利糊弄过去了。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:35.000 --> 00:06:38.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 你们是怎么觉得我死了的？
+- cleaned_text: 你们是怎么觉得我死了的？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:38.000 --> 00:06:39.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 我听到的版本是爱音得了病，匆匆忙忙
+- cleaned_text: 我听到的版本是爱音得了病，匆匆忙忙
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:39.000 --> 00:06:42.000]
+- canonical_name: 丰川祥子
+- source_label: 祥子
+- raw_text: 我听到的版本是爱音得了病，匆匆忙忙就离校了
+- cleaned_text: 我听到的版本是爱音得了病，匆匆忙忙就离校了
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:42.000 --> 00:06:43.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 到花联川这里，已经成了羽丘有个叫干桌爱音
+- cleaned_text: 到花联川这里，已经成了羽丘有个叫干桌爱音
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:43.000 --> 00:06:47.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 到花联川这里，已经成了羽丘有个叫千早爱音的女生这周一突然病逝了。
+- cleaned_text: 到花联川这里，已经成了羽丘有个叫千早爱音的女生这周一突然病逝了。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:47.000 --> 00:06:48.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 谣言害人呐！说好的不信谣
+- cleaned_text: 谣言害人呐！说好的不信谣
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:48.000 --> 00:06:51.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 谣言害人呐！说好的不信谣不传谣呢？
+- cleaned_text: 谣言害人呐！说好的不信谣不传谣呢？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:51.000 --> 00:06:52.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 这能怪我们吗？我前两天给你发消患
+- cleaned_text: 这能怪我们吗？我前两天给你发消患
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:52.000 --> 00:06:57.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 这能怪我们吗？我前两天给你发消息打电话打也打不通！还以为你真的出事了！你手机拿来玉
+- cleaned_text: 这能怪我们吗？我前两天给你发消息打电话打也打不通！还以为你真的出事了！你手机拿来玉
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:57.000 --> 00:06:58.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: V
+- cleaned_text: V
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:06:58.000 --> 00:07:00.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:07:00.000 --> 00:07:04.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 这样一来也算糊弄过去了吧
+- cleaned_text: 这样一来也算糊弄过去了吧
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:04.000 --> 00:07:07.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 是啊，再也不用担心了。
+- cleaned_text: 是啊，再也不用担心了。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:07:07.000 --> 00:07:08.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:08.000 --> 00:07:11.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 看！许愿池！正好正好，我要许一个！
+- cleaned_text: 看！许愿池！正好正好，我要许一个！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:11.000 --> 00:07:13.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 都多大的人了还信这个。
+- cleaned_text: 都多大的人了还信这个。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:07:13.000 --> 00:07:14.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: Y
+- cleaned_text: Y
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:14.000 --> 00:07:18.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 刚骗完教导主任的人不准说这话，我要投币，今天运气太好
+- cleaned_text: 刚骗完教导主任的人不准说这话，我要投币，今天运气太好
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:18.000 --> 00:07:19.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音掏出一枚硬币，站在池子边上念念有词
+- cleaned_text: 爱音掏出一枚硬币，站在池子边上念念有词
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:19.000 --> 00:07:21.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音掏出一枚硬币，站在池子边上念念有词。素世站在不远处看戏。
+- cleaned_text: 爱音掏出一枚硬币，站在池子边上念念有词。素世站在不远处看戏。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:21.000 --> 00:07:22.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 她深吸一日气，用
+- cleaned_text: 她深吸一日气，用
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:22.000 --> 00:07:23.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 她深吸一口气，用一个夸张的抛掷动作把硬币扔向池中央。结果硬币顺餐
+- cleaned_text: 她深吸一口气，用一个夸张的抛掷动作把硬币扔向池中央。结果硬币顺餐
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:23.000 --> 00:07:25.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 她深吸一口气，用一个夸张的抛掷动作把硬币扔向池中央。结果硬币顺着喷泉的柱子反弹了回来。
+- cleaned_text: 她深吸一口气，用一个夸张的抛掷动作把硬币扔向池中央。结果硬币顺着喷泉的柱子反弹了回来。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:25.000 --> 00:07:26.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:26.000 --> 00:07:29.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 你这是什么扔法？投石问路吗？
+- cleaned_text: 你这是什么扔法？投石问路吗？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:29.000 --> 00:07:30.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不行不行！刚
+- cleaned_text: 不行不行！刚
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:30.000 --> 00:07:33.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 不行不行！刚才的不算，等我捡回来重扔，许愿币不进水不灵的。
+- cleaned_text: 不行不行！刚才的不算，等我捡回来重扔，许愿币不进水不灵的。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:33.000 --> 00:07:34.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:34.000 --> 00:07:35.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 这叫做许愿池的拒绝吧
+- cleaned_text: 这叫做许愿池的拒绝吧
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:35.000 --> 00:07:37.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 这叫做许愿池的拒绝吧
+- cleaned_text: 这叫做许愿池的拒绝吧
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:07:37.000 --> 00:07:38.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世不过爱音，只好让她接着去捡。爱音
+- cleaned_text: 素世不过爱音，只好让她接着去捡。爱音
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:38.000 --> 00:07:39.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条
+- cleaned_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:39.000 --> 00:07:40.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条窄缝里，非常不好拿。
+- cleaned_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条窄缝里，非常不好拿。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:40.000 --> 00:07:43.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条窄缝里，非常不好拿。
+- cleaned_text: 素世不过爱音，只好让她接着去捡。爱音蹲下身，伸手去够那个硬币，它刚好滚到了池沿内侧一条窄缝里，非常不好拿。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:43.000 --> 00:07:44.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音的手指够了几次没够到
+- cleaned_text: 爱音的手指够了几次没够到
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:44.000 --> 00:07:45.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音的手指够了几次没够到，往前又挪了半步。然后她发现自己踩到了池沿
+- cleaned_text: 爱音的手指够了几次没够到，往前又挪了半步。然后她发现自己踩到了池沿
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:45.000 --> 00:07:48.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音的手指够了几次没够到，往前又挪了半步。然后她发现自己踩到了池沿上没干的水渍，鞋底一滑
+- cleaned_text: 爱音的手指够了几次没够到，往前又挪了半步。然后她发现自己踩到了池沿上没干的水渍，鞋底一滑
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:48.000 --> 00:07:50.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 哇啊啊啊！！
+- cleaned_text: 哇啊啊啊！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:50.000 --> 00:07:53.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 小爱音！！！
+- cleaned_text: 小爱音！！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:53.000 --> 00:07:54.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 哎呦我我事
+- cleaned_text: 哎呦我我事
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:07:54.000 --> 00:07:55.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 哎呦我我事
+- cleaned_text: 哎呦我我事
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:55.000 --> 00:07:56.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 哎呦…·我.我事
+- cleaned_text: 哎呦…·我.我事
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:56.000 --> 00:07:57.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音本人的
+- cleaned_text: 爱音本人的
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:57.000 --> 00:07:58.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍
+- cleaned_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:58.000 --> 00:07:59.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- cleaned_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:07:59.000 --> 00:08:00.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里。
+- cleaned_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:00.000 --> 00:08:01.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- cleaned_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:01.000 --> 00:08:02.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- cleaned_text: 爱音本人的确没事，可爱音放在边上的手机就在刚刚被她一巴掌拍飞。手机的抛物线比硬币更加精准地落进水池里
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:02.000 --> 00:08:03.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:03.000 --> 00:08:05.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 哈哈哈哈
+- cleaned_text: 哈哈哈哈
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:05.000 --> 00:08:06.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 好了不要笑啦，快点
+- cleaned_text: 好了不要笑啦，快点
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:06.000 --> 00:08:08.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 好了不要笑啦，快点帮我来捞呀！
+- cleaned_text: 好了不要笑啦，快点帮我来捞呀！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:08.000 --> 00:08:09.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:09.000 --> 00:08:10.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 哈哈哈好好好
+- cleaned_text: 哈哈哈好好好
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:10.000 --> 00:08:11.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 哈哈哈好好好
+- cleaned_text: 哈哈哈好好好
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:11.000 --> 00:08:12.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世趴在池沿上往水里看。水不算深，能清晰看到
+- cleaned_text: 素世趴在池沿上往水里看。水不算深，能清晰看到
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:12.000 --> 00:08:15.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世趴在池沿上往水里看。水不算深，能清晰看到爱音的手机躺在两枚硬币之间。
+- cleaned_text: 素世趴在池沿上往水里看。水不算深，能清晰看到爱音的手机躺在两枚硬币之间。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:15.000 --> 00:08:16.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 在尚且还没有熄灭
+- cleaned_text: 在尚且还没有熄灭
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:16.000 --> 00:08:17.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 在尚且还没有熄灭的屏幕上发来爱音妈的一条消息：我和你爸出去旅游，下个月之前
+- cleaned_text: 在尚且还没有熄灭的屏幕上发来爱音妈的一条消息：我和你爸出去旅游，下个月之前
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:17.000 --> 00:08:20.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 在尚且还没有熄灭的屏幕上发来爱音妈的一条消息：我和你爸出去旅游，下个月之前电话打不通哦。”随即屏幕就熄灭了。
+- cleaned_text: 在尚且还没有熄灭的屏幕上发来爱音妈的一条消息：我和你爸出去旅游，下个月之前电话打不通哦。”随即屏幕就熄灭了。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:20.000 --> 00:08:21.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 素世盯着那条消息拼尽全
+- cleaned_text: 素世盯着那条消息拼尽全
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:21.000 --> 00:08:26.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 素世盯着那条消息拼尽全力绷住。她在后面拽着爱音，让她捞手机的同时不去掉进水里
+- cleaned_text: 素世盯着那条消息拼尽全力绷住。她在后面拽着爱音，让她捞手机的同时不去掉进水里
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:26.000 --> 00:08:29.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世世，你看到我的手机了吗？
+- cleaned_text: 素世世，你看到我的手机了吗？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:29.000 --> 00:08:30.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 啊？不是就在那边吗？
+- cleaned_text: 啊？不是就在那边吗？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:30.000 --> 00:08:31.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 啊？不是就在那边吗？
+- cleaned_text: 啊？不是就在那边吗？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:31.000 --> 00:08:32.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:32.000 --> 00:08:33.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 什么？在哪边？
+- cleaned_text: 什么？在哪边？
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:33.000 --> 00:08:34.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 从就在那边！你右
+- cleaned_text: 从就在那边！你右
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:34.000 --> 00:08:36.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 就在那边！你右手边！
+- cleaned_text: 就在那边！你右手边！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:36.000 --> 00:08:37.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 碰到了！素世世
+- cleaned_text: 碰到了！素世世
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:37.000 --> 00:08:39.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 碰到了！素世世，再拉我一把！扶稳了！
+- cleaned_text: 碰到了！素世世，再拉我一把！扶稳了！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:39.000 --> 00:08:40.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 我去
+- cleaned_text: 我去
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:40.000 --> 00:08:42.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 我去！！！！！
+- cleaned_text: 我去！！！！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:42.000 --> 00:08:43.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 我去！！！！！
+- cleaned_text: 我去！！！！！
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:43.000 --> 00:08:44.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚
+- cleaned_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:44.000 --> 00:08:45.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚这个地方就是爱音滑倒的地方。
+- cleaned_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚这个地方就是爱音滑倒的地方。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:45.000 --> 00:08:48.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚这个地方就是爱音滑倒的地方。
+- cleaned_text: 素世往后拽了一下，爱音的另一只手撑在池沿上借力。但两人都忘了刚刚这个地方就是爱音滑倒的地方。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:48.000 --> 00:08:49.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 于是
+- cleaned_text: 于是
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:49.000 --> 00:08:50.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 于是，另一部手机以一道和刚才爱音的手机几乎一模一样：
+- cleaned_text: 于是，另一部手机以一道和刚才爱音的手机几乎一模一样：
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:50.000 --> 00:08:54.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 于是，另一部手机以一道和刚才爱音的手机几乎一模一样的抛物线，精准地落入水中。
+- cleaned_text: 于是，另一部手机以一道和刚才爱音的手机几乎一模一样的抛物线，精准地落入水中。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:08:54.000 --> 00:08:58.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:58.000 --> 00:08:59.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:08:59.000 --> 00:09:00.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: y
+- cleaned_text: y
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:00.000 --> 00:09:05.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 也就是说，你们俩的手机在这之后都报
+- cleaned_text: 也就是说，你们俩的手机在这之后都报
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:05.000 --> 00:09:08.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 现在一起在素世家的米缸里躺着呢。
+- cleaned_text: 现在一起在素世家的米缸里躺着呢。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:08.000 --> 00:09:09.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 那你这周一于去
+- cleaned_text: 那你这周一于去
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:09.000 --> 00:09:13.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 那你这周一干嘛去了？要是周一回学校传言还不至于变成现在这样。
+- cleaned_text: 那你这周一干嘛去了？要是周一回学校传言还不至于变成现在这样。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:13.000 --> 00:09:14.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 这个··.·我不是生病了嘛·所达
+- cleaned_text: 这个··.·我不是生病了嘛·所达
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:14.000 --> 00:09:18.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 这个我不是生病了嘛·所以就和素世世在她家里多待了一天？
+- cleaned_text: 这个我不是生病了嘛·所以就和素世世在她家里多待了一天？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:18.000 --> 00:09:22.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 最后一个问题。
+- cleaned_text: 最后一个问题。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:22.000 --> 00:09:24.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 请讲？
+- cleaned_text: 请讲？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:24.000 --> 00:09:25.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 你这
+- cleaned_text: 你这
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:25.000 --> 00:09:28.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 你这头发是什么意思？
+- cleaned_text: 你这头发是什么意思？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:28.000 --> 00:09:31.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 有没有很像初音未来？
+- cleaned_text: 有没有很像初音未来？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:31.000 --> 00:09:32.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:09:32.000 --> 00:09:34.000]
+- canonical_name: 椎名立希
+- source_label: 立希
+- raw_text: 像你个鬼啊！！
+- cleaned_text: 像你个鬼啊！！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:34.000 --> 00:09:35.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:35.000 --> 00:09:38.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 我.我知道错了
+- cleaned_text: 我.我知道错了
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:38.000 --> 00:09:41.000]
+- canonical_name: 高松灯
+- source_label: 灯
+- raw_text: 太好了爱音，你还活着！
+- cleaned_text: 太好了爱音，你还活着！
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:41.000 --> 00:09:42.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: [无法识别]
+- cleaned_text: [无法识别]
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:42.000 --> 00:09:45.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 灯灯别担心，我一直都好好的。那啥各位
+- cleaned_text: 灯灯别担心，我一直都好好的。那啥各位
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:45.000 --> 00:09:46.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 把灯抱在怀里，爱音随即
+- cleaned_text: 把灯抱在怀里，爱音随即
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:09:46.000 --> 00:09:49.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 把灯抱在怀里，爱音随即说出了全羽丘建校以来最有魄力的一句话
+- cleaned_text: 把灯抱在怀里，爱音随即说出了全羽丘建校以来最有魄力的一句话
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:09:49.000 --> 00:09:50.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 这个要不咱先说说这
+- cleaned_text: 这个要不咱先说说这
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:50.000 --> 00:09:54.000]
+- canonical_name: 千早爱音
+- source_label: 千早爱音
+- raw_text: 这个.·要不咱先说说这个追会的账找谁报销？
+- cleaned_text: 这个.·要不咱先说说这个追会的账找谁报销？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:09:54.000 --> 00:09:55.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 与此同时，月之森某班。
+- cleaned_text: 与此同时，月之森某班。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:09:55.000 --> 00:09:57.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 与此同时，月之森某班。
+- cleaned_text: 与此同时，月之森某班。
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:09:57.000 --> 00:10:00.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 与此同时，月之森某班。
+- cleaned_text: 与此同时，月之森某班。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:10:00.000 --> 00:10:04.000]
+- canonical_name: 若叶睦
+- source_label: 睦
+- raw_text: 素世，你感冒了吗？
+- cleaned_text: 素世，你感冒了吗？
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:10:04.000 --> 00:10:07.000]
+- canonical_name: 长崎素世
+- source_label: 素世
+- raw_text: 不知道，我感觉有人骂我。
+- cleaned_text: 不知道，我感觉有人骂我。
+- assignment_confidence: high
+- assignment_basis: 画面姓名标签与角色表精确匹配
+
+## [00:10:07.000 --> 00:10:08.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
+- raw_text: 千早爱音死
+- cleaned_text: 千早爱音死
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:10:08.000 --> 00:10:11.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 千早爱音死了#1（完）
+- cleaned_text: 千早爱音死了#1（完）
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断

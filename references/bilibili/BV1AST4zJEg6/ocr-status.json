@@ -1,0 +1,2791 @@
+{
+  "bvid": "BV1AST4zJEg6",
+  "video_title": "假如千早爱音会在死后24小时复活 #1",
+  "source_type": "hardcoded_subtitle_ocr",
+  "downloaded_quality": "360P preferred, 480P fallback",
+  "processed_time_range": {
+    "start_time": null,
+    "end_time": null
+  },
+  "crop_region": {
+    "top": 0.5,
+    "bottom": 0.92,
+    "left": 0.06,
+    "right": 0.96
+  },
+  "speaker_crop_regions": {
+    "left_upper": {
+      "top": 0.54,
+      "bottom": 0.68,
+      "left": 0.14,
+      "right": 0.42
+    },
+    "left_lower": {
+      "top": 0.62,
+      "bottom": 0.76,
+      "left": 0.06,
+      "right": 0.3
+    },
+    "center": {
+      "top": 0.62,
+      "bottom": 0.76,
+      "left": 0.38,
+      "right": 0.64
+    }
+  },
+  "sample_fps": 1.0,
+  "sample_interval_seconds": 1.0,
+  "ocr_language": "ch",
+  "ocr_engine": "rapidocr_onnxruntime",
+  "average_confidence": 0.8427571346823666,
+  "low_confidence_segments": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 6.0,
+      "end": 7.0,
+      "speaker": "旁白",
+      "text": "口",
+      "confidence": 0.6427667140960693
+    },
+    {
+      "start": 28.0,
+      "end": 33.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 37.0,
+      "end": 39.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 41.0,
+      "end": 47.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 66.0,
+      "end": 67.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 70.0,
+      "end": 72.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 73.0,
+      "end": 77.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 106.0,
+      "end": 109.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 154.0,
+      "end": 159.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 194.0,
+      "end": 195.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 215.0,
+      "end": 216.0,
+      "speaker": "旁白",
+      "text": "办",
+      "confidence": 0.5631608963012695
+    },
+    {
+      "start": 259.0,
+      "end": 260.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 270.0,
+      "end": 272.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 272.0,
+      "end": 273.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 273.0,
+      "end": 274.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 279.0,
+      "end": 282.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 283.0,
+      "end": 286.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 286.0,
+      "end": 289.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 306.0,
+      "end": 307.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 316.0,
+      "end": 323.0,
+      "speaker": "灯",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 380.0,
+      "end": 384.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 385.0,
+      "end": 386.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 387.0,
+      "end": 388.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 391.0,
+      "end": 392.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 395.0,
+      "end": 396.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 399.0,
+      "end": 401.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 433.0,
+      "end": 434.0,
+      "speaker": "灯",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 456.0,
+      "end": 459.0,
+      "speaker": "灯",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 487.0,
+      "end": 488.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 488.0,
+      "end": 491.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 505.0,
+      "end": 506.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 512.0,
+      "end": 513.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 520.0,
+      "end": 523.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 528.0,
+      "end": 530.0,
+      "speaker": "未知说话者",
+      "text": "口",
+      "confidence": 0.5140957832336426
+    }
+  ],
+  "detected_speaker_labels": [
+    {
+      "text": "18",
+      "confidence": 0.7965464890003204,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.933490440249443,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎案世",
+      "confidence": 0.8572184890508652,
+      "region": "left_lower"
+    },
+    {
+      "text": "DH",
+      "confidence": 0.627771258354187,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9867191165685654,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.951241135597229,
+      "region": "left_lower"
+    },
+    {
+      "text": "72",
+      "confidence": 0.6287588179111481,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9851982891559601,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9822466969490051,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6344883243242899,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9849776029586792,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9808602035045624,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6742913921674093,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9784095138311386,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9657392799854279,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-O",
+      "confidence": 0.6579976181189219,
+      "region": "center"
+    },
+    {
+      "text": "*D-0",
+      "confidence": 0.5354315415024757,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.900107741355896,
+      "region": "left_upper"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7270657420158386,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.993329331278801,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.972672626376152,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0m",
+      "confidence": 0.7763005346059799,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.5289231240749359,
+      "region": "center"
+    },
+    {
+      "text": "8",
+      "confidence": 0.7141112685203552,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9934301525354385,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9698369950056076,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.8094490170478821,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9934608489274979,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9711201041936874,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9390984773635864,
+      "region": "center"
+    },
+    {
+      "text": "3",
+      "confidence": 0.8824506998062134,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9717330187559128,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0A",
+      "confidence": 0.673679456114769,
+      "region": "center"
+    },
+    {
+      "text": "157",
+      "confidence": 0.7401081720987955,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9848691523075104,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世m",
+      "confidence": 0.8994500398635864,
+      "region": "left_lower"
+    },
+    {
+      "text": "19",
+      "confidence": 0.7067636698484421,
+      "region": "center"
+    },
+    {
+      "text": "18",
+      "confidence": 0.8271257877349854,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9848365783691406,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世m",
+      "confidence": 0.908881664276123,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.819776713848114,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世m",
+      "confidence": 0.8993107318878174,
+      "region": "left_lower"
+    },
+    {
+      "text": "T",
+      "confidence": 0.5216333866119385,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9899177700281143,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9105192124843597,
+      "region": "left_lower"
+    },
+    {
+      "text": "14",
+      "confidence": 0.6828603744506836,
+      "region": "center"
+    },
+    {
+      "text": ".1:8",
+      "confidence": 0.7026549205183983,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9840275347232819,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9635017216205597,
+      "region": "left_lower"
+    },
+    {
+      "text": "--",
+      "confidence": 0.5517751723527908,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9805918633937836,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世行",
+      "confidence": 0.7778859287500381,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0m",
+      "confidence": 0.6722258925437927,
+      "region": "center"
+    },
+    {
+      "text": "773",
+      "confidence": 0.8363489111264547,
+      "region": "center"
+    },
+    {
+      "text": "K.",
+      "confidence": 0.6895652115345001,
+      "region": "center"
+    },
+    {
+      "text": "上13",
+      "confidence": 0.6479931076367696,
+      "region": "left_lower"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9938720911741257,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.8829883337020874,
+      "region": "center"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9548279196023941,
+      "region": "left_lower"
+    },
+    {
+      "text": "7.7",
+      "confidence": 0.8168616692225138,
+      "region": "center"
+    },
+    {
+      "text": ".11",
+      "confidence": 0.5250470290581385,
+      "region": "left_lower"
+    },
+    {
+      "text": "77",
+      "confidence": 0.6424887478351593,
+      "region": "center"
+    },
+    {
+      "text": "111",
+      "confidence": 0.7550111214319865,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9858401715755463,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9803448468446732,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.574589471022288,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9894383996725082,
+      "region": "left_lower"
+    },
+    {
+      "text": "集",
+      "confidence": 0.5503786206245422,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世物",
+      "confidence": 0.8168080776929856,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.6946226954460144,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9895222187042236,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世书",
+      "confidence": 0.7996218666434288,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0A",
+      "confidence": 0.5057420134544373,
+      "region": "center"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.7407393753528595,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世拉",
+      "confidence": 0.7668773308396339,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.7256296873092651,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6936809619267782,
+      "region": "center"
+    },
+    {
+      "text": "AD-G",
+      "confidence": 0.5393930822610855,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7349799871444702,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9535576105117798,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-G",
+      "confidence": 0.5719879766305288,
+      "region": "center"
+    },
+    {
+      "text": "5.",
+      "confidence": 0.60859514772892,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世市",
+      "confidence": 0.8498543202877045,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世市",
+      "confidence": 0.8588698625564575,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.696688175201416,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9535302072763443,
+      "region": "left_lower"
+    },
+    {
+      "text": "8",
+      "confidence": 0.5769252777099609,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9793597757816315,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世m",
+      "confidence": 0.8650307536125184,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.8153918782869974,
+      "region": "center"
+    },
+    {
+      "text": "M0-G",
+      "confidence": 0.5744132474064827,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9791571199893951,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.974289283156395,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.5370187759399414,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-Gy",
+      "confidence": 0.6720372885465622,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9751647263765335,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.5434763431549072,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9796480089426041,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9743808060884476,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9797236770391464,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世布",
+      "confidence": 0.809936136007309,
+      "region": "left_lower"
+    },
+    {
+      "text": "大",
+      "confidence": 0.8060743808746338,
+      "region": "left_upper"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5661846896012624,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世布",
+      "confidence": 0.7936513662338257,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.5769544839859009,
+      "region": "left_lower"
+    },
+    {
+      "text": ".9r",
+      "confidence": 0.6802902022997538,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世布",
+      "confidence": 0.7970827668905258,
+      "region": "left_lower"
+    },
+    {
+      "text": "m",
+      "confidence": 0.7413938045501709,
+      "region": "left_lower"
+    },
+    {
+      "text": "-0-0",
+      "confidence": 0.7638614475727081,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.984445258975029,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9478870183229446,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8561785817146301,
+      "region": "left_lower"
+    },
+    {
+      "text": "1.1111",
+      "confidence": 0.835853507121404,
+      "region": "left_lower"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.5689838230609894,
+      "region": "center"
+    },
+    {
+      "text": "Ta",
+      "confidence": 0.5663620829582214,
+      "region": "center"
+    },
+    {
+      "text": ".11",
+      "confidence": 0.6367010474205017,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0m",
+      "confidence": 0.6313091740012169,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6042645076910654,
+      "region": "center"
+    },
+    {
+      "text": "m",
+      "confidence": 0.5888476967811584,
+      "region": "left_lower"
+    },
+    {
+      "text": "8",
+      "confidence": 0.572070837020874,
+      "region": "center"
+    },
+    {
+      "text": "8",
+      "confidence": 0.7329643368721008,
+      "region": "center"
+    },
+    {
+      "text": ".11",
+      "confidence": 0.5317218999067942,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.7002069850762686,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.8576138019561768,
+      "region": "left_upper"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.7986147205034891,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.6437389453252157,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.5675241351127625,
+      "region": "left_upper"
+    },
+    {
+      "text": "5.",
+      "confidence": 0.5108024775981903,
+      "region": "center"
+    },
+    {
+      "text": "A.A.11",
+      "confidence": 0.5443050215641657,
+      "region": "left_lower"
+    },
+    {
+      "text": ".1",
+      "confidence": 0.6670552790164948,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7030864159266154,
+      "region": "center"
+    },
+    {
+      "text": "77.",
+      "confidence": 0.5967760682106018,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6995053291320801,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8814006447792053,
+      "region": "left_upper"
+    },
+    {
+      "text": "Ta",
+      "confidence": 0.5988453477621078,
+      "region": "center"
+    },
+    {
+      "text": ".1",
+      "confidence": 0.6480943262577057,
+      "region": "left_lower"
+    },
+    {
+      "text": "2.5",
+      "confidence": 0.6618578235308329,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5894298553466797,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.8614009618759155,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.745582660039266,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8767470717430115,
+      "region": "center"
+    },
+    {
+      "text": "-0",
+      "confidence": 0.6774554550647736,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.8248242139816284,
+      "region": "left_upper"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.8842143813769022,
+      "region": "center"
+    },
+    {
+      "text": "771",
+      "confidence": 0.6373014748096466,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.7594501376152039,
+      "region": "left_upper"
+    },
+    {
+      "text": ".11",
+      "confidence": 0.5673051079114279,
+      "region": "left_lower"
+    },
+    {
+      "text": "00",
+      "confidence": 0.5816867351531982,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.8918620944023132,
+      "region": "center"
+    },
+    {
+      "text": "-0-0",
+      "confidence": 0.7537097260355949,
+      "region": "center"
+    },
+    {
+      "text": "7!3",
+      "confidence": 0.8405210177103678,
+      "region": "center"
+    },
+    {
+      "text": "w",
+      "confidence": 0.5203546285629272,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6755943894386292,
+      "region": "left_upper"
+    },
+    {
+      "text": "5",
+      "confidence": 0.9384756684303284,
+      "region": "left_upper"
+    },
+    {
+      "text": "E",
+      "confidence": 0.7371910810470581,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.696885327498118,
+      "region": "center"
+    },
+    {
+      "text": "1-0-0-",
+      "confidence": 0.6483792761961619,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.6486492156982422,
+      "region": "left_upper"
+    },
+    {
+      "text": "2-0-0",
+      "confidence": 0.582529878616333,
+      "region": "center"
+    },
+    {
+      "text": "0-0-",
+      "confidence": 0.8579468131065369,
+      "region": "center"
+    },
+    {
+      "text": "-0-0=",
+      "confidence": 0.6938590347766876,
+      "region": "center"
+    },
+    {
+      "text": "111",
+      "confidence": 0.735763152440389,
+      "region": "left_upper"
+    },
+    {
+      "text": "+",
+      "confidence": 0.8261934518814087,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.7802202105522156,
+      "region": "left_upper"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.5668498078982035,
+      "region": "center"
+    },
+    {
+      "text": "00",
+      "confidence": 0.5934530645608902,
+      "region": "center"
+    },
+    {
+      "text": "0-G",
+      "confidence": 0.6779730916023254,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.579367995262146,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-C",
+      "confidence": 0.5648066898187002,
+      "region": "center"
+    },
+    {
+      "text": "4P-N",
+      "confidence": 0.540587916970253,
+      "region": "left_upper"
+    },
+    {
+      "text": "二",
+      "confidence": 0.6893169283866882,
+      "region": "left_lower"
+    },
+    {
+      "text": "r",
+      "confidence": 0.711219072341919,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-0=",
+      "confidence": 0.6401059702038765,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9879093170166016,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9514853805303574,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.7916115721066793,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9885264337062836,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.917760968208313,
+      "region": "left_lower"
+    },
+    {
+      "text": "r",
+      "confidence": 0.5662840604782104,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.6652677953243256,
+      "region": "center"
+    },
+    {
+      "text": "0",
+      "confidence": 0.5624874830245972,
+      "region": "center"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.5316297014554342,
+      "region": "center"
+    },
+    {
+      "text": "二",
+      "confidence": 0.9536258578300476,
+      "region": "left_lower"
+    },
+    {
+      "text": "N0H0",
+      "confidence": 0.520617201924324,
+      "region": "center"
+    },
+    {
+      "text": "3",
+      "confidence": 0.9356272220611572,
+      "region": "left_upper"
+    },
+    {
+      "text": "二",
+      "confidence": 0.9738734364509583,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.7140934069951376,
+      "region": "center"
+    },
+    {
+      "text": ">1",
+      "confidence": 0.5023186802864075,
+      "region": "center"
+    },
+    {
+      "text": "山",
+      "confidence": 0.7308856844902039,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7152830362319946,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6014263133207957,
+      "region": "center"
+    },
+    {
+      "text": "P",
+      "confidence": 0.5906291007995605,
+      "region": "left_upper"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7005772391955057,
+      "region": "center"
+    },
+    {
+      "text": "00",
+      "confidence": 0.5838419497013092,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7417882482210795,
+      "region": "center"
+    },
+    {
+      "text": "7",
+      "confidence": 0.6492233276367188,
+      "region": "left_upper"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.5161453386147817,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.502285897731781,
+      "region": "center"
+    },
+    {
+      "text": "3",
+      "confidence": 0.7423452138900757,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.6344096660614014,
+      "region": "center"
+    },
+    {
+      "text": "277",
+      "confidence": 0.5184939901034037,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5767784714698792,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.8175843358039856,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.7043935159842173,
+      "region": "center"
+    },
+    {
+      "text": "r",
+      "confidence": 0.9301422834396362,
+      "region": "left_lower"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.7982777158419291,
+      "region": "center"
+    },
+    {
+      "text": "r",
+      "confidence": 0.9406041502952576,
+      "region": "left_lower"
+    },
+    {
+      "text": "r",
+      "confidence": 0.9514482617378235,
+      "region": "left_lower"
+    },
+    {
+      "text": "-0-0",
+      "confidence": 0.6108680441975594,
+      "region": "center"
+    },
+    {
+      "text": "-0-0",
+      "confidence": 0.6628132537007332,
+      "region": "center"
+    },
+    {
+      "text": "-→7",
+      "confidence": 0.6270241538683573,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5838010907173157,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5402612487475077,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5476292570432028,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.7213792204856873,
+      "region": "center"
+    },
+    {
+      "text": "27",
+      "confidence": 0.5294492542743683,
+      "region": "center"
+    },
+    {
+      "text": "人",
+      "confidence": 0.5231190919876099,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9808469116687775,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9819884896278381,
+      "region": "left_lower"
+    },
+    {
+      "text": "*",
+      "confidence": 0.613658607006073,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9997104008992513,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8303620219230652,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9820960313081741,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9399579614400864,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9941661357879639,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.948948547244072,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9682419896125793,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8589357932408651,
+      "region": "left_lower"
+    },
+    {
+      "text": "++",
+      "confidence": 0.5070754289627075,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9392871061960856,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9997691512107849,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8311937948067983,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9854309856891632,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9557189643383026,
+      "region": "left_lower"
+    },
+    {
+      "text": "008",
+      "confidence": 0.5426366130510966,
+      "region": "center"
+    },
+    {
+      "text": "M",
+      "confidence": 0.6142802238464355,
+      "region": "left_upper"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.983514815568924,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9562301486730576,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9737416207790375,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9650041610002518,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9829401969909668,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9744262248277664,
+      "region": "left_lower"
+    },
+    {
+      "text": "DOZ",
+      "confidence": 0.5759674410025278,
+      "region": "center"
+    },
+    {
+      "text": "n0n",
+      "confidence": 0.6503144999345144,
+      "region": "center"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8658846418062845,
+      "region": "left_lower"
+    },
+    {
+      "text": "Don",
+      "confidence": 0.5568794012069702,
+      "region": "center"
+    },
+    {
+      "text": "D0n",
+      "confidence": 0.5481597582499186,
+      "region": "center"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.859438975652059,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9741064608097076,
+      "region": "left_lower"
+    },
+    {
+      "text": "205",
+      "confidence": 0.5757415692011515,
+      "region": "center"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9704717546701431,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5376152992248535,
+      "region": "center"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8849778970082601,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8746338884035746,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8671431144078573,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7682816386222839,
+      "region": "left_upper"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9125218391418457,
+      "region": "left_lower"
+    },
+    {
+      "text": "一",
+      "confidence": 0.7505983710289001,
+      "region": "left_upper"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8369018236796061,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8626686731974283,
+      "region": "left_lower"
+    },
+    {
+      "text": "0.",
+      "confidence": 0.6479935944080353,
+      "region": "center"
+    },
+    {
+      "text": "7.",
+      "confidence": 0.5625090301036835,
+      "region": "center"
+    },
+    {
+      "text": "HOPOA",
+      "confidence": 0.5338933110237122,
+      "region": "center"
+    },
+    {
+      "text": "mr",
+      "confidence": 0.5641486346721649,
+      "region": "center"
+    },
+    {
+      "text": "D-C",
+      "confidence": 0.7619401216506958,
+      "region": "center"
+    },
+    {
+      "text": "1!.",
+      "confidence": 0.7589539786179861,
+      "region": "center"
+    },
+    {
+      "text": "mrm",
+      "confidence": 0.5758053859074911,
+      "region": "center"
+    },
+    {
+      "text": "HDHOA",
+      "confidence": 0.5514024436473847,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.814171314239502,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9950113892555237,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9748790115118027,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9881587326526642,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9834275990724564,
+      "region": "left_lower"
+    },
+    {
+      "text": ".1",
+      "confidence": 0.8166362643241882,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.5985094904899597,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8477274179458618,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5857675075531006,
+      "region": "center"
+    },
+    {
+      "text": "福",
+      "confidence": 0.7607840299606323,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.68429763118426,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5798903206984202,
+      "region": "center"
+    },
+    {
+      "text": "a??",
+      "confidence": 0.6233183840910593,
+      "region": "center"
+    },
+    {
+      "text": "D-0",
+      "confidence": 0.6854771773020426,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.7924311558405558,
+      "region": "center"
+    },
+    {
+      "text": "D-G",
+      "confidence": 0.5540168980757395,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9591300934553146,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9945849925279617,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9601546823978424,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-GA",
+      "confidence": 0.6455575153231621,
+      "region": "center"
+    },
+    {
+      "text": "7",
+      "confidence": 0.6294057369232178,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9946995228528976,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9754407107830048,
+      "region": "left_lower"
+    },
+    {
+      "text": "0-0m",
+      "confidence": 0.7375403344631195,
+      "region": "center"
+    },
+    {
+      "text": "m",
+      "confidence": 0.5395922064781189,
+      "region": "center"
+    },
+    {
+      "text": "0-0",
+      "confidence": 0.5765972137451172,
+      "region": "center"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8716573516527811,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8954867521921793,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9034937421480814,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9995609720547994,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8850852847099304,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8810468316078186,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.834686795870463,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.979628399014473,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9491606950759888,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9841348230838776,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9748065322637558,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9433783491452535,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5685755014419556,
+      "region": "center"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9815637767314911,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9187196791172028,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.9754042625427246,
+      "region": "left_lower"
+    },
+    {
+      "text": "椎名立希",
+      "confidence": 0.912719264626503,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9197158416112264,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8434548377990723,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8694860935211182,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8157555460929871,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8654249509175619,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9508604407310486,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7855038046836853,
+      "region": "center"
+    },
+    {
+      "text": "f",
+      "confidence": 0.5755681991577148,
+      "region": "left_upper"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9865586906671524,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9395397454500198,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.990236446261406,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.8370552286505699,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.7235981225967407,
+      "region": "left_upper"
+    },
+    {
+      "text": "<.=",
+      "confidence": 0.7478364507357279,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9054240385691324,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8491000731786092,
+      "region": "left_lower"
+    },
+    {
+      "text": "mm,",
+      "confidence": 0.5087336413562298,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9960235208272934,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9519824683666229,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9402667284011841,
+      "region": "left_lower"
+    },
+    {
+      "text": ". *",
+      "confidence": 0.6562342445055643,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5044099688529968,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5416972041130066,
+      "region": "left_lower"
+    },
+    {
+      "text": "F",
+      "confidence": 0.77411949634552,
+      "region": "center"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9442684352397919,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9962477535009384,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9768236726522446,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9908246397972107,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9494678676128387,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9647044986486435,
+      "region": "left_lower"
+    },
+    {
+      "text": "一",
+      "confidence": 0.5870789289474487,
+      "region": "left_upper"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8442479173342387,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8791680733362833,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9026781618595123,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5905387997627258,
+      "region": "center"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9174400766690572,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9195618033409119,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.8164960741996765,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8914900819460551,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8878702521324158,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.9130606651306152,
+      "region": "left_lower"
+    },
+    {
+      "text": "631",
+      "confidence": 0.6259633898735046,
+      "region": "center"
+    },
+    {
+      "text": "2",
+      "confidence": 0.589958131313324,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.672100841999054,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9402812321980795,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.9332084457079569,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8332013289133707,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.844921886920929,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8883974750836691,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9315762966871262,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.869716539978981,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9627060294151306,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8622881770133972,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8940221071243286,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9900612533092499,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9567557573318481,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9528185427188873,
+      "region": "left_lower"
+    },
+    {
+      "text": "4",
+      "confidence": 0.795520544052124,
+      "region": "center"
+    },
+    {
+      "text": ":4",
+      "confidence": 0.9167141318321228,
+      "region": "center"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.936738908290863,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8629170060157776,
+      "region": "left_lower"
+    },
+    {
+      "text": "f",
+      "confidence": 0.8275634050369263,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9899951368570328,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9279091656208038,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9335784316062927,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9049099286397299,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8932392994562784,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9922075420618057,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.943418100476265,
+      "region": "left_lower"
+    },
+    {
+      "text": "R'r :",
+      "confidence": 0.6572400450706481,
+      "region": "left_lower"
+    },
+    {
+      "text": "-.t",
+      "confidence": 0.5537290821472803,
+      "region": "left_lower"
+    },
+    {
+      "text": ":2, x",
+      "confidence": 0.6914643228054047,
+      "region": "left_lower"
+    },
+    {
+      "text": "-:1,",
+      "confidence": 0.569849468767643,
+      "region": "left_lower"
+    },
+    {
+      "text": "个",
+      "confidence": 0.5955193638801575,
+      "region": "center"
+    },
+    {
+      "text": "长崎素世",
+      "confidence": 0.9871137142181396,
+      "region": "left_lower"
+    },
+    {
+      "text": ":2,x",
+      "confidence": 0.5556904599070549,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9389588236808777,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9554043114185333,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9306296110153198,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9294879138469696,
+      "region": "left_lower"
+    },
+    {
+      "text": "长崎索世",
+      "confidence": 0.9276532232761383,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8389287193616232,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.8404918511708578,
+      "region": "left_lower"
+    },
+    {
+      "text": "商松灯",
+      "confidence": 0.9280088941256205,
+      "region": "left_lower"
+    },
+    {
+      "text": "高松灯",
+      "confidence": 0.8942356705665588,
+      "region": "left_lower"
+    },
+    {
+      "text": "3",
+      "confidence": 0.9575772881507874,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9278994202613831,
+      "region": "left_lower"
+    }
+  ],
+  "normalized_speaker_names": [
+    "千早爱音",
+    "灯",
+    "立希",
+    "素世"
+  ],
+  "unknown_speaker_count": 94,
+  "narrator_count": 96,
+  "rejected_name_candidates": [
+    {
+      "text": "18",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "DH",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "72",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-O",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "*D-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "一",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "0-0m",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "11",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "8",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-G",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0-0A",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "157",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世m",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "19",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "T",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "14",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ".1:8",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "--",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世行",
+      "reason": "low confidence"
+    },
+    {
+      "text": "773",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "K.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "上13",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "口",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "7.7",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ".11",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "77",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "111",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "集",
+      "reason": "low confidence"
+    },
+    {
+      "text": "长崎索世物",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "m",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世书",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "1.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世拉",
+      "reason": "low confidence"
+    },
+    {
+      "text": "AD-G",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0-G",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "5.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世市",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "M0-G",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-Gy",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "长崎索世布",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "大",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": ".9r",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-0-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1.1111",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "Ta",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "一",
+      "reason": "low confidence"
+    },
+    {
+      "text": "A.A.11",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ".1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "77.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "2.5",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "771",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "00",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "7!3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "w",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "5",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "E",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1-0-0-",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "2-0-0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0-0-",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-0-0=",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "+",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-C",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "4P-N",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "二",
+      "reason": "low confidence"
+    },
+    {
+      "text": "r",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D-0=",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "二",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "N0H0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ">1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "山",
+      "reason": "low confidence"
+    },
+    {
+      "text": "P",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "7",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "277",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-→7",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "口",
+      "reason": "low confidence"
+    },
+    {
+      "text": "27",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "人",
+      "reason": "low confidence"
+    },
+    {
+      "text": "*",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "商松灯",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "++",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "008",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "M",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "DOZ",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "n0n",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "Don",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D0n",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "205",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "7.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "HOPOA",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "mr",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1!.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "mrm",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "HDHOA",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "福",
+      "reason": "low confidence"
+    },
+    {
+      "text": "a??",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0-GA",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "f",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "<.=",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "mm,",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ". *",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "F",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "631",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "2",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "4",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ":4",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "R'r :",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-.t",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": ":2, x",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-:1,",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "个",
+      "reason": "low confidence"
+    },
+    {
+      "text": ":2,x",
+      "reason": "not a short CJK name"
+    }
+  ],
+  "speaker_name_confidence": {
+    "素世": 0.9873105347790616,
+    "千早爱音": 0.9938744058211645,
+    "灯": 0.9997148026882763,
+    "立希": 0.9821284897625446
+  },
+  "success": true,
+  "failure_reason": null,
+  "diagnostics": {
+    "video_path": "114631318175764.P1.30338781019.mp4",
+    "video_resolution": "640x360",
+    "frame_count": 542,
+    "left_speaker_frame_count": 542,
+    "left_lower_speaker_frame_count": 542,
+    "center_speaker_frame_count": 542,
+    "ffmpeg_frame_extraction_passes": 1,
+    "ocr_call_count": 300,
+    "ocr_reused_frame_count": 242,
+    "speaker_ocr_call_count": 2340,
+    "left_speaker_reused_frame_count": 152,
+    "left_lower_speaker_reused_frame_count": 152,
+    "center_speaker_reused_frame_count": 152,
+    "speaker_identified_frame_count": 180,
+    "speaker_debug_sample_count": 20,
+    "raw_ocr_result_count": 294,
+    "filtered_result_count": 274,
+    "frame_similarity_threshold": 0.02
+  },
+  "processed_at": "2026-07-12T04:41:41+00:00"
+}
