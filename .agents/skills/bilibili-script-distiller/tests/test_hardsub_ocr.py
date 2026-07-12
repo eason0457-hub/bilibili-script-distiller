@@ -145,11 +145,59 @@ class HardSubtitleOcrTests(unittest.TestCase):
 
     def test_default_bottom_crop_is_valid(self):
         crop = MODULE.crop_for("bottom", {"top": None, "bottom": None, "left": None, "right": None})
-        self.assertEqual(crop["top"], 0.62)
-        self.assertEqual(crop["bottom"], 0.96)
+        self.assertEqual(crop, {"top": 0.50, "bottom": 0.92, "left": 0.06, "right": 0.96})
         regions = MODULE.speaker_crop_regions()
-        self.assertEqual(regions["left"], {"top": 0.55, "bottom": 0.82, "left": 0.05, "right": 0.45})
-        self.assertEqual(regions["center"], {"top": 0.52, "bottom": 0.80, "left": 0.30, "right": 0.70})
+        self.assertEqual(
+            regions,
+            {
+                "left_upper": {"top": 0.54, "bottom": 0.68, "left": 0.14, "right": 0.42},
+                "left_lower": {"top": 0.62, "bottom": 0.76, "left": 0.06, "right": 0.30},
+                "center": {"top": 0.62, "bottom": 0.76, "left": 0.38, "right": 0.64},
+            },
+        )
+
+    def test_dialogue_crop_masks_all_name_labels_but_keeps_body(self):
+        from PIL import Image
+
+        with tempfile.TemporaryDirectory() as temp:
+            source_path = Path(temp) / "frame.png"
+            output_path = Path(temp) / "body.png"
+            Image.new("RGB", (100, 100), "black").save(source_path)
+            body = MODULE.crop_for(
+                "bottom", {"top": None, "bottom": None, "left": None, "right": None}
+            )
+            MODULE.crop_dialogue_body(
+                source_path, body, MODULE.speaker_crop_regions(), output_path
+            )
+            with Image.open(output_path) as cropped:
+                # Global (20, 60) lies inside the upper-left name tag and is masked.
+                self.assertEqual(cropped.getpixel((14, 10)), (255, 255, 255))
+                # Global (50, 80) is dialogue body and remains untouched.
+                self.assertEqual(cropped.getpixel((44, 30)), (0, 0, 0))
+
+    def test_speaker_detection_checks_left_upper_left_lower_and_center(self):
+        from unittest import mock
+
+        images = {name: Path(f"{name}.png") for name in MODULE.speaker_crop_regions()}
+        with mock.patch.object(
+            MODULE,
+            "ocr_name_region",
+            side_effect=lambda _image, _ocr, region: (
+                ([{"text": "灯", "confidence": 0.96, "region": region}] if region == "left_lower" else []),
+                2,
+            ),
+        ) as recognize:
+            result, calls = MODULE.detect_speaker(images, object(), self.dictionary)
+        self.assertEqual(result["speaker"], "灯")
+        self.assertEqual(result["region"], "left_lower")
+        self.assertEqual(recognize.call_count, 3)
+        self.assertEqual(calls, 6)
+
+    def test_hardsub_uses_one_ffmpeg_frame_extraction_pass(self):
+        source = SCRIPT.read_text(encoding="utf-8")
+        self.assertIn('"ffmpeg_frame_extraction_passes": 1', source)
+        self.assertNotIn('temp / "left-speaker-frames"', source)
+        self.assertNotIn('temp / "center-speaker-frames"', source)
 
     def test_ocr_backend_uses_onnx_runtime_not_paddle_native_inference(self):
         source = SCRIPT.read_text(encoding="utf-8")
