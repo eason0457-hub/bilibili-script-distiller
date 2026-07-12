@@ -6,7 +6,7 @@
 
 | 规范角色名 | high | medium | low |
 | --- | ---: | ---: | ---: |
-| UNKNOWN | 0 | 0 | 188 |
+| UNKNOWN | 0 | 0 | 190 |
 | 千早爱音 | 28 | 0 | 0 |
 
 ## [00:00:00.000 --> 00:00:01.000]
@@ -17,17 +17,9 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:00:01.000 --> 00:00:02.000]
+## [00:00:01.000 --> 00:00:03.000]
 - canonical_name: UNKNOWN
 - source_label: 未知说话者
-- raw_text: [无法识别]
-- cleaned_text: [无法识别]
-- assignment_confidence: low
-- assignment_basis: 无法可靠判断
-
-## [00:00:02.000 --> 00:00:03.000]
-- canonical_name: UNKNOWN
-- source_label: 旁白
 - raw_text: [无法识别]
 - cleaned_text: [无法识别]
 - assignment_confidence: low
@@ -491,7 +483,7 @@
 
 ## [00:01:16.000 --> 00:01:17.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO爱音要
 - cleaned_text: AUTO爱音要
 - assignment_confidence: low
@@ -705,7 +697,15 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:01:45.000 --> 00:01:47.000]
+## [00:01:45.000 --> 00:01:46.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: AUTO毕竟，男扮女装进女校这种事，要是被抓到，就不只是被退学这
+- cleaned_text: AUTO毕竟，男扮女装进女校这种事，要是被抓到，就不只是被退学这
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:01:46.000 --> 00:01:47.000]
 - canonical_name: UNKNOWN
 - source_label: 未知说话者
 - raw_text: AUTO毕竟，男扮女装进女校这种事，要是被抓到，就不只是被退学这
@@ -715,7 +715,7 @@
 
 ## [00:01:47.000 --> 00:01:48.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: 爱音就这样
 - cleaned_text: 爱音就这样
 - assignment_confidence: low
@@ -731,7 +731,7 @@
 
 ## [00:01:49.000 --> 00:01:50.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO
 - cleaned_text: AUTO
 - assignment_confidence: low
@@ -763,7 +763,7 @@
 
 ## [00:01:53.000 --> 00:01:54.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO但她不想和这些老同学再待在一起了，仿佛再相处一天
 - cleaned_text: AUTO但她不想和这些老同学再待在一起了，仿佛再相处一天
 - assignment_confidence: low
@@ -849,19 +849,11 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:02:05.000 --> 00:02:06.000]
-- canonical_name: UNKNOWN
-- source_label: 旁白
-- raw_text: AUTO爱音绝对不会忘记拿到学生证的那
-- cleaned_text: AUTO爱音绝对不会忘记拿到学生证的那
-- assignment_confidence: low
-- assignment_basis: 无法可靠判断
-
-## [00:02:06.000 --> 00:02:07.000]
+## [00:02:05.000 --> 00:02:07.000]
 - canonical_name: UNKNOWN
 - source_label: 未知说话者
-- raw_text: AUTO爱音绝对不会忘记拿到学生证的那刻
-- cleaned_text: AUTO爱音绝对不会忘记拿到学生证的那刻
+- raw_text: AUTO爱音绝对不会忘记拿到学生证的那
+- cleaned_text: AUTO爱音绝对不会忘记拿到学生证的那
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
@@ -875,7 +867,7 @@
 
 ## [00:02:08.000 --> 00:02:09.000]
 - canonical_name: UNKNOWN
-- source_label: 旁白
+- source_label: 未知说话者
 - raw_text: 她看着性别那一栏，明明白白地写着：女
 - cleaned_text: 她看着性别那一栏，明明白白地写着：女
 - assignment_confidence: low
@@ -907,7 +899,7 @@
 
 ## [00:02:12.000 --> 00:02:13.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO又感动，又感激，又欣喜，又怅然
 - cleaned_text: AUTO又感动，又感激，又欣喜，又怅然
 - assignment_confidence: low
@@ -963,7 +955,7 @@
 
 ## [00:02:20.000 --> 00:02:21.000]
 - canonical_name: UNKNOWN
-- source_label: 旁白
+- source_label: 未知说话者
 - raw_text: 无以为报，无以为报啊·
 - cleaned_text: 无以为报，无以为报啊·
 - assignment_confidence: low
@@ -971,7 +963,7 @@
 
 ## [00:02:21.000 --> 00:02:22.000]
 - canonical_name: UNKNOWN
-- source_label: 旁白
+- source_label: 未知说话者
 - raw_text: 爸爸妈妈.·谢谢
 - cleaned_text: 爸爸妈妈.·谢谢
 - assignment_confidence: low
@@ -993,9 +985,17 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:02:24.000 --> 00:02:26.000]
+## [00:02:24.000 --> 00:02:25.000]
 - canonical_name: UNKNOWN
 - source_label: 旁白
+- raw_text: 那时的爱音在心底撕心裂肺地呐
+- cleaned_text: 那时的爱音在心底撕心裂肺地呐
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:02:25.000 --> 00:02:26.000]
+- canonical_name: UNKNOWN
+- source_label: 未知说话者
 - raw_text: 那时的爱音在心底撕心裂肺地呐
 - cleaned_text: 那时的爱音在心底撕心裂肺地呐
 - assignment_confidence: low
@@ -1011,7 +1011,7 @@
 
 ## [00:02:27.000 --> 00:02:28.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: 现在的爱音也在心底撕心裂肺地呐喊
 - cleaned_text: 现在的爱音也在心底撕心裂肺地呐喊
 - assignment_confidence: low
@@ -1203,7 +1203,7 @@
 
 ## [00:02:52.000 --> 00:02:53.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO那
 - cleaned_text: AUTO那
 - assignment_confidence: low
@@ -1265,7 +1265,15 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:03:00.000 --> 00:03:03.000]
+## [00:03:00.000 --> 00:03:01.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 她随便翻了几页就丢在一边不管了
+- cleaned_text: 她随便翻了几页就丢在一边不管了
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:01.000 --> 00:03:03.000]
 - canonical_name: UNKNOWN
 - source_label: 未知说话者
 - raw_text: 她随便翻了几页就丢在一边不管了
@@ -1379,7 +1387,7 @@
 
 ## [00:03:16.000 --> 00:03:17.000]
 - canonical_name: UNKNOWN
-- source_label: 未知说话者
+- source_label: 旁白
 - raw_text: AUTO有着惊世智慧的爱音立刻注意到
 - cleaned_text: AUTO有着惊世智慧的爱音立刻注意到
 - assignment_confidence: low
@@ -1417,7 +1425,15 @@
 - assignment_confidence: low
 - assignment_basis: 无法可靠判断
 
-## [00:03:21.000 --> 00:03:23.000]
+## [00:03:21.000 --> 00:03:22.000]
+- canonical_name: UNKNOWN
+- source_label: 旁白
+- raw_text: 里面的角色也不会出现那个奇奇怪怪的东西了
+- cleaned_text: 里面的角色也不会出现那个奇奇怪怪的东西了
+- assignment_confidence: low
+- assignment_basis: 无法可靠判断
+
+## [00:03:22.000 --> 00:03:23.000]
 - canonical_name: UNKNOWN
 - source_label: 未知说话者
 - raw_text: 里面的角色也不会出现那个奇奇怪怪的东西了

@@ -37,7 +37,7 @@
   "sample_interval_seconds": 1.0,
   "ocr_language": "ch",
   "ocr_engine": "rapidocr_onnxruntime",
-  "average_confidence": 0.9291649058238841,
+  "average_confidence": 0.9342939594678193,
   "low_confidence_segments": [
     {
       "start": 0.0,
@@ -48,15 +48,8 @@
     },
     {
       "start": 1.0,
-      "end": 2.0,
-      "speaker": "未知说话者",
-      "text": "[无法识别]",
-      "confidence": 0.0
-    },
-    {
-      "start": 2.0,
       "end": 3.0,
-      "speaker": "旁白",
+      "speaker": "未知说话者",
       "text": "[无法识别]",
       "confidence": 0.0
     },
@@ -100,7 +93,7 @@
       "end": 232.0,
       "speaker": "千早爱音",
       "text": "T",
-      "confidence": 0.5336421728134155
+      "confidence": 0.5336417555809021
     },
     {
       "start": 246.0,
@@ -113,12 +106,17 @@
   "detected_speaker_labels": [
     {
       "text": "+",
-      "confidence": 0.849568784236908,
+      "confidence": 0.849567711353302,
       "region": "left_lower"
     },
     {
+      "text": "R",
+      "confidence": 0.7185959219932556,
+      "region": "center"
+    },
+    {
       "text": "爱妈",
-      "confidence": 0.8406814336776733,
+      "confidence": 0.7918376326560974,
       "region": "left_lower"
     },
     {
@@ -128,227 +126,232 @@
     },
     {
       "text": "爱妈",
-      "confidence": 0.9997312128543854,
+      "confidence": 0.9998167455196381,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5166372656822205,
+      "confidence": 0.5166362524032593,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9990433752536774,
+      "confidence": 0.9990431368350983,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9981721341609955,
+      "confidence": 0.9984827935695648,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9278976917266846,
+      "confidence": 0.9278974533081055,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9994664788246155,
+      "confidence": 0.9994663596153259,
       "region": "left_lower"
     },
     {
-      "text": "爱爸",
-      "confidence": 0.9962392151355743,
-      "region": "left_lower"
-    },
-    {
-      "text": "医",
-      "confidence": 0.5398072600364685,
-      "region": "center"
+      "text": "女",
+      "confidence": 0.5067248344421387,
+      "region": "left_upper"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9985517710447311,
+      "confidence": 0.9985515922307968,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9207476824522018,
+      "confidence": 0.8834981918334961,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.8331972360610962,
+      "confidence": 0.8331963419914246,
       "region": "center"
     },
     {
       "text": "-111",
-      "confidence": 0.7732957825064659,
+      "confidence": 0.7779236435890198,
       "region": "center"
     },
     {
       "text": "早爱音",
-      "confidence": 0.976641575495402,
+      "confidence": 0.9766411781311035,
       "region": "left_lower"
     },
     {
-      "text": "4.110.",
-      "confidence": 0.5760296732187271,
+      "text": ".110",
+      "confidence": 0.6522421166300774,
       "region": "center"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9997954666614532,
+      "confidence": 0.999683290719986,
       "region": "left_lower"
     },
     {
       "text": "mll.",
-      "confidence": 0.5982817634940147,
+      "confidence": 0.6093734726309776,
+      "region": "center"
+    },
+    {
+      "text": "爱妈",
+      "confidence": 0.996354341506958,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5195754766464233,
       "region": "center"
     },
     {
       "text": ".119",
-      "confidence": 0.5477304607629776,
+      "confidence": 0.5477292910218239,
       "region": "center"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9990421235561371,
+      "confidence": 0.9990420043468475,
       "region": "left_lower"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9992342889308929,
+      "confidence": 0.999180257320404,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6488505005836487,
+      "confidence": 0.6488490700721741,
       "region": "center"
     },
     {
-      "text": "lr.",
-      "confidence": 0.6149123907089233,
+      "text": "Ullr.",
+      "confidence": 0.5735729455947876,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9669632166624069,
+      "confidence": 0.9820521473884583,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9699215292930603,
+      "confidence": 0.9699207544326782,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9795815348625183,
+      "confidence": 0.9786041378974915,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9263849258422852,
+      "confidence": 0.9263838529586792,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9986448884010315,
+      "confidence": 0.9986445307731628,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9773882031440735,
+      "confidence": 0.9773879647254944,
       "region": "left_lower"
     },
     {
-      "text": "ta meia",
-      "confidence": 0.5300473081214088,
+      "text": "Ea ri.",
+      "confidence": 0.5014517977833748,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9887828528881073,
+      "confidence": 0.9953654408454895,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9985235929489136,
+      "confidence": 0.9985234141349792,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.952540248632431,
+      "confidence": 0.9493741244077682,
       "region": "left_lower"
     },
     {
-      "text": "1.1.",
-      "confidence": 0.8232036828994751,
+      "text": "11 1",
+      "confidence": 0.6354733780026436,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.989525556564331,
+      "confidence": 0.9895248711109161,
       "region": "left_lower"
     },
     {
       "text": "*",
-      "confidence": 0.5574166774749756,
+      "confidence": 0.5574163794517517,
       "region": "left_upper"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9916909337043762,
+      "confidence": 0.9916903674602509,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.8230191469192505,
+      "confidence": 0.8230181932449341,
+      "region": "center"
+    },
+    {
+      "text": "Ea 1",
+      "confidence": 0.5456639230251312,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9986529499292374,
+      "confidence": 0.998652771115303,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.8761810511350632,
+      "confidence": 0.8586856722831726,
       "region": "left_lower"
     },
     {
-      "text": "-",
-      "confidence": 0.5781261920928955,
+      "text": "t =1=例 加",
+      "confidence": 0.5726059128840765,
       "region": "center"
     },
     {
-      "text": "tesk\"",
-      "confidence": 0.5213407278060913,
+      "text": "tk.",
+      "confidence": 0.6163180768489838,
       "region": "left_upper"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.8957958817481995,
+      "confidence": 0.8957955837249756,
       "region": "left_lower"
     },
     {
-      "text": "t.1",
-      "confidence": 0.5801242589950562,
-      "region": "center"
-    },
-    {
       "text": "千早爱音",
-      "confidence": 0.9865165650844574,
+      "confidence": 0.9864953011274338,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5881756544113159,
+      "confidence": 0.5881751179695129,
       "region": "center"
     },
     {
       "text": "11",
-      "confidence": 0.8134872317314148,
+      "confidence": 0.8134855031967163,
       "region": "center"
     },
     {
@@ -358,1207 +361,1162 @@
     },
     {
       "text": "爱爸",
-      "confidence": 0.9890951216220856,
+      "confidence": 0.9949584007263184,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6163905262947083,
+      "confidence": 0.6163901090621948,
       "region": "center"
     },
     {
       "text": "il",
-      "confidence": 0.6499566435813904,
+      "confidence": 0.7178736925125122,
+      "region": "center"
+    },
+    {
+      "text": "IT",
+      "confidence": 0.647066742181778,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9877005517482758,
+      "confidence": 0.997507780790329,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5668070316314697,
+      "confidence": 0.5668076872825623,
       "region": "center"
     },
     {
       "text": "111",
-      "confidence": 0.8957797288894653,
+      "confidence": 0.8768030405044556,
       "region": "center"
     },
     {
+      "text": "爱爸",
+      "confidence": 0.9981400966644287,
+      "region": "left_lower"
+    },
+    {
       "text": "口",
-      "confidence": 0.7271737456321716,
+      "confidence": 0.7271736860275269,
       "region": "center"
     },
     {
       "text": "L1.",
-      "confidence": 0.5482597947120667,
+      "confidence": 0.5088559339443842,
       "region": "center"
     },
     {
-      "text": "nine",
-      "confidence": 0.5317479558289051,
+      "text": "mlna",
+      "confidence": 0.5518918111920357,
       "region": "center"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9991156160831451,
+      "confidence": 0.9991154968738556,
       "region": "left_lower"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9993509352207184,
+      "confidence": 0.9994548559188843,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6781601309776306,
+      "confidence": 0.6781587600708008,
       "region": "center"
     },
     {
       "text": "LH",
-      "confidence": 0.8593554198741913,
-      "region": "center"
-    },
-    {
-      "text": "爱妈",
-      "confidence": 0.9995383322238922,
-      "region": "left_lower"
-    },
-    {
-      "text": "14E",
-      "confidence": 0.6686998903751373,
+      "confidence": 0.8593538403511047,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6364706754684448,
+      "confidence": 0.636470377445221,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6084933876991272,
-      "region": "center"
-    },
-    {
-      "text": "s-l---",
-      "confidence": 0.5579629987478256,
+      "confidence": 0.6084928512573242,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9972150027751923,
+      "confidence": 0.9972147643566132,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9949042499065399,
+      "confidence": 0.9949451982975006,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6271103620529175,
-      "region": "center"
-    },
-    {
-      "text": "--!!!",
-      "confidence": 0.6770573079586029,
+      "confidence": 0.6271100640296936,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9986836612224579,
+      "confidence": 0.9986834228038788,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9978444874286652,
+      "confidence": 0.9977023899555206,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6183527708053589,
+      "confidence": 0.6183521151542664,
+      "region": "center"
+    },
+    {
+      "text": "mlo-l",
+      "confidence": 0.5773630499839782,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9993564486503601,
+      "confidence": 0.9993562698364258,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9968888461589813,
+      "confidence": 0.9972557425498962,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5082818865776062,
+      "confidence": 0.5082818269729614,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.797585666179657,
+      "confidence": 0.7975834608078003,
       "region": "center"
     },
     {
       "text": "11E36:",
-      "confidence": 0.6068280264735222,
+      "confidence": 0.5091296384731928,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.5296634435653687,
+      "confidence": 0.5296626091003418,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.5334393978118896,
+      "confidence": 0.516669511795044,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9796833842992783,
+      "confidence": 0.9874177277088165,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.966144010424614,
+      "confidence": 0.972626805305481,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9446651190519333,
+      "confidence": 0.9459422379732132,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9702811241149902,
+      "confidence": 0.970280647277832,
       "region": "center"
     },
     {
       "text": "业",
-      "confidence": 0.5556939244270325,
+      "confidence": 0.5556931495666504,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9983267933130264,
+      "confidence": 0.9983265846967697,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9860493689775467,
+      "confidence": 0.9860491007566452,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.8226646184921265,
+      "confidence": 0.8226632475852966,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.8884521722793579,
+      "confidence": 0.8884508609771729,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.5613540410995483,
+      "confidence": 0.5613534450531006,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6202194094657898,
+      "confidence": 0.6202184557914734,
       "region": "center"
     },
     {
-      "text": "+",
-      "confidence": 0.7544823884963989,
+      "text": "llea6",
+      "confidence": 0.5075428068637848,
+      "region": "center"
+    },
+    {
+      "text": "÷1",
+      "confidence": 0.5928491503000259,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.7275187373161316,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.5123485326766968,
-      "region": "center"
-    },
-    {
-      "text": "ea 60",
-      "confidence": 0.5390743166208267,
-      "region": "center"
-    },
-    {
-      "text": "（1",
-      "confidence": 0.5730873122811317,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.7275201082229614,
+      "confidence": 0.6162312626838684,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.7259058356285095,
+      "confidence": 0.8721416592597961,
       "region": "left_upper"
     },
     {
-      "text": "101.",
-      "confidence": 0.5393867306411266,
-      "region": "left_lower"
-    },
-    {
-      "text": "100001",
-      "confidence": 0.7564681420723597,
+      "text": "0odbt",
+      "confidence": 0.5135530173778534,
       "region": "left_lower"
     },
     {
       "text": "10",
-      "confidence": 0.6558358073234558,
-      "region": "left_lower"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.7206484913825989,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.7416208386421204,
-      "region": "left_upper"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.7128901004791259,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9102767705917358,
-      "region": "center"
-    },
-    {
-      "text": "0001",
-      "confidence": 0.5818540975451469,
-      "region": "left_lower"
-    },
-    {
-      "text": "A",
-      "confidence": 0.5804187655448914,
-      "region": "center"
-    },
-    {
-      "text": "1000",
-      "confidence": 0.5874250009655952,
-      "region": "left_lower"
-    },
-    {
-      "text": "00001",
-      "confidence": 0.952850592136383,
-      "region": "left_lower"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.6849600791931152,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.8827650547027588,
-      "region": "left_lower"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.6500979602336884,
+      "confidence": 0.6320655792951584,
       "region": "left_lower"
     },
     {
       "text": "100001",
-      "confidence": 0.8098974923292795,
-      "region": "left_lower"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.6453126430511474,
-      "region": "left_lower"
-    },
-    {
-      "text": "ue t",
-      "confidence": 0.5064746960997581,
-      "region": "left_upper"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.6868088960647583,
-      "region": "left_lower"
-    },
-    {
-      "text": "100000",
-      "confidence": 0.6222847600777944,
+      "confidence": 0.7347399294376373,
       "region": "left_lower"
     },
     {
       "text": "0",
-      "confidence": 0.5324528813362122,
-      "region": "left_lower"
-    },
-    {
-      "text": "1h",
-      "confidence": 0.7265148162841797,
-      "region": "left_upper"
-    },
-    {
-      "text": "10000",
-      "confidence": 0.6815176486968995,
-      "region": "left_lower"
-    },
-    {
-      "text": "U",
-      "confidence": 0.6942256689071655,
-      "region": "left_lower"
-    },
-    {
-      "text": "10",
-      "confidence": 0.7307482063770294,
-      "region": "left_lower"
-    },
-    {
-      "text": "0000",
-      "confidence": 0.5018942728638649,
-      "region": "left_lower"
-    },
-    {
-      "text": "00001",
-      "confidence": 0.6473284125328064,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9187021851539612,
-      "region": "center"
-    },
-    {
-      "text": "1000",
-      "confidence": 0.737689770758152,
-      "region": "left_lower"
-    },
-    {
-      "text": "'11",
-      "confidence": 0.7832769056161245,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6162553429603577,
-      "region": "left_upper"
-    },
-    {
-      "text": "10001",
-      "confidence": 0.7418393790721893,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.5557302236557007,
-      "region": "left_upper"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6415432095527649,
-      "region": "left_upper"
-    },
-    {
-      "text": "10001",
-      "confidence": 0.7419268548488617,
-      "region": "left_lower"
-    },
-    {
-      "text": "U1",
-      "confidence": 0.7364822626113892,
-      "region": "left_lower"
-    },
-    {
-      "text": "h",
-      "confidence": 0.5299045443534851,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9985313415527344,
-      "region": "left_lower"
-    },
-    {
-      "text": "-111",
-      "confidence": 0.8186952620744705,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6476277709007263,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.7623934149742126,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6200190186500549,
-      "region": "center"
-    },
-    {
-      "text": "11",
-      "confidence": 0.6882921755313873,
-      "region": "center"
-    },
-    {
-      "text": "L",
-      "confidence": 0.6286484599113464,
-      "region": "center"
-    },
-    {
-      "text": "ml!..",
-      "confidence": 0.6241284102201462,
-      "region": "center"
-    },
-    {
-      "text": ".* =",
-      "confidence": 0.6296582147479057,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9568331837654114,
-      "region": "left_upper"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5763313174247742,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.5833156108856201,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5095850825309753,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.967391312122345,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.8565208315849304,
-      "region": "center"
-    },
-    {
-      "text": "nrt",
-      "confidence": 0.6203541606664658,
-      "region": "left_upper"
-    },
-    {
-      "text": "中",
-      "confidence": 0.7885709404945374,
-      "region": "left_lower"
-    },
-    {
-      "text": "1-1",
-      "confidence": 0.8010519444942474,
-      "region": "left_upper"
-    },
-    {
-      "text": "T",
-      "confidence": 0.6742923259735107,
-      "region": "left_upper"
-    },
-    {
-      "text": "童1",
-      "confidence": 0.7202887833118439,
-      "region": "left_upper"
-    },
-    {
-      "text": "7",
-      "confidence": 0.5152146220207214,
-      "region": "center"
-    },
-    {
-      "text": "11 0",
-      "confidence": 0.6359987035393715,
-      "region": "left_upper"
-    },
-    {
-      "text": "1.",
-      "confidence": 0.7574575841426849,
-      "region": "left_upper"
-    },
-    {
-      "text": "A0.a",
-      "confidence": 0.5291345342993736,
-      "region": "center"
-    },
-    {
-      "text": "111",
-      "confidence": 0.6058872242768606,
-      "region": "left_upper"
-    },
-    {
-      "text": "1",
-      "confidence": 0.7878873348236084,
-      "region": "left_upper"
-    },
-    {
-      "text": "11",
-      "confidence": 0.7355195432901382,
-      "region": "center"
-    },
-    {
-      "text": "t011",
-      "confidence": 0.5529107972979546,
-      "region": "left_upper"
-    },
-    {
-      "text": "1071",
-      "confidence": 0.6559197381138802,
-      "region": "left_upper"
-    },
-    {
-      "text": "-7",
-      "confidence": 0.6548980325460434,
-      "region": "left_upper"
-    },
-    {
-      "text": "00001",
-      "confidence": 0.6573843359947205,
-      "region": "left_lower"
-    },
-    {
-      "text": "材",
-      "confidence": 0.596930980682373,
-      "region": "left_lower"
-    },
-    {
-      "text": "10",
-      "confidence": 0.5775539577007294,
-      "region": "left_lower"
-    },
-    {
-      "text": "0000",
-      "confidence": 0.5807312577962875,
+      "confidence": 0.7361811995506287,
       "region": "left_lower"
     },
     {
       "text": "10000",
-      "confidence": 0.6685922682285309,
+      "confidence": 0.7206470370292664,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.741619348526001,
+      "region": "left_upper"
+    },
+    {
+      "text": "10000",
+      "confidence": 0.7128884792327881,
+      "region": "left_lower"
+    },
+    {
+      "text": "0001",
+      "confidence": 0.5783279687166214,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9102739691734314,
+      "region": "center"
+    },
+    {
+      "text": "0001",
+      "confidence": 0.5840985178947449,
+      "region": "left_lower"
+    },
+    {
+      "text": "A",
+      "confidence": 0.5804177522659302,
+      "region": "center"
+    },
+    {
+      "text": "0001",
+      "confidence": 0.5880262926220894,
+      "region": "left_lower"
+    },
+    {
+      "text": "100801",
+      "confidence": 0.79759548107783,
+      "region": "left_lower"
+    },
+    {
+      "text": "00001",
+      "confidence": 0.9536506772041321,
+      "region": "left_lower"
+    },
+    {
+      "text": "11",
+      "confidence": 0.7164101004600525,
+      "region": "center"
+    },
+    {
+      "text": "10000",
+      "confidence": 0.5571143090724945,
       "region": "left_lower"
     },
     {
       "text": "100001",
-      "confidence": 0.6436218818028768,
+      "confidence": 0.8109829525152842,
       "region": "left_lower"
     },
     {
-      "text": "00001",
-      "confidence": 0.5326438188552857,
+      "text": "t",
+      "confidence": 0.5256006717681885,
+      "region": "center"
+    },
+    {
+      "text": "100001",
+      "confidence": 0.8097736140092214,
       "region": "left_lower"
     },
     {
-      "text": "7",
-      "confidence": 0.5235561728477478,
+      "text": "10000",
+      "confidence": 0.7104229927062988,
+      "region": "left_lower"
+    },
+    {
+      "text": "h",
+      "confidence": 0.5253450870513916,
       "region": "left_upper"
     },
     {
-      "text": "1000001",
-      "confidence": 0.7993233587060656,
+      "text": "10000",
+      "confidence": 0.7105169057846069,
+      "region": "left_lower"
+    },
+    {
+      "text": "161",
+      "confidence": 0.6664711534976959,
+      "region": "left_upper"
+    },
+    {
+      "text": "10000",
+      "confidence": 0.7111528635025024,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5527172088623047,
+      "region": "left_lower"
+    },
+    {
+      "text": "UF",
+      "confidence": 0.6271266788244247,
       "region": "left_lower"
     },
     {
       "text": "101",
-      "confidence": 0.9685185352961222,
+      "confidence": 0.7033153772354126,
       "region": "left_lower"
     },
     {
-      "text": "千早爱音",
-      "confidence": 0.9610429257154465,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.8126522898674011,
-      "region": "center"
-    },
-    {
-      "text": "181",
-      "confidence": 0.6070321202278137,
-      "region": "center"
-    },
-    {
-      "text": "爱妈",
-      "confidence": 0.9986864030361176,
+      "text": "-1",
+      "confidence": 0.5179842859506607,
       "region": "left_lower"
     },
     {
       "text": "1",
-      "confidence": 0.9777194261550903,
+      "confidence": 0.8909051418304443,
+      "region": "center"
+    },
+    {
+      "text": "10",
+      "confidence": 0.8051139414310455,
+      "region": "left_lower"
+    },
+    {
+      "text": "41",
+      "confidence": 0.6015106439590454,
+      "region": "center"
+    },
+    {
+      "text": "1710001",
+      "confidence": 0.7098785170486995,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.55572909116745,
+      "region": "left_upper"
+    },
+    {
+      "text": "U1",
+      "confidence": 0.547017052769661,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6415421366691589,
+      "region": "left_upper"
+    },
+    {
+      "text": "1710001",
+      "confidence": 0.7113823124340602,
+      "region": "left_lower"
+    },
+    {
+      "text": "UY",
+      "confidence": 0.7019314765930176,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9985306262969971,
+      "region": "left_lower"
+    },
+    {
+      "text": "-111",
+      "confidence": 0.696211114525795,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.7623921036720276,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.620018482208252,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.776363879442215,
+      "region": "center"
+    },
+    {
+      "text": "L",
+      "confidence": 0.6286481618881226,
+      "region": "center"
+    },
+    {
+      "text": "ml!.",
+      "confidence": 0.6375378891825676,
+      "region": "center"
+    },
+    {
+      "text": ".* =",
+      "confidence": 0.6296570971608162,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9568307399749756,
+      "region": "left_upper"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5763303637504578,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.552374929189682,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5095829963684082,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.8255767524242401,
+      "region": "center"
+    },
+    {
+      "text": "-.1s",
+      "confidence": 0.5744703561067581,
+      "region": "center"
+    },
+    {
+      "text": "nrt",
+      "confidence": 0.6283235649267832,
+      "region": "left_upper"
+    },
+    {
+      "text": "1-1",
+      "confidence": 0.8010504047075907,
+      "region": "left_upper"
+    },
+    {
+      "text": "T",
+      "confidence": 0.7261384129524231,
+      "region": "left_upper"
+    },
+    {
+      "text": "童1",
+      "confidence": 0.7189011573791504,
+      "region": "left_upper"
+    },
+    {
+      "text": "7",
+      "confidence": 0.7035500407218933,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7211983799934387,
+      "region": "left_upper"
+    },
+    {
+      "text": "111",
+      "confidence": 0.6417754888534546,
+      "region": "left_upper"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.7574563920497894,
+      "region": "left_upper"
+    },
+    {
+      "text": "Av.a",
+      "confidence": 0.5601072534918785,
+      "region": "center"
+    },
+    {
+      "text": "1111",
+      "confidence": 0.621886283159256,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8753236532211304,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.844411313533783,
+      "region": "left_upper"
+    },
+    {
+      "text": "11",
+      "confidence": 0.7355180382728577,
+      "region": "center"
+    },
+    {
+      "text": "1071",
+      "confidence": 0.6559180617332458,
+      "region": "left_upper"
+    },
+    {
+      "text": "材",
+      "confidence": 0.6972400546073914,
+      "region": "left_lower"
+    },
+    {
+      "text": "J",
+      "confidence": 0.7163357138633728,
+      "region": "left_upper"
+    },
+    {
+      "text": "10000",
+      "confidence": 0.6795044898986816,
+      "region": "left_lower"
+    },
+    {
+      "text": "J",
+      "confidence": 0.8616757988929749,
+      "region": "left_upper"
+    },
+    {
+      "text": "100001",
+      "confidence": 0.5415201634168625,
+      "region": "left_lower"
+    },
+    {
+      "text": "物",
+      "confidence": 0.5156418085098267,
+      "region": "left_lower"
+    },
+    {
+      "text": "100G01",
+      "confidence": 0.6100741202632586,
+      "region": "left_lower"
+    },
+    {
+      "text": "U",
+      "confidence": 0.542026698589325,
+      "region": "left_upper"
+    },
+    {
+      "text": "100001",
+      "confidence": 0.8173442433277766,
+      "region": "left_lower"
+    },
+    {
+      "text": "101",
+      "confidence": 0.9667494495709738,
+      "region": "left_lower"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9744305610656738,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.8126508593559265,
+      "region": "center"
+    },
+    {
+      "text": "爱妈",
+      "confidence": 0.998686283826828,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9777168035507202,
       "region": "center"
     },
     {
       "text": "国",
-      "confidence": 0.5440888404846191,
+      "confidence": 0.5440881252288818,
       "region": "center"
     },
     {
       "text": "爱妈",
-      "confidence": 0.9993307590484619,
+      "confidence": 0.9993263483047485,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9714941382408142,
+      "confidence": 0.9714932441711426,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.9565795063972473,
+      "confidence": 0.9565789103507996,
       "region": "center"
     },
     {
       "text": "111",
-      "confidence": 0.8456310431162516,
+      "confidence": 0.7929827173550924,
       "region": "center"
     },
     {
+      "text": "13",
+      "confidence": 0.714854896068573,
+      "region": "left_lower"
+    },
+    {
       "text": "+",
-      "confidence": 0.6258140206336975,
+      "confidence": 0.6258134841918945,
       "region": "center"
     },
     {
       "text": "4",
-      "confidence": 0.7935053706169128,
+      "confidence": 0.7935047149658203,
       "region": "left_upper"
     },
     {
       "text": "口",
-      "confidence": 0.7976831197738647,
+      "confidence": 0.7976824641227722,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.6595162153244019,
+      "confidence": 0.9122785925865173,
       "region": "center"
     },
     {
       "text": "1--",
-      "confidence": 0.5373997489611307,
+      "confidence": 0.5304834147294363,
       "region": "center"
     },
     {
       "text": "1!?",
-      "confidence": 0.6453257203102112,
-      "region": "center"
-    },
-    {
-      "text": "5",
-      "confidence": 0.65519118309021,
-      "region": "left_upper"
-    },
-    {
-      "text": "1",
-      "confidence": 0.8821141123771667,
-      "region": "left_lower"
-    },
-    {
-      "text": "-",
-      "confidence": 0.6178712844848633,
-      "region": "left_lower"
-    },
-    {
-      "text": "5",
-      "confidence": 0.5807127952575684,
-      "region": "left_upper"
-    },
-    {
-      "text": "-",
-      "confidence": 0.5705234408378601,
-      "region": "left_lower"
-    },
-    {
-      "text": "-",
-      "confidence": 0.8184304237365723,
-      "region": "left_lower"
-    },
-    {
-      "text": "EnL",
-      "confidence": 0.6094338099161783,
-      "region": "left_lower"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6849721074104309,
-      "region": "center"
-    },
-    {
-      "text": "EnL",
-      "confidence": 0.5302564799785614,
-      "region": "left_lower"
-    },
-    {
-      "text": "EnL",
-      "confidence": 0.5569353103637695,
-      "region": "left_lower"
-    },
-    {
-      "text": "EnL",
-      "confidence": 0.6166678071022034,
-      "region": "left_lower"
-    },
-    {
-      "text": "L",
-      "confidence": 0.7042261362075806,
-      "region": "left_lower"
-    },
-    {
-      "text": "111",
-      "confidence": 0.801777164141337,
-      "region": "left_lower"
-    },
-    {
-      "text": "111.",
-      "confidence": 0.7171531021595001,
-      "region": "left_lower"
-    },
-    {
-      "text": "11.",
-      "confidence": 0.7329786618550619,
-      "region": "left_lower"
-    },
-    {
-      "text": "111.",
-      "confidence": 0.8149322420358658,
-      "region": "left_lower"
-    },
-    {
-      "text": "1.0!",
-      "confidence": 0.5933797024190426,
-      "region": "left_lower"
-    },
-    {
-      "text": ".1",
-      "confidence": 0.5952611565589905,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.5399463176727295,
-      "region": "left_upper"
-    },
-    {
-      "text": "111",
-      "confidence": 0.8108299175898234,
-      "region": "center"
-    },
-    {
-      "text": "$",
-      "confidence": 0.5712760090827942,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5405455827713013,
-      "region": "center"
-    },
-    {
-      "text": "ail",
-      "confidence": 0.5026413202285767,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9675873517990112,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5570476055145264,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5914471745491028,
-      "region": "center"
-    },
-    {
-      "text": "mt1",
-      "confidence": 0.5135689576466879,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5268361568450928,
-      "region": "center"
-    },
-    {
-      "text": "R1",
-      "confidence": 0.5110383033752441,
-      "region": "center"
-    },
-    {
-      "text": "+",
-      "confidence": 0.8662210702896118,
-      "region": "left_upper"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6294389367103577,
-      "region": "left_lower"
-    },
-    {
-      "text": "timnt",
-      "confidence": 0.600458949804306,
-      "region": "center"
-    },
-    {
-      "text": "HEAL",
-      "confidence": 0.5981611758470535,
-      "region": "center"
-    },
-    {
-      "text": "511",
-      "confidence": 0.5312350988388062,
-      "region": "center"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.9987587779760361,
-      "region": "left_lower"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.8491550385951996,
-      "region": "left_lower"
-    },
-    {
-      "text": "I",
-      "confidence": 0.572509765625,
-      "region": "center"
-    },
-    {
-      "text": "31",
-      "confidence": 0.533944383263588,
-      "region": "center"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.9219997674226761,
-      "region": "left_lower"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.9215645790100098,
-      "region": "left_lower"
-    },
-    {
-      "text": "913",
-      "confidence": 0.5169364213943481,
-      "region": "center"
-    },
-    {
-      "text": "Y",
-      "confidence": 0.6674730181694031,
-      "region": "left_upper"
-    },
-    {
-      "text": "1115",
-      "confidence": 0.6606177911162376,
-      "region": "center"
-    },
-    {
-      "text": "918",
-      "confidence": 0.6843026677767435,
-      "region": "center"
-    },
-    {
-      "text": "2112",
-      "confidence": 0.9355834126472473,
-      "region": "center"
-    },
-    {
-      "text": "8112",
-      "confidence": 0.6662491634488106,
-      "region": "center"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.9983949065208435,
-      "region": "left_lower"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.9748134613037109,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.7095499634742737,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.6580638289451599,
-      "region": "center"
-    },
-    {
-      "text": "Mr",
-      "confidence": 0.5379979759454727,
-      "region": "left_upper"
-    },
-    {
-      "text": "Ⅱ",
-      "confidence": 0.5284872055053711,
-      "region": "center"
-    },
-    {
-      "text": "-11E",
-      "confidence": 0.6117738261818886,
-      "region": "center"
-    },
-    {
-      "text": "3-",
-      "confidence": 0.6283274292945862,
-      "region": "left_upper"
-    },
-    {
-      "text": "SmE",
-      "confidence": 0.5405541062355042,
-      "region": "center"
-    },
-    {
-      "text": "-Ni:",
-      "confidence": 0.5616962164640427,
-      "region": "left_upper"
-    },
-    {
-      "text": "1t",
-      "confidence": 0.5734827667474747,
-      "region": "center"
-    },
-    {
-      "text": "4",
-      "confidence": 0.5543123483657837,
-      "region": "center"
-    },
-    {
-      "text": "M..",
-      "confidence": 0.7596317132314047,
-      "region": "center"
-    },
-    {
-      "text": "-15",
-      "confidence": 0.5354182422161102,
-      "region": "center"
-    },
-    {
-      "text": "(41.8",
-      "confidence": 0.6172203242778778,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.750560998916626,
-      "region": "center"
-    },
-    {
-      "text": "业",
-      "confidence": 0.6586772799491882,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5644795298576355,
-      "region": "center"
-    },
-    {
-      "text": "1:.",
-      "confidence": 0.5252363979816437,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6973068118095398,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6261516213417053,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5047417879104614,
-      "region": "center"
-    },
-    {
-      "text": "ir-ai",
-      "confidence": 0.6152962148189545,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5080727338790894,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.7754520773887634,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.672308623790741,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6926949620246887,
-      "region": "center"
-    },
-    {
-      "text": "mk",
-      "confidence": 0.5961335599422455,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5204806923866272,
-      "region": "center"
-    },
-    {
-      "text": "61",
-      "confidence": 0.831494003534317,
-      "region": "center"
-    },
-    {
-      "text": "4.3",
-      "confidence": 0.528360034028689,
-      "region": "center"
-    },
-    {
-      "text": "【El",
-      "confidence": 0.6190107762813568,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5808500051498413,
-      "region": "center"
-    },
-    {
-      "text": "l",
-      "confidence": 0.5597646236419678,
-      "region": "left_lower"
-    },
-    {
-      "text": "千星爱音",
-      "confidence": 0.8389229699969292,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6406221389770508,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.9768542647361755,
-      "region": "center"
-    },
-    {
-      "text": "l!",
-      "confidence": 0.7433384954929352,
-      "region": "left_lower"
-    },
-    {
-      "text": "千星爱音",
-      "confidence": 0.8448895514011383,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.9643927216529846,
-      "region": "center"
-    },
-    {
-      "text": "l'!",
-      "confidence": 0.6784654060999552,
-      "region": "left_lower"
-    },
-    {
-      "text": "千早爱音",
-      "confidence": 0.8833722919225693,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.9416984915733337,
+      "confidence": 0.6430233220259348,
       "region": "center"
     },
     {
       "text": "1.",
-      "confidence": 0.7135250866413116,
+      "confidence": 0.5442462414503098,
+      "region": "left_lower"
+    },
+    {
+      "text": "-",
+      "confidence": 0.560451090335846,
+      "region": "left_lower"
+    },
+    {
+      "text": "-",
+      "confidence": 0.5705223083496094,
+      "region": "left_lower"
+    },
+    {
+      "text": "5",
+      "confidence": 0.5449574589729309,
+      "region": "left_upper"
+    },
+    {
+      "text": "-",
+      "confidence": 0.8184301853179932,
+      "region": "left_lower"
+    },
+    {
+      "text": "EnL",
+      "confidence": 0.6094335814317068,
+      "region": "left_lower"
+    },
+    {
+      "text": "EnL",
+      "confidence": 0.5302561422189077,
+      "region": "left_lower"
+    },
+    {
+      "text": "n",
+      "confidence": 0.6382942795753479,
+      "region": "center"
+    },
+    {
+      "text": "EnL",
+      "confidence": 0.6166670322418213,
+      "region": "left_lower"
+    },
+    {
+      "text": "EnL",
+      "confidence": 0.5884074767430624,
+      "region": "left_lower"
+    },
+    {
+      "text": "111",
+      "confidence": 0.8017760117848715,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6433598399162292,
+      "region": "left_lower"
+    },
+    {
+      "text": "11.",
+      "confidence": 0.69689013560613,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5132638812065125,
+      "region": "left_lower"
+    },
+    {
+      "text": "11.",
+      "confidence": 0.7329778075218201,
+      "region": "left_lower"
+    },
+    {
+      "text": "编",
+      "confidence": 0.6676620841026306,
+      "region": "left_upper"
+    },
+    {
+      "text": "111.",
+      "confidence": 0.8149317651987076,
+      "region": "left_lower"
+    },
+    {
+      "text": "导胍",
+      "confidence": 0.598434716463089,
+      "region": "left_lower"
+    },
+    {
+      "text": "LnE",
+      "confidence": 0.5576524237791697,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5399457216262817,
+      "region": "left_upper"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.5603405237197876,
+      "region": "left_lower"
+    },
+    {
+      "text": "111",
+      "confidence": 0.8108291029930115,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.9396076798439026,
+      "confidence": 0.5405445694923401,
       "region": "center"
     },
     {
-      "text": "lia",
-      "confidence": 0.5928675532341003,
+      "text": "ail",
+      "confidence": 0.5026403566201528,
       "region": "center"
     },
     {
-      "text": "316",
-      "confidence": 0.6490301688512167,
+      "text": "1",
+      "confidence": 0.9539839625358582,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5570469498634338,
       "region": "center"
     },
     {
-      "text": "111",
-      "confidence": 0.7772443294525146,
+      "text": "口",
+      "confidence": 0.5914467573165894,
+      "region": "center"
+    },
+    {
+      "text": "mt1",
+      "confidence": 0.513568306962649,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5268359184265137,
+      "region": "center"
+    },
+    {
+      "text": "IRE1",
+      "confidence": 0.5559346899390221,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.8662205338478088,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.629439115524292,
+      "region": "left_lower"
+    },
+    {
+      "text": "imnt",
+      "confidence": 0.5100465193390846,
+      "region": "center"
+    },
+    {
+      "text": "4",
+      "confidence": 0.5654229521751404,
+      "region": "center"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9987585991621017,
+      "region": "left_lower"
+    },
+    {
+      "text": "千星爱音",
+      "confidence": 0.8200454264879227,
+      "region": "left_lower"
+    },
+    {
+      "text": "I",
+      "confidence": 0.5725093483924866,
+      "region": "center"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9189704954624176,
+      "region": "left_lower"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9185407906770706,
+      "region": "left_lower"
+    },
+    {
+      "text": "1115",
+      "confidence": 0.6606169044971466,
+      "region": "center"
+    },
+    {
+      "text": "9116",
+      "confidence": 0.7093911990523338,
+      "region": "center"
+    },
+    {
+      "text": "2112",
+      "confidence": 0.8826819062232971,
+      "region": "center"
+    },
+    {
+      "text": "8112",
+      "confidence": 0.802060142159462,
+      "region": "center"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9983946979045868,
+      "region": "left_lower"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.9936366975307465,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.7095483541488647,
+      "region": "center"
+    },
+    {
+      "text": "11!",
+      "confidence": 0.5808956623077393,
+      "region": "center"
+    },
+    {
+      "text": "Mr",
+      "confidence": 0.5379974469542503,
+      "region": "left_upper"
+    },
+    {
+      "text": "Ⅱ",
+      "confidence": 0.5284871459007263,
+      "region": "center"
+    },
+    {
+      "text": "11-",
+      "confidence": 0.7577878336111704,
+      "region": "center"
+    },
+    {
+      "text": "3-",
+      "confidence": 0.6283265352249146,
+      "region": "left_upper"
+    },
+    {
+      "text": "SmE",
+      "confidence": 0.6628100176652273,
+      "region": "center"
+    },
+    {
+      "text": "-Ni:",
+      "confidence": 0.5616956576704979,
+      "region": "left_upper"
+    },
+    {
+      "text": "4",
+      "confidence": 0.5543124675750732,
       "region": "center"
     },
     {
       "text": "M..",
-      "confidence": 0.5903530915578207,
+      "confidence": 0.765488843123118,
       "region": "center"
     },
     {
-      "text": "20",
-      "confidence": 0.5342836380004883,
-      "region": "left_upper"
-    },
-    {
-      "text": "31E",
-      "confidence": 0.5412702560424805,
-      "region": "center"
-    },
-    {
-      "text": "一",
-      "confidence": 0.5068236589431763,
-      "region": "center"
-    },
-    {
-      "text": "m p.?!",
-      "confidence": 0.6300616512695948,
+      "text": "(41.6",
+      "confidence": 0.5266848891973496,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.645136833190918,
+      "confidence": 0.7505595088005066,
+      "region": "center"
+    },
+    {
+      "text": "业",
+      "confidence": 0.6586763858795166,
+      "region": "center"
+    },
+    {
+      "text": "Gm",
+      "confidence": 0.6629879176616669,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5644785165786743,
+      "region": "center"
+    },
+    {
+      "text": "I:-.",
+      "confidence": 0.5977472364902496,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6973047256469727,
+      "region": "center"
+    },
+    {
+      "text": "MEE",
+      "confidence": 0.6833949089050293,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6261500716209412,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.504740297794342,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5080728530883789,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6723076701164246,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6926940083503723,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5204805731773376,
+      "region": "center"
+    },
+    {
+      "text": "611",
+      "confidence": 0.6984670559565226,
+      "region": "center"
+    },
+    {
+      "text": "4.1",
+      "confidence": 0.5141988545656204,
+      "region": "center"
+    },
+    {
+      "text": "【al",
+      "confidence": 0.6529709001382192,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.5808494091033936,
+      "region": "center"
+    },
+    {
+      "text": "千星爱音",
+      "confidence": 0.839355356991291,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6406214833259583,
+      "region": "center"
+    },
+    {
+      "text": "事",
+      "confidence": 0.5117599964141846,
+      "region": "left_upper"
+    },
+    {
+      "text": "i.!.",
+      "confidence": 0.7469929605722427,
+      "region": "left_lower"
+    },
+    {
+      "text": "千星爱音",
+      "confidence": 0.8448890596628189,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.9643919467926025,
+      "region": "center"
+    },
+    {
+      "text": "千早爱音",
+      "confidence": 0.883371889591217,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.94169682264328,
+      "region": "center"
+    },
+    {
+      "text": "ME8",
+      "confidence": 0.5109768311182658,
+      "region": "center"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.7135240435600281,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.9396066665649414,
+      "region": "center"
+    },
+    {
+      "text": "316",
+      "confidence": 0.6490293145179749,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.6457841098308563,
+      "region": "center"
+    },
+    {
+      "text": "20",
+      "confidence": 0.5214470624923706,
+      "region": "left_upper"
+    },
+    {
+      "text": "91E",
+      "confidence": 0.5492467929919561,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6570848226547241,
+      "region": "left_upper"
+    },
+    {
+      "text": "一",
+      "confidence": 0.5068234801292419,
+      "region": "center"
+    },
+    {
+      "text": "m p.la!",
+      "confidence": 0.5215446587119784,
+      "region": "center"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.6830664575099945,
+      "region": "left_lower"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6451361775398254,
+      "region": "center"
+    },
+    {
+      "text": "af",
+      "confidence": 0.5915627181529999,
       "region": "center"
     },
     {
@@ -1568,347 +1526,317 @@
     },
     {
       "text": "1",
-      "confidence": 0.9152328372001648,
+      "confidence": 0.9152309894561768,
       "region": "center"
     },
     {
-      "text": "It.",
-      "confidence": 0.8835361003875732,
-      "region": "left_lower"
-    },
-    {
       "text": "口",
-      "confidence": 0.5117389559745789,
+      "confidence": 0.5117390751838684,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.8336608409881592,
+      "confidence": 0.833659291267395,
       "region": "center"
     },
     {
-      "text": "api",
-      "confidence": 0.5666642884413401,
-      "region": "center"
-    },
-    {
-      "text": "71",
-      "confidence": 0.5046972781419754,
-      "region": "center"
-    },
-    {
-      "text": "1.",
-      "confidence": 0.6830672919750214,
-      "region": "left_lower"
-    },
-    {
-      "text": "口",
-      "confidence": 0.9487552046775818,
+      "text": "7",
+      "confidence": 0.5842639803886414,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.5148959755897522,
+      "confidence": 0.9487544894218445,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.710115909576416,
+      "confidence": 0.514895498752594,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.7101145386695862,
       "region": "center"
     },
     {
       "text": "11",
-      "confidence": 0.8668208122253418,
+      "confidence": 0.9690060019493103,
       "region": "left_lower"
     },
     {
       "text": "1!",
-      "confidence": 0.6945840120315552,
+      "confidence": 0.694583460688591,
       "region": "left_lower"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.8727946430444717,
+      "confidence": 0.8713866323232651,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5316740870475769,
+      "confidence": 0.5316729545593262,
       "region": "center"
     },
     {
+      "text": "+",
+      "confidence": 0.5613542795181274,
+      "region": "left_upper"
+    },
+    {
       "text": "千早爱音",
-      "confidence": 0.9704531282186508,
+      "confidence": 0.9739384651184082,
       "region": "left_lower"
     },
     {
       "text": "1.",
-      "confidence": 0.6675245761871338,
+      "confidence": 0.6675235033035278,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9716882556676865,
+      "confidence": 0.9733020514249802,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.6784844994544983,
-      "region": "center"
-    },
-    {
-      "text": "361",
-      "confidence": 0.5105593800544739,
+      "confidence": 0.6784842014312744,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.5831920504570007,
+      "confidence": 0.583191454410553,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.8036337494850159,
-      "region": "center"
-    },
-    {
-      "text": "1",
-      "confidence": 0.8546879291534424,
+      "confidence": 0.854686439037323,
       "region": "center"
     },
     {
       "text": "-=y",
-      "confidence": 0.6383449832598368,
+      "confidence": 0.573795884847641,
       "region": "left_upper"
     },
     {
       "text": "口",
-      "confidence": 0.7080622911453247,
-      "region": "center"
-    },
-    {
-      "text": "piru",
-      "confidence": 0.5705139078199863,
+      "confidence": 0.7080616354942322,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6906523704528809,
+      "confidence": 0.6906524896621704,
       "region": "center"
     },
     {
-      "text": "44+t=",
-      "confidence": 0.5477465778589249,
+      "text": "44+T=",
+      "confidence": 0.5879617631435394,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6168739795684814,
+      "confidence": 0.616874098777771,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.9943260550498962,
+      "confidence": 0.9678249359130859,
       "region": "center"
     },
     {
-      "text": "118-318",
-      "confidence": 0.5489218405314854,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.6240454316139221,
+      "text": "1181312",
+      "confidence": 0.5908095070293972,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.6535803079605103,
-      "region": "center"
-    },
-    {
-      "text": "11812313",
-      "confidence": 0.7727469466626644,
+      "confidence": 0.6240447163581848,
       "region": "center"
     },
     {
       "text": "口",
-      "confidence": 0.9621536731719971,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.7217376232147217,
-      "region": "center"
-    },
-    {
-      "text": "118 E:",
-      "confidence": 0.6471819430589676,
-      "region": "center"
-    },
-    {
-      "text": "口",
-      "confidence": 0.5402491688728333,
+      "confidence": 0.6535794138908386,
       "region": "center"
     },
     {
       "text": "1",
-      "confidence": 0.5861152410507202,
+      "confidence": 0.5810685753822327,
+      "region": "center"
+    },
+    {
+      "text": "81631611",
+      "confidence": 0.600547555834055,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.9621531367301941,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.7217371463775635,
+      "region": "center"
+    },
+    {
+      "text": "118.EE:",
+      "confidence": 0.6136497897761208,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.540248453617096,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5861139893531799,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9289331436157227,
+      "confidence": 0.7560228183865547,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.5814518332481384,
+      "confidence": 0.5814511775970459,
       "region": "center"
     },
     {
-      "text": "y",
-      "confidence": 0.5017332434654236,
-      "region": "left_upper"
-    },
-    {
       "text": "千早爱音",
-      "confidence": 0.9258100688457489,
+      "confidence": 0.8385982438921928,
       "region": "left_lower"
     },
     {
       "text": "广",
-      "confidence": 0.6615754961967468,
+      "confidence": 0.661574125289917,
       "region": "center"
     },
     {
-      "text": "118.",
-      "confidence": 0.5092305094003677,
+      "text": "74",
+      "confidence": 0.6655795574188232,
       "region": "center"
     },
     {
       "text": "千星爱音",
-      "confidence": 0.8390243500471115,
+      "confidence": 0.839023619890213,
       "region": "left_lower"
     },
     {
       "text": "11",
-      "confidence": 0.8733119666576385,
+      "confidence": 0.7190812230110168,
       "region": "center"
     },
     {
       "text": "千星爱音",
-      "confidence": 0.8165491074323654,
+      "confidence": 0.8888033032417297,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.9399197697639465,
+      "confidence": 0.939918577671051,
       "region": "center"
     },
     {
-      "text": "G国1",
-      "confidence": 0.524863600730896,
+      "text": "9国1",
+      "confidence": 0.5596330612897873,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9991426467895508,
+      "confidence": 0.9991424083709717,
       "region": "left_lower"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9939835369586945,
+      "confidence": 0.9937103688716888,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.8908178210258484,
+      "confidence": 0.8908169865608215,
       "region": "center"
     },
     {
       "text": "13",
-      "confidence": 0.7218357622623444,
+      "confidence": 0.6279646158218384,
       "region": "center"
     },
     {
       "text": "23",
-      "confidence": 0.5966159105300903,
+      "confidence": 0.5642417073249817,
       "region": "center"
     },
     {
-      "text": "ENZEMP",
-      "confidence": 0.5272306352853775,
+      "text": "1911",
+      "confidence": 0.572677493095398,
       "region": "center"
     },
     {
-      "text": "11",
-      "confidence": 0.8358662128448486,
-      "region": "center"
-    },
-    {
-      "text": "18",
-      "confidence": 0.5312936902046204,
+      "text": "1",
+      "confidence": 0.6684811115264893,
       "region": "center"
     },
     {
       "text": "爱爸",
-      "confidence": 0.9974755644798279,
+      "confidence": 0.9974105954170227,
       "region": "left_lower"
     },
     {
       "text": "口",
-      "confidence": 0.7363079190254211,
+      "confidence": 0.7363068461418152,
       "region": "center"
     },
     {
       "text": "10",
-      "confidence": 0.8142618834972382,
+      "confidence": 0.8162822127342224,
       "region": "center"
     },
     {
       "text": "千早爱音",
-      "confidence": 0.9988718777894974,
+      "confidence": 0.998871698975563,
       "region": "left_lower"
     },
     {
       "text": "干早爱音",
-      "confidence": 0.8108469173312187,
+      "confidence": 0.8128748536109924,
       "region": "left_lower"
     },
     {
       "text": "1311",
-      "confidence": 0.7995544150471687,
+      "confidence": 0.7995540127158165,
       "region": "center"
     },
     {
       "text": "有",
-      "confidence": 0.6362815499305725,
+      "confidence": 0.636281430721283,
       "region": "left_lower"
     },
     {
       "text": "王早爱音",
-      "confidence": 0.851755827665329,
+      "confidence": 0.8519458994269371,
       "region": "left_lower"
     },
     {
       "text": "S",
-      "confidence": 0.5405964255332947,
+      "confidence": 0.5405959486961365,
       "region": "left_upper"
     },
     {
       "text": "王早爱音",
-      "confidence": 0.7878435999155045,
+      "confidence": 0.7850424647331238,
       "region": "left_lower"
     },
     {
       "text": "R.",
-      "confidence": 0.5229891836643219,
+      "confidence": 0.5229883641004562,
       "region": "center"
     },
     {
       "text": "=",
-      "confidence": 0.5821277499198914,
+      "confidence": 0.5821269154548645,
       "region": "center"
     },
     {
@@ -1917,19 +1845,28 @@
       "region": "left_upper"
     },
     {
+      "text": "W",
+      "confidence": 0.6345860362052917,
+      "region": "left_lower"
+    },
+    {
       "text": "='",
-      "confidence": 0.6078627705574036,
+      "confidence": 0.6820408701896667,
       "region": "center"
     }
   ],
   "normalized_speaker_names": [
     "千早爱音"
   ],
-  "unknown_speaker_count": 157,
-  "narrator_count": 31,
+  "unknown_speaker_count": 153,
+  "narrator_count": 37,
   "rejected_name_candidates": [
     {
       "text": "+",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "R",
       "reason": "not a short CJK name"
     },
     {
@@ -1949,7 +1886,7 @@
       "reason": "not matched to character dictionary"
     },
     {
-      "text": "医",
+      "text": "女",
       "reason": "low confidence"
     },
     {
@@ -1957,7 +1894,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "4.110.",
+      "text": ".110",
       "reason": "not a short CJK name"
     },
     {
@@ -1965,19 +1902,23 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "1",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": ".119",
       "reason": "not a short CJK name"
     },
     {
-      "text": "lr.",
+      "text": "Ullr.",
       "reason": "not a short CJK name"
     },
     {
-      "text": "ta meia",
+      "text": "Ea ri.",
       "reason": "not a short CJK name"
     },
     {
-      "text": "1.1.",
+      "text": "11 1",
       "reason": "not a short CJK name"
     },
     {
@@ -1985,15 +1926,15 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "-",
+      "text": "Ea 1",
       "reason": "not a short CJK name"
     },
     {
-      "text": "tesk\"",
+      "text": "t =1=例 加",
       "reason": "not a short CJK name"
     },
     {
-      "text": "t.1",
+      "text": "tk.",
       "reason": "not a short CJK name"
     },
     {
@@ -2005,6 +1946,10 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "IT",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": "111",
       "reason": "not a short CJK name"
     },
@@ -2013,7 +1958,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "nine",
+      "text": "mlna",
       "reason": "not a short CJK name"
     },
     {
@@ -2021,19 +1966,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "14E",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "s-l---",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "--!!!",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "1",
+      "text": "mlo-l",
       "reason": "not a short CJK name"
     },
     {
@@ -2045,15 +1978,19 @@
       "reason": "low confidence"
     },
     {
-      "text": "ea 60",
+      "text": "llea6",
       "reason": "not a short CJK name"
     },
     {
-      "text": "（1",
+      "text": "÷1",
       "reason": "not a short CJK name"
     },
     {
-      "text": "101.",
+      "text": "0odbt",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "10",
       "reason": "not a short CJK name"
     },
     {
@@ -2061,7 +1998,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "10",
+      "text": "0",
       "reason": "not a short CJK name"
     },
     {
@@ -2077,7 +2014,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "1000",
+      "text": "100801",
       "reason": "not a short CJK name"
     },
     {
@@ -2085,39 +2022,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "ue t",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "100000",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "0",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "1h",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "U",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "0000",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "'11",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "10001",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "U1",
+      "text": "t",
       "reason": "not a short CJK name"
     },
     {
@@ -2125,11 +2030,43 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "161",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "UF",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "101",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "41",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1710001",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "U1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "UY",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": "L",
       "reason": "not a short CJK name"
     },
     {
-      "text": "ml!..",
+      "text": "ml!.",
       "reason": "not a short CJK name"
     },
     {
@@ -2137,12 +2074,12 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "nrt",
+      "text": "-.1s",
       "reason": "not a short CJK name"
     },
     {
-      "text": "中",
-      "reason": "not matched to character dictionary"
+      "text": "nrt",
+      "reason": "not a short CJK name"
     },
     {
       "text": "1-1",
@@ -2161,19 +2098,15 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "11 0",
-      "reason": "not a short CJK name"
-    },
-    {
       "text": "1.",
       "reason": "not a short CJK name"
     },
     {
-      "text": "A0.a",
+      "text": "Av.a",
       "reason": "not a short CJK name"
     },
     {
-      "text": "t011",
+      "text": "1111",
       "reason": "not a short CJK name"
     },
     {
@@ -2181,28 +2114,32 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "-7",
-      "reason": "not a short CJK name"
-    },
-    {
       "text": "材",
       "reason": "low confidence"
     },
     {
-      "text": "1000001",
+      "text": "J",
       "reason": "not a short CJK name"
     },
     {
-      "text": "101",
+      "text": "物",
+      "reason": "low confidence"
+    },
+    {
+      "text": "100G01",
       "reason": "not a short CJK name"
     },
     {
-      "text": "181",
+      "text": "U",
       "reason": "not a short CJK name"
     },
     {
       "text": "国",
       "reason": "low confidence"
+    },
+    {
+      "text": "13",
+      "reason": "not a short CJK name"
     },
     {
       "text": "4",
@@ -2217,6 +2154,10 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "-",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": "5",
       "reason": "not a short CJK name"
     },
@@ -2225,7 +2166,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "111.",
+      "text": "n",
       "reason": "not a short CJK name"
     },
     {
@@ -2233,15 +2174,23 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "1.0!",
+      "text": "编",
+      "reason": "low confidence"
+    },
+    {
+      "text": "111.",
       "reason": "not a short CJK name"
     },
     {
-      "text": ".1",
+      "text": "导胍",
+      "reason": "low confidence"
+    },
+    {
+      "text": "LnE",
       "reason": "not a short CJK name"
     },
     {
-      "text": "$",
+      "text": "Y",
       "reason": "not a short CJK name"
     },
     {
@@ -2253,19 +2202,11 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "R1",
+      "text": "IRE1",
       "reason": "not a short CJK name"
     },
     {
-      "text": "timnt",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "HEAL",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "511",
+      "text": "imnt",
       "reason": "not a short CJK name"
     },
     {
@@ -2273,23 +2214,11 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "31",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "913",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "Y",
-      "reason": "not a short CJK name"
-    },
-    {
       "text": "1115",
       "reason": "not a short CJK name"
     },
     {
-      "text": "918",
+      "text": "9116",
       "reason": "not a short CJK name"
     },
     {
@@ -2301,6 +2230,10 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "11!",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": "Mr",
       "reason": "not a short CJK name"
     },
@@ -2309,7 +2242,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "-11E",
+      "text": "11-",
       "reason": "not a short CJK name"
     },
     {
@@ -2325,59 +2258,47 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "1t",
-      "reason": "not a short CJK name"
-    },
-    {
       "text": "M..",
       "reason": "not a short CJK name"
     },
     {
-      "text": "-15",
+      "text": "(41.6",
       "reason": "not a short CJK name"
     },
     {
-      "text": "(41.8",
+      "text": "Gm",
       "reason": "not a short CJK name"
     },
     {
-      "text": "1:.",
+      "text": "I:-.",
       "reason": "not a short CJK name"
     },
     {
-      "text": "ir-ai",
+      "text": "MEE",
       "reason": "not a short CJK name"
     },
     {
-      "text": "mk",
+      "text": "611",
       "reason": "not a short CJK name"
     },
     {
-      "text": "61",
+      "text": "4.1",
       "reason": "not a short CJK name"
     },
     {
-      "text": "4.3",
+      "text": "【al",
       "reason": "not a short CJK name"
     },
     {
-      "text": "【El",
+      "text": "事",
+      "reason": "low confidence"
+    },
+    {
+      "text": "i.!.",
       "reason": "not a short CJK name"
     },
     {
-      "text": "l",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "l!",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "l'!",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "lia",
+      "text": "ME8",
       "reason": "not a short CJK name"
     },
     {
@@ -2389,7 +2310,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "31E",
+      "text": "91E",
       "reason": "not a short CJK name"
     },
     {
@@ -2397,19 +2318,11 @@
       "reason": "low confidence"
     },
     {
-      "text": "m p.?!",
+      "text": "m p.la!",
       "reason": "not a short CJK name"
     },
     {
-      "text": "It.",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "api",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "71",
+      "text": "af",
       "reason": "not a short CJK name"
     },
     {
@@ -2417,35 +2330,23 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "361",
-      "reason": "not a short CJK name"
-    },
-    {
       "text": "-=y",
       "reason": "not a short CJK name"
     },
     {
-      "text": "piru",
+      "text": "44+T=",
       "reason": "not a short CJK name"
     },
     {
-      "text": "44+t=",
+      "text": "1181312",
       "reason": "not a short CJK name"
     },
     {
-      "text": "118-318",
+      "text": "81631611",
       "reason": "not a short CJK name"
     },
     {
-      "text": "11812313",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "118 E:",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "y",
+      "text": "118.EE:",
       "reason": "not a short CJK name"
     },
     {
@@ -2453,15 +2354,11 @@
       "reason": "low confidence"
     },
     {
-      "text": "118.",
+      "text": "74",
       "reason": "not a short CJK name"
     },
     {
-      "text": "G国1",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "13",
+      "text": "9国1",
       "reason": "not a short CJK name"
     },
     {
@@ -2469,11 +2366,7 @@
       "reason": "not a short CJK name"
     },
     {
-      "text": "ENZEMP",
-      "reason": "not a short CJK name"
-    },
-    {
-      "text": "18",
+      "text": "1911",
       "reason": "not a short CJK name"
     },
     {
@@ -2501,12 +2394,16 @@
       "reason": "not a short CJK name"
     },
     {
+      "text": "W",
+      "reason": "not a short CJK name"
+    },
+    {
       "text": "='",
       "reason": "not a short CJK name"
     }
   ],
   "speaker_name_confidence": {
-    "千早爱音": 0.9986281697948773
+    "千早爱音": 0.9986280098557472
   },
   "success": true,
   "failure_reason": null,
@@ -2527,8 +2424,8 @@
     "speaker_identified_frame_count": 30,
     "speaker_debug_sample_count": 20,
     "raw_ocr_result_count": 348,
-    "filtered_result_count": 216,
+    "filtered_result_count": 218,
     "frame_similarity_threshold": 0.02
   },
-  "processed_at": "2026-07-12T07:56:37+00:00"
+  "processed_at": "2026-07-12T11:18:26+00:00"
 }
