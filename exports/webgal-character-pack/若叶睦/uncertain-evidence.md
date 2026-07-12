@@ -1,0 +1,25 @@
+# 若叶睦：待确认与不确定证据
+
+- 当前可归属证据：high 0 / medium 0 / low 0。
+- 需要人工确认：画面姓名标签、同一对话框的轮次、以及 OCR 断裂字。
+- 未归属样本（前 20 条，仅供复核，不代表本角色）：
+  - BV1uknVz9EeN 00:00:00.000
+  - BV1uknVz9EeN 00:00:01.000
+  - BV1uknVz9EeN 00:00:03.000
+  - BV1uknVz9EeN 00:00:04.000
+  - BV1uknVz9EeN 00:00:10.000
+  - BV1uknVz9EeN 00:00:11.000
+  - BV1uknVz9EeN 00:00:16.000
+  - BV1uknVz9EeN 00:00:17.000
+  - BV1uknVz9EeN 00:00:18.000
+  - BV1uknVz9EeN 00:00:19.000
+  - BV1uknVz9EeN 00:00:20.000
+  - BV1uknVz9EeN 00:00:22.000
+  - BV1uknVz9EeN 00:00:23.000
+  - BV1uknVz9EeN 00:00:29.000
+  - BV1uknVz9EeN 00:00:30.000
+  - BV1uknVz9EeN 00:00:39.000
+  - BV1uknVz9EeN 00:00:40.000
+  - BV1uknVz9EeN 00:00:43.000
+  - BV1uknVz9EeN 00:00:44.000
+  - BV1uknVz9EeN 00:00:47.000
