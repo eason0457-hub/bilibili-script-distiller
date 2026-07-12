@@ -1,0 +1,4093 @@
+{
+  "bvid": "BV1ht7n6xEb5",
+  "video_title": "『💥MyGO!!!!!/欢乐向』💢爱音获得了雷霆语言系统？！",
+  "source_type": "hardcoded_subtitle_ocr",
+  "downloaded_quality": "360P preferred, 480P fallback",
+  "processed_time_range": {
+    "start_time": null,
+    "end_time": null
+  },
+  "crop_region": {
+    "top": 0.5,
+    "bottom": 0.92,
+    "left": 0.06,
+    "right": 0.96
+  },
+  "speaker_crop_regions": {
+    "left_upper": {
+      "top": 0.54,
+      "bottom": 0.68,
+      "left": 0.14,
+      "right": 0.42
+    },
+    "left_lower": {
+      "top": 0.62,
+      "bottom": 0.76,
+      "left": 0.06,
+      "right": 0.3
+    },
+    "center": {
+      "top": 0.62,
+      "bottom": 0.76,
+      "left": 0.38,
+      "right": 0.64
+    }
+  },
+  "sample_fps": 1.0,
+  "sample_interval_seconds": 1.0,
+  "ocr_language": "ch",
+  "ocr_engine": "rapidocr_onnxruntime",
+  "average_confidence": 0.8838228242926309,
+  "low_confidence_segments": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 2.0,
+      "end": 3.0,
+      "speaker": "未知说话者",
+      "text": "!!",
+      "confidence": 0.6466722786426544
+    },
+    {
+      "start": 3.0,
+      "end": 4.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 13.0,
+      "end": 14.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 61.0,
+      "end": 62.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 96.0,
+      "end": 97.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 121.0,
+      "end": 122.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 138.0,
+      "end": 139.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 199.0,
+      "end": 200.0,
+      "speaker": "素世",
+      "text": "TU",
+      "confidence": 0.5707029402256012
+    },
+    {
+      "start": 203.0,
+      "end": 204.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 222.0,
+      "end": 223.0,
+      "speaker": "立希",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 239.0,
+      "end": 240.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 312.0,
+      "end": 313.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 357.0,
+      "end": 358.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 371.0,
+      "end": 372.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 374.0,
+      "end": 375.0,
+      "speaker": "立希",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 383.0,
+      "end": 384.0,
+      "speaker": "立希",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 428.0,
+      "end": 429.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 434.0,
+      "end": 435.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 447.0,
+      "end": 448.0,
+      "speaker": "千早爱音",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 494.0,
+      "end": 495.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 507.0,
+      "end": 508.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 530.0,
+      "end": 531.0,
+      "speaker": "千早爱音",
+      "text": "3川",
+      "confidence": 0.64268559217453
+    },
+    {
+      "start": 534.0,
+      "end": 535.0,
+      "speaker": "立希",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 560.0,
+      "end": 561.0,
+      "speaker": "千早爱音",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 564.0,
+      "end": 565.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 619.0,
+      "end": 620.0,
+      "speaker": "千早爱音",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 657.0,
+      "end": 658.0,
+      "speaker": "素世",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 675.0,
+      "end": 676.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 706.0,
+      "end": 707.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 710.0,
+      "end": 711.0,
+      "speaker": "旁白",
+      "text": "SM",
+      "confidence": 0.5554609894752502
+    },
+    {
+      "start": 714.0,
+      "end": 715.0,
+      "speaker": "旁白",
+      "text": "我",
+      "confidence": 0.5055047869682312
+    },
+    {
+      "start": 729.0,
+      "end": 730.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 752.0,
+      "end": 753.0,
+      "speaker": "千早爱音",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 772.0,
+      "end": 773.0,
+      "speaker": "千早爱音",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 821.0,
+      "end": 822.0,
+      "speaker": "立希",
+      "text": "五",
+      "confidence": 0.5362404584884644
+    },
+    {
+      "start": 825.0,
+      "end": 826.0,
+      "speaker": "乐奈",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 847.0,
+      "end": 848.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 855.0,
+      "end": 856.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 859.0,
+      "end": 860.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 862.0,
+      "end": 863.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 863.0,
+      "end": 864.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 864.0,
+      "end": 867.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 867.0,
+      "end": 868.0,
+      "speaker": "未知说话者",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    },
+    {
+      "start": 868.0,
+      "end": 869.0,
+      "speaker": "旁白",
+      "text": "[无法识别]",
+      "confidence": 0.0
+    }
+  ],
+  "detected_speaker_labels": [
+    {
+      "text": "1.",
+      "confidence": 0.6119025945663452,
+      "region": "left_lower"
+    },
+    {
+      "text": "ME",
+      "confidence": 0.5080658048391342,
+      "region": "center"
+    },
+    {
+      "text": "r",
+      "confidence": 0.710108757019043,
+      "region": "left_lower"
+    },
+    {
+      "text": "ME",
+      "confidence": 0.5020664855837822,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.8080645203590393,
+      "region": "center"
+    },
+    {
+      "text": "71!",
+      "confidence": 0.6060148874918619,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.622715175151825,
+      "region": "center"
+    },
+    {
+      "text": "2",
+      "confidence": 0.5984479784965515,
+      "region": "left_lower"
+    },
+    {
+      "text": "11",
+      "confidence": 0.9846204221248627,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9997017681598663,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9925268292427063,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9591304659843445,
+      "region": "center"
+    },
+    {
+      "text": "10",
+      "confidence": 0.891872227191925,
+      "region": "left_lower"
+    },
+    {
+      "text": "县盛",
+      "confidence": 0.6504730433225632,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9996414184570312,
+      "region": "center"
+    },
+    {
+      "text": "+5",
+      "confidence": 0.5068892538547516,
+      "region": "left_lower"
+    },
+    {
+      "text": "1:",
+      "confidence": 0.9256007671356201,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9993299543857574,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9822522401809692,
+      "region": "center"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.508076548576355,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9844186007976532,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9993511736392975,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9866442680358887,
+      "region": "center"
+    },
+    {
+      "text": "1.",
+      "confidence": 0.964633047580719,
+      "region": "left_lower"
+    },
+    {
+      "text": "D",
+      "confidence": 0.5467519760131836,
+      "region": "left_lower"
+    },
+    {
+      "text": "1h.",
+      "confidence": 0.5476074616114298,
+      "region": "center"
+    },
+    {
+      "text": "11.",
+      "confidence": 0.6390383342901865,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7006844282150269,
+      "region": "center"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.9266948103904724,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9972786605358124,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9977452456951141,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9947943091392517,
+      "region": "center"
+    },
+    {
+      "text": "三",
+      "confidence": 0.6528404355049133,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.995989461739858,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9975743889808655,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.996149480342865,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9955275456110636,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9964454968770345,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.6440587043762207,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9937330881754557,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9978242715199789,
+      "region": "center"
+    },
+    {
+      "text": "爱音妈",
+      "confidence": 0.9130600293477377,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.6996647119522095,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.7407076358795166,
+      "region": "left_upper"
+    },
+    {
+      "text": "X",
+      "confidence": 0.5487169027328491,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9993480741977692,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8960588276386261,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.999690055847168,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6350816637277603,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8200154304504395,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9995995461940765,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6845215260982513,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9991690516471863,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7016628682613373,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6347912400960922,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8538143634796143,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9908813536167145,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8547587990760803,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5294743180274963,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9905089139938354,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6706196367740631,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6094890832901001,
+      "region": "left_upper"
+    },
+    {
+      "text": "iD",
+      "confidence": 0.58745938539505,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9995476305484772,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8135676980018616,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9137020409107208,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8614973425865173,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9990764558315277,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.5477558374404907,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5809634327888489,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.922427773475647,
+      "region": "left_upper"
+    },
+    {
+      "text": "6",
+      "confidence": 0.5697910189628601,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9989702999591827,
+      "region": "center"
+    },
+    {
+      "text": "爱音：",
+      "confidence": 0.8272174199422201,
+      "region": "center"
+    },
+    {
+      "text": "0",
+      "confidence": 0.5116046667098999,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9063918888568878,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.999470978975296,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.8790549635887146,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9984334707260132,
+      "region": "center"
+    },
+    {
+      "text": "中",
+      "confidence": 0.5381997227668762,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9253011345863342,
+      "region": "center"
+    },
+    {
+      "text": "一一",
+      "confidence": 0.5254034847021103,
+      "region": "center"
+    },
+    {
+      "text": "A",
+      "confidence": 0.5021188259124756,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8101035952568054,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7738714814186096,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9207791686058044,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7645522058010101,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.680730864405632,
+      "region": "center"
+    },
+    {
+      "text": "A.,",
+      "confidence": 0.6379805207252502,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9720979928970337,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9931919276714325,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.984563946723938,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9991790354251862,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9873726963996887,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9867050647735596,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.8592548370361328,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.5382250286638737,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9911011159420013,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5945108383893967,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9910347163677216,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5918704271316528,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9914204776287079,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.6472377628087997,
+      "region": "center"
+    },
+    {
+      "text": "HP",
+      "confidence": 0.5476243644952774,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9822985827922821,
+      "region": "center"
+    },
+    {
+      "text": "麻世",
+      "confidence": 0.6276005953550339,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5802759453654289,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9826767146587372,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5277681387960911,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.8458658456802368,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5593389645218849,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9141877591609955,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.993910163640976,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8637010455131531,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9940154552459717,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8465937077999115,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9994135200977325,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8358863294124603,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9819064736366272,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5575136169791222,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.984453022480011,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5678164660930634,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9838254451751709,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5786707997322083,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9846228659152985,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.609394758939743,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5815522074699402,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9949025809764862,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.5465750694274902,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.6117323040962219,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9888745844364166,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5531037673354149,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.985921323299408,
+      "region": "center"
+    },
+    {
+      "text": "10",
+      "confidence": 0.7266466468572617,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.6504652202129364,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9786628782749176,
+      "region": "center"
+    },
+    {
+      "text": "15",
+      "confidence": 0.7604880928993225,
+      "region": "center"
+    },
+    {
+      "text": "17L",
+      "confidence": 0.722393532594045,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.6088745519518852,
+      "region": "center"
+    },
+    {
+      "text": "15",
+      "confidence": 0.8502998054027557,
+      "region": "center"
+    },
+    {
+      "text": "ur.",
+      "confidence": 0.721940259138743,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5233882442116737,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9800795614719391,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.532707154750824,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5775720030069351,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.976885199546814,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9767221510410309,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.9824090003967285,
+      "region": "center"
+    },
+    {
+      "text": "大a",
+      "confidence": 0.547197699546814,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.8701727390289307,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9207313060760498,
+      "region": "center"
+    },
+    {
+      "text": "4",
+      "confidence": 0.8560510873794556,
+      "region": "left_lower"
+    },
+    {
+      "text": "拉希",
+      "confidence": 0.5157942771911621,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.602803185582161,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6760386675596237,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.6489409804344177,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7598997056484222,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.6082873344421387,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.5757019519805908,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.5801394581794739,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.6723650097846985,
+      "region": "left_lower"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9999319314956665,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9723257422447205,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.762814998626709,
+      "region": "left_lower"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.99765944480896,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.7079411745071411,
+      "region": "left_lower"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9993378520011902,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.7843417525291443,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.6420531272888184,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6603504419326782,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5859502553939819,
+      "region": "left_upper"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7413574457168579,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7423050403594971,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5265088677406311,
+      "region": "left_upper"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6782122850418091,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6062766313552856,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.558944046497345,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6992148756980896,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7764310836791992,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6396931409835815,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9866094291210175,
+      "region": "center"
+    },
+    {
+      "text": "7",
+      "confidence": 0.7027009725570679,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9864649176597595,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9933464527130127,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.6793881356716156,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5516401827335358,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9898138344287872,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.5752950310707092,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.992673933506012,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.5814932286739349,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9758806228637695,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9919576346874237,
+      "region": "center"
+    },
+    {
+      "text": "3",
+      "confidence": 0.9936679005622864,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9922486245632172,
+      "region": "center"
+    },
+    {
+      "text": "7",
+      "confidence": 0.6711869835853577,
+      "region": "left_upper"
+    },
+    {
+      "text": "++",
+      "confidence": 0.5706247389316559,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5023075938224792,
+      "region": "center"
+    },
+    {
+      "text": "9",
+      "confidence": 0.6919441819190979,
+      "region": "left_upper"
+    },
+    {
+      "text": "0",
+      "confidence": 0.7540660500526428,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9948585629463196,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9351664781570435,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9289996922016144,
+      "region": "center"
+    },
+    {
+      "text": "25",
+      "confidence": 0.5396573692560196,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9930380880832672,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8152121007442474,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8000054061412811,
+      "region": "center"
+    },
+    {
+      "text": "-",
+      "confidence": 0.5382480621337891,
+      "region": "left_upper"
+    },
+    {
+      "text": "D",
+      "confidence": 0.7968612909317017,
+      "region": "center"
+    },
+    {
+      "text": "小",
+      "confidence": 0.5168784856796265,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5585507154464722,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9999412894248962,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9993727207183838,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9971812963485718,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9995557963848114,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9997895658016205,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9994735717773438,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7836800217628479,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8309571444988251,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7223659753799438,
+      "region": "left_upper"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6162944436073303,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9404618740081787,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.974983274936676,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6338074654340744,
+      "region": "center"
+    },
+    {
+      "text": "立猪",
+      "confidence": 0.5765277519822121,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.99970942735672,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9998348951339722,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9982606768608093,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9972606003284454,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9953705966472626,
+      "region": "center"
+    },
+    {
+      "text": "手机",
+      "confidence": 0.9978752434253693,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8486915528774261,
+      "region": "center"
+    },
+    {
+      "text": "立超",
+      "confidence": 0.6337811797857285,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7436121255159378,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9862490594387054,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7096418589353561,
+      "region": "center"
+    },
+    {
+      "text": "1121",
+      "confidence": 0.6799780875444412,
+      "region": "left_lower"
+    },
+    {
+      "text": "建",
+      "confidence": 0.9547145366668701,
+      "region": "left_lower"
+    },
+    {
+      "text": "一达一",
+      "confidence": 0.5873950024445852,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8175710439682007,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9186601936817169,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9998036026954651,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6539610028266907,
+      "region": "left_upper"
+    },
+    {
+      "text": "Fa",
+      "confidence": 0.50159902125597,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9299315810203552,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6382348537445068,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.8594261705875397,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7664360404014587,
+      "region": "left_upper"
+    },
+    {
+      "text": "6",
+      "confidence": 0.6382125616073608,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9715946614742279,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9842139780521393,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9817675054073334,
+      "region": "center"
+    },
+    {
+      "text": "t",
+      "confidence": 0.7401981353759766,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7499297559261322,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7893807291984558,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9197491407394409,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.783099353313446,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9760777950286865,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8315886557102203,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8278023600578308,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.864629864692688,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9241026937961578,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9963615536689758,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9091697931289673,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.570446252822876,
+      "region": "left_upper"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9950419664382935,
+      "region": "center"
+    },
+    {
+      "text": "乐京",
+      "confidence": 0.7745939791202545,
+      "region": "center"
+    },
+    {
+      "text": "乐京",
+      "confidence": 0.5921609997749329,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9956972002983093,
+      "region": "center"
+    },
+    {
+      "text": "乐京",
+      "confidence": 0.6852892935276031,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9954935908317566,
+      "region": "center"
+    },
+    {
+      "text": "乐京",
+      "confidence": 0.8720160126686096,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9886961877346039,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.5520074777305126,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9854534268379211,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.6104502603411674,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9852977693080902,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.6140689551830292,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9854229092597961,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.6396832466125488,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9849465191364288,
+      "region": "center"
+    },
+    {
+      "text": "孩世",
+      "confidence": 0.5071533098816872,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9982094764709473,
+      "region": "center"
+    },
+    {
+      "text": "乐荣",
+      "confidence": 0.6046049445867538,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9985333979129791,
+      "region": "center"
+    },
+    {
+      "text": "乐茶",
+      "confidence": 0.8342661261558533,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9985597431659698,
+      "region": "center"
+    },
+    {
+      "text": "乐茶",
+      "confidence": 0.8442866504192352,
+      "region": "center"
+    },
+    {
+      "text": "乐茶",
+      "confidence": 0.7964058816432953,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9960038065910339,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9985137581825256,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9970760345458984,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.921532541513443,
+      "region": "left_lower"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9965912103652954,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9972406625747681,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7871158123016357,
+      "region": "left_upper"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9731439352035522,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.6143842190504074,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9737040102481842,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.6000011786818504,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9272649884223938,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5937822684645653,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9877915680408478,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5541624948382378,
+      "region": "center"
+    },
+    {
+      "text": "爱音：",
+      "confidence": 0.8683997988700867,
+      "region": "center"
+    },
+    {
+      "text": "爱音：",
+      "confidence": 0.82883087793986,
+      "region": "center"
+    },
+    {
+      "text": "爱音：",
+      "confidence": 0.8261177142461141,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9917602241039276,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9985981583595276,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.6191628575325012,
+      "region": "left_lower"
+    },
+    {
+      "text": "i.",
+      "confidence": 0.7435276210308075,
+      "region": "left_lower"
+    },
+    {
+      "text": "2",
+      "confidence": 0.5719224810600281,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9873107373714447,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.5534251257777214,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.565593920648098,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9894684255123138,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9922964572906494,
+      "region": "center"
+    },
+    {
+      "text": "滋世",
+      "confidence": 0.5634101331233978,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.992120623588562,
+      "region": "center"
+    },
+    {
+      "text": "然世",
+      "confidence": 0.5642266422510147,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.99018594622612,
+      "region": "center"
+    },
+    {
+      "text": "U",
+      "confidence": 0.5112960934638977,
+      "region": "left_upper"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6894691586494446,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6126905083656311,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9580390453338623,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9908137619495392,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.547743022441864,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5093268752098083,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5336813926696777,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6749836802482605,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9690972864627838,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5293376222252846,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9879510402679443,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5067149251699448,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5127635598182678,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9141781032085419,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.6372653245925903,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9386067092418671,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5437793657183647,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9327268898487091,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.6288275122642517,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6218334436416626,
+      "region": "left_upper"
+    },
+    {
+      "text": "一",
+      "confidence": 0.6113752126693726,
+      "region": "left_upper"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9901333153247833,
+      "region": "center"
+    },
+    {
+      "text": "家世",
+      "confidence": 0.5998920202255249,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5925825834274292,
+      "region": "center"
+    },
+    {
+      "text": "家世",
+      "confidence": 0.5786768570542336,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9899327456951141,
+      "region": "center"
+    },
+    {
+      "text": "家世",
+      "confidence": 0.5646333619952202,
+      "region": "center"
+    },
+    {
+      "text": "麻世",
+      "confidence": 0.5754000023007393,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9730297923088074,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9800181090831757,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.970045417547226,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9918842911720276,
+      "region": "center"
+    },
+    {
+      "text": "拉希",
+      "confidence": 0.5741734504699707,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9452589750289917,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7770159542560577,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.7307311296463013,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7372030913829803,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9944462776184082,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9130016565322876,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8672747313976288,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.910259485244751,
+      "region": "left_upper"
+    },
+    {
+      "text": "\"-K-.",
+      "confidence": 0.577383553981781,
+      "region": "left_lower"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.6189296767115593,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9692454636096954,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5411237180233002,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9667971134185791,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.5497721992433071,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9663291573524475,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.6017454639077187,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.8660409450531006,
+      "region": "center"
+    },
+    {
+      "text": "滋世",
+      "confidence": 0.5700963512063026,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9926473200321198,
+      "region": "center"
+    },
+    {
+      "text": "4",
+      "confidence": 0.5031225085258484,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9917155802249908,
+      "region": "center"
+    },
+    {
+      "text": "县强",
+      "confidence": 0.5600983500480652,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9458235502243042,
+      "region": "center"
+    },
+    {
+      "text": "滋世",
+      "confidence": 0.5808659493923187,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9868195950984955,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5974136888980865,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9872457385063171,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5481547974050045,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9615725576877594,
+      "region": "center"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.6439462304115295,
+      "region": "center"
+    },
+    {
+      "text": "6l",
+      "confidence": 0.5121224224567413,
+      "region": "left_upper"
+    },
+    {
+      "text": "县盛",
+      "confidence": 0.5347923934459686,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9485031068325043,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9576093256473541,
+      "region": "center"
+    },
+    {
+      "text": "一",
+      "confidence": 0.6128901839256287,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.90864098072052,
+      "region": "center"
+    },
+    {
+      "text": "6.3",
+      "confidence": 0.5304581622282664,
+      "region": "left_upper"
+    },
+    {
+      "text": "h",
+      "confidence": 0.918106198310852,
+      "region": "center"
+    },
+    {
+      "text": "伊",
+      "confidence": 0.7409865260124207,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5374880433082581,
+      "region": "left_lower"
+    },
+    {
+      "text": "Ur.!",
+      "confidence": 0.6411879137158394,
+      "region": "center"
+    },
+    {
+      "text": "5",
+      "confidence": 0.5072640180587769,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6554440855979919,
+      "region": "left_upper"
+    },
+    {
+      "text": "上",
+      "confidence": 0.6255168914794922,
+      "region": "center"
+    },
+    {
+      "text": "LZ",
+      "confidence": 0.5353063084185123,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7400090098381042,
+      "region": "left_upper"
+    },
+    {
+      "text": "1000L",
+      "confidence": 0.7422558486461639,
+      "region": "left_upper"
+    },
+    {
+      "text": "mr",
+      "confidence": 0.9430939257144928,
+      "region": "left_upper"
+    },
+    {
+      "text": "3",
+      "confidence": 0.7433986067771912,
+      "region": "left_upper"
+    },
+    {
+      "text": "35",
+      "confidence": 0.8061848282814026,
+      "region": "left_upper"
+    },
+    {
+      "text": "85",
+      "confidence": 0.7325703203678131,
+      "region": "left_upper"
+    },
+    {
+      "text": "r",
+      "confidence": 0.5990704894065857,
+      "region": "center"
+    },
+    {
+      "text": "U",
+      "confidence": 0.6826729774475098,
+      "region": "center"
+    },
+    {
+      "text": "222",
+      "confidence": 0.5068328678607941,
+      "region": "center"
+    },
+    {
+      "text": "282",
+      "confidence": 0.6215125223000845,
+      "region": "center"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5802158117294312,
+      "region": "left_upper"
+    },
+    {
+      "text": "222",
+      "confidence": 0.5102983216444651,
+      "region": "center"
+    },
+    {
+      "text": "282",
+      "confidence": 0.5389076769351959,
+      "region": "center"
+    },
+    {
+      "text": "222",
+      "confidence": 0.5331407189369202,
+      "region": "center"
+    },
+    {
+      "text": "222",
+      "confidence": 0.52313960591952,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9953077038129171,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.8919347524642944,
+      "region": "center"
+    },
+    {
+      "text": "←",
+      "confidence": 0.6654983162879944,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.995222826798757,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9548915425936381,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9310455918312073,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9602817595005035,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9801840782165527,
+      "region": "center"
+    },
+    {
+      "text": "41",
+      "confidence": 0.8989079296588898,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9462455809116364,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9945400754610697,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.7765762408574423,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9947633345921835,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.8614046374956766,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9956883788108826,
+      "region": "center"
+    },
+    {
+      "text": "爱音记",
+      "confidence": 0.7468452155590057,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9960215290387472,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.910037616888682,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9926637411117554,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5772987604141235,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9949352741241455,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9791235625743866,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.8659413158893585,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9950898885726929,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.7630486587683359,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9950437545776367,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.8170364499092102,
+      "region": "center"
+    },
+    {
+      "text": "Tu",
+      "confidence": 0.5218796879053116,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.994873583316803,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.7401266495386759,
+      "region": "center"
+    },
+    {
+      "text": "爱音？",
+      "confidence": 0.9418961803118387,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9708456993103027,
+      "region": "center"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.5438393950462341,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9694473445415497,
+      "region": "center"
+    },
+    {
+      "text": "L.",
+      "confidence": 0.7274709939956665,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9675489962100983,
+      "region": "center"
+    },
+    {
+      "text": "H",
+      "confidence": 0.6558284759521484,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6947638392448425,
+      "region": "center"
+    },
+    {
+      "text": "H",
+      "confidence": 0.8368316292762756,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9214158654212952,
+      "region": "center"
+    },
+    {
+      "text": "H",
+      "confidence": 0.5819844603538513,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8308467268943787,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5300694108009338,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6019303202629089,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.7734655141830444,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6647042632102966,
+      "region": "left_upper"
+    },
+    {
+      "text": "T",
+      "confidence": 0.5374424457550049,
+      "region": "left_upper"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5530216097831726,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.985685408115387,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.5698188543319702,
+      "region": "center"
+    },
+    {
+      "text": "工",
+      "confidence": 0.6744446754455566,
+      "region": "left_upper"
+    },
+    {
+      "text": "t",
+      "confidence": 0.5329974889755249,
+      "region": "left_upper"
+    },
+    {
+      "text": "茶世",
+      "confidence": 0.5810300633311272,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.820146918296814,
+      "region": "left_upper"
+    },
+    {
+      "text": "7-4",
+      "confidence": 0.694635679324468,
+      "region": "left_lower"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.5858351439237595,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9862988591194153,
+      "region": "center"
+    },
+    {
+      "text": "古",
+      "confidence": 0.5153400301933289,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9241765737533569,
+      "region": "center"
+    },
+    {
+      "text": "县盛",
+      "confidence": 0.5093336552381516,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9753112196922302,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9921329021453857,
+      "region": "center"
+    },
+    {
+      "text": "H",
+      "confidence": 0.5422888994216919,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.592836931347847,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.627956748008728,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.557712972164154,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9866629242897034,
+      "region": "center"
+    },
+    {
+      "text": "蒸世",
+      "confidence": 0.6264764070510864,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9751619100570679,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.6193208023905754,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9750612080097198,
+      "region": "center"
+    },
+    {
+      "text": "森世",
+      "confidence": 0.6115838289260864,
+      "region": "center"
+    },
+    {
+      "text": "*",
+      "confidence": 0.5836026072502136,
+      "region": "left_upper"
+    },
+    {
+      "text": "+",
+      "confidence": 0.9445360898971558,
+      "region": "left_lower"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.5219843983650208,
+      "region": "center"
+    },
+    {
+      "text": "口",
+      "confidence": 0.6648563742637634,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.887096107006073,
+      "region": "left_lower"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5575499534606934,
+      "region": "left_lower"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5791730284690857,
+      "region": "left_upper"
+    },
+    {
+      "text": "A",
+      "confidence": 0.5446473360061646,
+      "region": "left_lower"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9982996582984924,
+      "region": "left_upper"
+    },
+    {
+      "text": "企",
+      "confidence": 0.7147558927536011,
+      "region": "center"
+    },
+    {
+      "text": "41-<A",
+      "confidence": 0.5135078847408294,
+      "region": "left_lower"
+    },
+    {
+      "text": "41<3",
+      "confidence": 0.5082429200410843,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9497561156749725,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9684104919433594,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9682117998600006,
+      "region": "center"
+    },
+    {
+      "text": "人",
+      "confidence": 0.846788763999939,
+      "region": "left_lower"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9216577112674713,
+      "region": "center"
+    },
+    {
+      "text": "L",
+      "confidence": 0.7885024547576904,
+      "region": "left_upper"
+    },
+    {
+      "text": "A",
+      "confidence": 0.9311685562133789,
+      "region": "left_upper"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.6185592263936996,
+      "region": "center"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9905738532543182,
+      "region": "center"
+    },
+    {
+      "text": "111",
+      "confidence": 0.8030975063641866,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.5577221363782883,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.79228276014328,
+      "region": "center"
+    },
+    {
+      "text": "臻世",
+      "confidence": 0.6059914231300354,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.6038855314254761,
+      "region": "left_lower"
+    },
+    {
+      "text": "素世",
+      "confidence": 0.9774818122386932,
+      "region": "center"
+    },
+    {
+      "text": "泰世",
+      "confidence": 0.595624640583992,
+      "region": "center"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.5923709273338318,
+      "region": "left_upper"
+    },
+    {
+      "text": "H",
+      "confidence": 0.6571879386901855,
+      "region": "left_upper"
+    },
+    {
+      "text": "书",
+      "confidence": 0.5024502277374268,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9456517100334167,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.973100870847702,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9864237904548645,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9860094785690308,
+      "region": "center"
+    },
+    {
+      "text": "￥",
+      "confidence": 0.5142499208450317,
+      "region": "left_upper"
+    },
+    {
+      "text": "t",
+      "confidence": 0.9698194861412048,
+      "region": "left_upper"
+    },
+    {
+      "text": "=3",
+      "confidence": 0.5520324409008026,
+      "region": "left_upper"
+    },
+    {
+      "text": "+",
+      "confidence": 0.5486987233161926,
+      "region": "left_lower"
+    },
+    {
+      "text": "F",
+      "confidence": 0.996123731136322,
+      "region": "center"
+    },
+    {
+      "text": "rG",
+      "confidence": 0.5315558165311813,
+      "region": "center"
+    },
+    {
+      "text": "都",
+      "confidence": 0.6210752725601196,
+      "region": "center"
+    },
+    {
+      "text": "盛",
+      "confidence": 0.5822293162345886,
+      "region": "center"
+    },
+    {
+      "text": "盛",
+      "confidence": 0.614139199256897,
+      "region": "center"
+    },
+    {
+      "text": "盛",
+      "confidence": 0.5645160675048828,
+      "region": "center"
+    },
+    {
+      "text": "盛",
+      "confidence": 0.6000245809555054,
+      "region": "center"
+    },
+    {
+      "text": "县盈",
+      "confidence": 0.5554106757044792,
+      "region": "center"
+    },
+    {
+      "text": "3",
+      "confidence": 0.6122560501098633,
+      "region": "left_upper"
+    },
+    {
+      "text": "5",
+      "confidence": 0.7983779311180115,
+      "region": "left_upper"
+    },
+    {
+      "text": "11",
+      "confidence": 0.9855901598930359,
+      "region": "left_upper"
+    },
+    {
+      "text": "11",
+      "confidence": 0.9667625725269318,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9094788730144501,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8934455811977386,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8355728685855865,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.6505916118621826,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.5345042943954468,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.6931478679180145,
+      "region": "center"
+    },
+    {
+      "text": "71",
+      "confidence": 0.5918034762144089,
+      "region": "left_upper"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9670988023281097,
+      "region": "center"
+    },
+    {
+      "text": "县盛",
+      "confidence": 0.6929872930049896,
+      "region": "center"
+    },
+    {
+      "text": "'ili",
+      "confidence": 0.674302477389574,
+      "region": "left_upper"
+    },
+    {
+      "text": "11.",
+      "confidence": 0.7289732297261556,
+      "region": "left_upper"
+    },
+    {
+      "text": "sist",
+      "confidence": 0.5986795835196972,
+      "region": "left_upper"
+    },
+    {
+      "text": "11.",
+      "confidence": 0.8894785841306051,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9907327890396118,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8141227066516876,
+      "region": "center"
+    },
+    {
+      "text": "11,",
+      "confidence": 0.5515472888946533,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7601859867572784,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.786431610584259,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8728974163532257,
+      "region": "center"
+    },
+    {
+      "text": "11",
+      "confidence": 0.6639219522476196,
+      "region": "left_upper"
+    },
+    {
+      "text": "71",
+      "confidence": 0.7352047264575958,
+      "region": "left_upper"
+    },
+    {
+      "text": "V.",
+      "confidence": 0.5027145147323608,
+      "region": "left_upper"
+    },
+    {
+      "text": "11",
+      "confidence": 0.9568730294704437,
+      "region": "left_upper"
+    },
+    {
+      "text": "71",
+      "confidence": 0.5401826873421669,
+      "region": "left_upper"
+    },
+    {
+      "text": "拉希",
+      "confidence": 0.5632250756025314,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.622964397072792,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.9915278553962708,
+      "region": "center"
+    },
+    {
+      "text": "117",
+      "confidence": 0.7871024211247762,
+      "region": "left_upper"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8301576972007751,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8778953850269318,
+      "region": "center"
+    },
+    {
+      "text": "SI",
+      "confidence": 0.5027151852846146,
+      "region": "left_lower"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.8656522631645203,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7932196855545044,
+      "region": "center"
+    },
+    {
+      "text": "立希",
+      "confidence": 0.7997874915599823,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.981003999710083,
+      "region": "center"
+    },
+    {
+      "text": "乐茶",
+      "confidence": 0.6089226007461548,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9971365928649902,
+      "region": "center"
+    },
+    {
+      "text": "乐京",
+      "confidence": 0.5972018763422966,
+      "region": "center"
+    },
+    {
+      "text": "乐茶",
+      "confidence": 0.5948480814695358,
+      "region": "center"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9973469972610474,
+      "region": "center"
+    },
+    {
+      "text": "乐荣",
+      "confidence": 0.5803012996912003,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6480651497840881,
+      "region": "left_upper"
+    },
+    {
+      "text": "乐奈",
+      "confidence": 0.9941979646682739,
+      "region": "center"
+    },
+    {
+      "text": "T",
+      "confidence": 0.7958175539970398,
+      "region": "center"
+    },
+    {
+      "text": "乐荣",
+      "confidence": 0.5926367789506912,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.6049463152885437,
+      "region": "left_upper"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5426896810531616,
+      "region": "left_upper"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.989764928817749,
+      "region": "center"
+    },
+    {
+      "text": "C",
+      "confidence": 0.5461686253547668,
+      "region": "left_upper"
+    },
+    {
+      "text": "2",
+      "confidence": 0.5287489891052246,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9964073300361633,
+      "region": "center"
+    },
+    {
+      "text": "灯",
+      "confidence": 0.9967973828315735,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9230080544948578,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.8635073900222778,
+      "region": "center"
+    },
+    {
+      "text": "爱音",
+      "confidence": 0.9267649054527283,
+      "region": "center"
+    },
+    {
+      "text": "电L",
+      "confidence": 0.5162575542926788,
+      "region": "center"
+    },
+    {
+      "text": "173",
+      "confidence": 0.755088875691096,
+      "region": "center"
+    },
+    {
+      "text": "田表",
+      "confidence": 0.6138695999979973,
+      "region": "center"
+    },
+    {
+      "text": "元",
+      "confidence": 0.6714493632316589,
+      "region": "center"
+    },
+    {
+      "text": "纯田法好",
+      "confidence": 0.5221123173832893,
+      "region": "center"
+    },
+    {
+      "text": "史L!",
+      "confidence": 0.5085241198539734,
+      "region": "center"
+    },
+    {
+      "text": "x47",
+      "confidence": 0.6288959383964539,
+      "region": "left_upper"
+    },
+    {
+      "text": "78",
+      "confidence": 0.5217617601156235,
+      "region": "left_upper"
+    },
+    {
+      "text": "田表",
+      "confidence": 0.6197448372840881,
+      "region": "center"
+    },
+    {
+      "text": "元",
+      "confidence": 0.6700884699821472,
+      "region": "center"
+    },
+    {
+      "text": "纯田法好",
+      "confidence": 0.6238272711634636,
+      "region": "center"
+    },
+    {
+      "text": "ME",
+      "confidence": 0.5484200716018677,
+      "region": "left_upper"
+    },
+    {
+      "text": "H",
+      "confidence": 0.5182865262031555,
+      "region": "left_lower"
+    },
+    {
+      "text": "纯田芯",
+      "confidence": 0.6973265806833903,
+      "region": "center"
+    },
+    {
+      "text": "纯田未放",
+      "confidence": 0.6106290407478809,
+      "region": "center"
+    },
+    {
+      "text": "F/",
+      "confidence": 0.8264864385128021,
+      "region": "center"
+    },
+    {
+      "text": "F/C",
+      "confidence": 0.7421144346396128,
+      "region": "center"
+    },
+    {
+      "text": "G",
+      "confidence": 0.8849427700042725,
+      "region": "center"
+    },
+    {
+      "text": "F/C",
+      "confidence": 0.8266568183898926,
+      "region": "center"
+    },
+    {
+      "text": "G",
+      "confidence": 0.6521034836769104,
+      "region": "center"
+    },
+    {
+      "text": "F/C",
+      "confidence": 0.7014574011166891,
+      "region": "center"
+    },
+    {
+      "text": "xG",
+      "confidence": 0.6754797846078873,
+      "region": "center"
+    },
+    {
+      "text": "+r",
+      "confidence": 0.5738385543227196,
+      "region": "left_upper"
+    },
+    {
+      "text": "F/C",
+      "confidence": 0.8317223787307739,
+      "region": "center"
+    },
+    {
+      "text": "G",
+      "confidence": 0.6206392049789429,
+      "region": "center"
+    },
+    {
+      "text": "F/C",
+      "confidence": 0.7693852186203003,
+      "region": "center"
+    },
+    {
+      "text": "xG",
+      "confidence": 0.6966133415699005,
+      "region": "center"
+    },
+    {
+      "text": "XF/人",
+      "confidence": 0.6322682946920395,
+      "region": "center"
+    },
+    {
+      "text": "のXIG",
+      "confidence": 0.6263410151004791,
+      "region": "center"
+    },
+    {
+      "text": "1",
+      "confidence": 0.727332353591919,
+      "region": "left_upper"
+    },
+    {
+      "text": "n",
+      "confidence": 0.5174329280853271,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.7502550482749939,
+      "region": "left_upper"
+    },
+    {
+      "text": "M7",
+      "confidence": 0.5162848383188248,
+      "region": "left_upper"
+    },
+    {
+      "text": "M",
+      "confidence": 0.9154093265533447,
+      "region": "left_lower"
+    },
+    {
+      "text": "Y",
+      "confidence": 0.7157132029533386,
+      "region": "left_upper"
+    },
+    {
+      "text": "1",
+      "confidence": 0.9969050288200378,
+      "region": "left_upper"
+    }
+  ],
+  "normalized_speaker_names": [
+    "乐奈",
+    "千早爱音",
+    "灯",
+    "立希",
+    "素世"
+  ],
+  "unknown_speaker_count": 127,
+  "narrator_count": 260,
+  "rejected_name_candidates": [
+    {
+      "text": "1.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "ME",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "r",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "一",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "71!",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "2",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "11",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "10",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "县盛",
+      "reason": "low confidence"
+    },
+    {
+      "text": "+5",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1:",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "Y",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "D",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1h.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "11.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "三",
+      "reason": "low confidence"
+    },
+    {
+      "text": "一",
+      "reason": "low confidence"
+    },
+    {
+      "text": "T",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "X",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "立希",
+      "reason": "low confidence"
+    },
+    {
+      "text": "C",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "iD",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "6",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "0",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "中",
+      "reason": "low confidence"
+    },
+    {
+      "text": "一一",
+      "reason": "low confidence"
+    },
+    {
+      "text": "A",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "A.,",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "蒸世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "臻世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "HP",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "麻世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "茶世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "森世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "泰世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "15",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "17L",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "ur.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "大a",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "9",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "4",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "拉希",
+      "reason": "low confidence"
+    },
+    {
+      "text": "+",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "7",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "素世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "++",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "25",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "-",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "小",
+      "reason": "low confidence"
+    },
+    {
+      "text": "手机",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "立猪",
+      "reason": "low confidence"
+    },
+    {
+      "text": "立超",
+      "reason": "low confidence"
+    },
+    {
+      "text": "1121",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "建",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "一达一",
+      "reason": "low confidence"
+    },
+    {
+      "text": "Fa",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "t",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "乐京",
+      "reason": "low confidence"
+    },
+    {
+      "text": "乐京",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "孩世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "乐荣",
+      "reason": "low confidence"
+    },
+    {
+      "text": "乐茶",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "i.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "滋世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "然世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "U",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "家世",
+      "reason": "low confidence"
+    },
+    {
+      "text": "\"-K-.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "县强",
+      "reason": "low confidence"
+    },
+    {
+      "text": "6l",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "6.3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "h",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "伊",
+      "reason": "low confidence"
+    },
+    {
+      "text": "Ur.!",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "5",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "上",
+      "reason": "low confidence"
+    },
+    {
+      "text": "LZ",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "1000L",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "mr",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "35",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "85",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "222",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "282",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "←",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "41",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "爱音记",
+      "reason": "low confidence"
+    },
+    {
+      "text": "Tu",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "L.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "H",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "工",
+      "reason": "low confidence"
+    },
+    {
+      "text": "7-4",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "古",
+      "reason": "low confidence"
+    },
+    {
+      "text": "*",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "口",
+      "reason": "low confidence"
+    },
+    {
+      "text": "企",
+      "reason": "low confidence"
+    },
+    {
+      "text": "41-<A",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "41<3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "人",
+      "reason": "not matched to character dictionary"
+    },
+    {
+      "text": "L",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "111",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "书",
+      "reason": "low confidence"
+    },
+    {
+      "text": "￥",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "=3",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "F",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "rG",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "都",
+      "reason": "low confidence"
+    },
+    {
+      "text": "盛",
+      "reason": "low confidence"
+    },
+    {
+      "text": "县盈",
+      "reason": "low confidence"
+    },
+    {
+      "text": "71",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "'ili",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "sist",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "11,",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "V.",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "117",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "SI",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "乐茶",
+      "reason": "low confidence"
+    },
+    {
+      "text": "电L",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "173",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "田表",
+      "reason": "low confidence"
+    },
+    {
+      "text": "元",
+      "reason": "low confidence"
+    },
+    {
+      "text": "纯田法好",
+      "reason": "low confidence"
+    },
+    {
+      "text": "史L!",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "x47",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "78",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "纯田芯",
+      "reason": "low confidence"
+    },
+    {
+      "text": "纯田未放",
+      "reason": "low confidence"
+    },
+    {
+      "text": "F/",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "F/C",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "G",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "xG",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "+r",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "XF/人",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "のXIG",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "n",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "M7",
+      "reason": "not a short CJK name"
+    },
+    {
+      "text": "M",
+      "reason": "not a short CJK name"
+    }
+  ],
+  "speaker_name_confidence": {
+    "千早爱音": 0.9877694379503481,
+    "立希": 0.9984471745350781,
+    "素世": 0.9757135065396627,
+    "灯": 0.9998603147618911,
+    "乐奈": 0.9955404446675227
+  },
+  "success": true,
+  "failure_reason": null,
+  "diagnostics": {
+    "video_path": "116820677757357.P1.39447167961.mp4",
+    "video_resolution": "640x360",
+    "frame_count": 869,
+    "left_speaker_frame_count": 869,
+    "left_lower_speaker_frame_count": 869,
+    "center_speaker_frame_count": 869,
+    "ffmpeg_frame_extraction_passes": 1,
+    "ocr_call_count": 764,
+    "ocr_reused_frame_count": 105,
+    "speaker_ocr_call_count": 4800,
+    "left_speaker_reused_frame_count": 69,
+    "left_lower_speaker_reused_frame_count": 69,
+    "center_speaker_reused_frame_count": 69,
+    "speaker_identified_frame_count": 297,
+    "speaker_debug_sample_count": 20,
+    "raw_ocr_result_count": 1085,
+    "filtered_result_count": 536,
+    "frame_similarity_threshold": 0.02
+  },
+  "processed_at": "2026-07-12T12:39:36+00:00"
+}
