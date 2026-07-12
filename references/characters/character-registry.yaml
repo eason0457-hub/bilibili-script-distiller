@@ -1,0 +1,50 @@
+characters:
+  - canonical_name: 千早爱音
+    aliases: [爱音, ano, ano酱, 阿侬]
+    ocr_common_misrecognitions: [干早爱音, 爱子, ano将]
+    nicknames: [ano酱, 小爱音]
+    addressed_by: [爱音, ano酱, 小爱音, 爱音小姐]
+    identity_uncertainties:
+      - 硬字幕 OCR 的姓名栏曾被水印污染；未见可靠姓名框时不可仅凭剧情归属。
+  - canonical_name: 高松灯
+    aliases: [灯, 高松灯, tomorin]
+    ocr_common_misrecognitions: [灵, 正, 小灯T]
+    nicknames: [小灯, tomorin]
+    addressed_by: [灯, 小灯, tomorin]
+    identity_uncertainties:
+      - 文本中出现“灯”可能是称呼或叙述对象，不自动等于其发言。
+  - canonical_name: 长崎素世
+    aliases: [素世, 长崎素世, 素世酱]
+    ocr_common_misrecognitions: [素有灵, 素有, 素世将]
+    nicknames: [素世酱]
+    addressed_by: [素世, 素世酱, 素世小姐]
+    identity_uncertainties:
+      - OCR 中的“素有灵”等可能是台词内容或误识别，不单独构成姓名标签。
+  - canonical_name: 椎名立希
+    aliases: [立希, 椎名立希, Rikki, rikki]
+    ocr_common_misrecognitions: [立希I, 椎名队员, Rikk]
+    nicknames: [立希酱, Rikki]
+    addressed_by: [立希, 立希酱, Rikki]
+    identity_uncertainties:
+      - 英文转写和中文短名须有姓名标签或人工轮次确认。
+  - canonical_name: 要乐奈
+    aliases: [乐奈, 要乐奈, 野猫]
+    ocr_common_misrecognitions: [乐子, 乐耐]
+    nicknames: [野猫]
+    addressed_by: [乐奈, 野猫]
+    identity_uncertainties:
+      - “野猫”是关系内称呼，既可能指向该角色，也可能是泛称；不单独作说话者归属。
+  - canonical_name: 丰川祥子
+    aliases: [祥子, 丰川祥子]
+    ocr_common_misrecognitions: [样子, 二正EZ, 祥了]
+    nicknames: []
+    addressed_by: [祥子]
+    identity_uncertainties:
+      - 短名“祥子”在 OCR 中需与姓名区域或轮次证据配合。
+  - canonical_name: 若叶睦
+    aliases: [睦, 若叶睦]
+    ocr_common_misrecognitions: [木, 梦, 若叶目]
+    nicknames: []
+    addressed_by: [睦, 若叶睦]
+    identity_uncertainties:
+      - 单字 OCR 极易漂移，单独出现不能作为归属依据。
