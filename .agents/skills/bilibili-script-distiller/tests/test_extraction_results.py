@@ -63,9 +63,31 @@ class ExtractionResultTests(unittest.TestCase):
         self.assertIn("啊，等等……", raw)
         self.assertIn("[00:00:01.000 --> 00:00:02.500]", raw)
 
+    def test_music_only_track_is_not_a_successful_dialogue_subtitle(self):
+        srt = (
+            "1\n00:00:01,000 --> 00:00:02,500\n♪ 音乐 ♪\n\n"
+            "2\n00:00:03,000 --> 00:00:04,000\n[Music]\n"
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            result = MODULE.run_one(
+                "BV1uknVz9EeN",
+                root,
+                command_runner=runner_with_file("BV1uknVz9EeN.ai-zh.srt", srt),
+            )
+        self.assertFalse(result["success"])
+        self.assertEqual(result["subtitle_cue_count"], 2)
+        self.assertEqual(result["dialogue_cue_count"], 0)
+        self.assertEqual(
+            result["failure_reason"],
+            "Selected subtitle track contained only non-dialogue cues (e.g. music).",
+        )
+        self.assertEqual(result["rejected_subtitle_tracks"], ["BV1uknVz9EeN.ai-zh.srt"])
+
     def test_main_returns_nonzero_when_all_fail(self):
         failed = {
             "input": "BV1uknVz9EeN",
+            "source_type": "subtitle_track",
             "bvid": "BV1uknVz9EeN",
             "success": False,
             "failure_reason": "no subtitle",
@@ -76,6 +98,7 @@ class ExtractionResultTests(unittest.TestCase):
     def test_main_continues_and_succeeds_when_one_item_succeeds(self):
         failed = {
             "input": "BV1uknVz9EeN",
+            "source_type": "subtitle_track",
             "bvid": "BV1uknVz9EeN",
             "success": False,
             "failure_reason": "no subtitle",
@@ -83,6 +106,7 @@ class ExtractionResultTests(unittest.TestCase):
         }
         succeeded = {
             "input": "BV1xx411c7mD",
+            "source_type": "subtitle_track",
             "bvid": "BV1xx411c7mD",
             "success": True,
             "failure_reason": None,
