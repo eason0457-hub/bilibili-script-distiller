@@ -1,4 +1,4 @@
-name: Extract Bilibili subtitles
+name: Extract Bilibili subtitles + auto distill
 
 on:
   workflow_dispatch:
@@ -7,18 +7,26 @@ on:
         description: "Bilibili URL, b23.tv link, BV ID, or AV ID; separate multiple entries with newlines, spaces, or commas"
         required: true
         type: string
+      enable_hardsub_ocr:
+        description: "Enable hard subtitle OCR fallback"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
   contents: write
 
 jobs:
-  extract:
+  extract-and-distill:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 360
     env:
       ARTIFACT_NAME: bilibili-subtitle-results-${{ github.run_id }}
       VIDEO_URLS: ${{ inputs.video_urls }}
-      ENABLE_HARDSUB_OCR: "true"
+      ENABLE_HARDSUB_OCR: ${{ inputs.enable_hardsub_ocr }}
 
     steps:
       - name: Check out repository
@@ -47,6 +55,7 @@ jobs:
       - name: Install FFmpeg
         shell: bash
         run: |
+          set -euo pipefail
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           command -v ffmpeg
@@ -88,17 +97,19 @@ jobs:
           chmod +x "$HOME/.local/bin/BBDown"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
-      - name: Install ONNX OCR fallback
+      - name: Install OCR and distillation dependencies
         shell: bash
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          python -m pip install "rapidocr_onnxruntime"
+          python -m pip install rapidocr_onnxruntime pyyaml
           python - <<'PY'
           from rapidocr_onnxruntime import RapidOCR
+          import yaml
 
           RapidOCR()
           print("RapidOCR ONNX import check: OK")
+          print("PyYAML import check: OK")
           PY
 
       - name: Extract existing subtitles
@@ -111,54 +122,84 @@ jobs:
           OCR_LANGUAGE: ch
         run: |
           set -uo pipefail
-          if ! command -v ffmpeg >/dev/null 2>&1; then
-            echo "::error::FFmpeg is not installed or not available in PATH"
-            exit 1
-          fi
           SCRIPT=".agents/skills/bilibili-script-distiller/scripts/github_actions_extract.py"
-          if [[ -z "$SCRIPT" ]]; then
-            echo "Extractor script not found" >&2
-            exit 1
-          fi
           if [[ ! -f "$SCRIPT" ]]; then
-            echo "Extractor script not found at $SCRIPT" >&2
-            exit 1
+            echo "::error::Extractor script not found at $SCRIPT"
+            echo "exit_code=1" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
-          set +e
-          OCR_ARGS=(--enable-hardsub-ocr)
+
+          OCR_ARGS=()
+          if [[ "${ENABLE_HARDSUB_OCR:-true}" == "true" ]]; then
+            OCR_ARGS+=(--enable-hardsub-ocr)
+          fi
           for pair in \
             "--start-time|$OCR_START_TIME" \
             "--end-time|$OCR_END_TIME"; do
-            flag=${pair%%|*}; value=${pair#*|}
-            if [[ -n "$value" ]]; then OCR_ARGS+=("$flag" "$value"); fi
+            flag=${pair%%|*}
+            value=${pair#*|}
+            if [[ -n "$value" ]]; then
+              OCR_ARGS+=("$flag" "$value")
+            fi
           done
-          python "$SCRIPT" --output-root references/bilibili --summary-json "$RUNNER_TEMP/extraction-summary.json" \
+
+          set +e
+          python "$SCRIPT" \
+            --output-root references/bilibili \
+            --summary-json "$RUNNER_TEMP/extraction-summary.json" \
             --subtitle-position "$OCR_SUBTITLE_POSITION" \
-            --ocr-language "$OCR_LANGUAGE" "${OCR_ARGS[@]}"
+            --ocr-language "$OCR_LANGUAGE" \
+            "${OCR_ARGS[@]}"
           code=$?
           set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Commit subtitle results
+      - name: Run character evidence distillation
+        id: distill
+        shell: bash
+        run: |
+          set -uo pipefail
+          SCRIPT=".agents/skills/bilibili-script-distiller/scripts/character_evidence_pipeline.py"
+          if [[ ! -f "$SCRIPT" ]]; then
+            echo "::error::Distillation script not found at $SCRIPT"
+            echo "exit_code=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          set +e
+          python "$SCRIPT" --project-root .
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Commit extracted and distilled results
         id: publish
         shell: bash
         run: |
           set -uo pipefail
-          if [[ ! -d references/bilibili ]] || [[ -z "$(find references/bilibili -type f -print -quit 2>/dev/null)" ]]; then
+          paths=()
+          [[ -d references/bilibili ]] && paths+=(references/bilibili)
+          [[ -d references/characters ]] && paths+=(references/characters)
+          [[ -d references/distilled ]] && paths+=(references/distilled)
+
+          if [[ ${#paths[@]} -eq 0 ]]; then
             echo "mode=artifact" >> "$GITHUB_OUTPUT"
-            echo "reason=no result files were produced" >> "$GITHUB_OUTPUT"
+            echo "reason=no result directories were produced" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git add -- references/bilibili
+
+          git add -- "${paths[@]}"
           if git diff --cached --quiet; then
             echo "mode=none" >> "$GITHUB_OUTPUT"
-            echo "reason=no new or changed subtitle results" >> "$GITHUB_OUTPUT"
+            echo "reason=no new or changed extraction/distillation results" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Add extracted Bilibili subtitles"
+          git commit -m "Add extracted subtitles and character evidence"
           if git push; then
             echo "mode=commit" >> "$GITHUB_OUTPUT"
             echo "reason=results committed to repository" >> "$GITHUB_OUTPUT"
@@ -167,12 +208,15 @@ jobs:
             echo "reason=repository write permission or branch protection prevented push" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Upload subtitle Artifact when commit is unavailable
+      - name: Upload results Artifact when commit is unavailable
         if: steps.publish.outputs.mode == 'artifact'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: references/bilibili/
+          path: |
+            references/bilibili/
+            references/characters/
+            references/distilled/
           if-no-files-found: warn
           retention-days: 30
 
@@ -190,7 +234,7 @@ jobs:
         shell: bash
         run: |
           {
-            echo "## Bilibili subtitle extraction"
+            echo "## Bilibili subtitle extraction + character evidence"
             echo
             if [[ -f "$RUNNER_TEMP/extraction-summary.json" ]]; then
               python - "$RUNNER_TEMP/extraction-summary.json" <<'PY'
@@ -205,11 +249,12 @@ jobs:
               print(f"- {mark} `{item.get('input', '')}` — {mode}: {item.get('video_id') or item.get('failure_reason') or 'unknown'}")
           PY
             fi
+            echo "- Extraction exit code: ${{ steps.extract.outputs.exit_code || 'unknown' }}"
+            echo "- Distillation exit code: ${{ steps.distill.outputs.exit_code || 'unknown' }}"
             echo "- Save mode: ${{ steps.publish.outputs.mode || 'unknown' }}"
             echo "- Details: ${{ steps.publish.outputs.reason || 'not available' }}"
             if [[ "${{ steps.publish.outputs.mode }}" == "artifact" ]]; then
               echo "- Artifact: \`$ARTIFACT_NAME\`"
-              echo "- Files were not written back to the repository. Download the Artifact from this run."
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
@@ -218,4 +263,11 @@ jobs:
         shell: bash
         run: |
           echo "::error::All subtitle extractions failed"
+          exit 1
+
+      - name: Fail workflow when distillation failed
+        if: always() && steps.distill.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          echo "::error::Character evidence distillation failed; extracted subtitles were still preserved"
           exit 1
