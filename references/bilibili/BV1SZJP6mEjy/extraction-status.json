@@ -11,6 +11,9 @@
   ],
   "selected_subtitle_file": "subtitle-ocr.srt",
   "subtitle_language": "ch",
+  "subtitle_cue_count": 0,
+  "dialogue_cue_count": 0,
+  "rejected_subtitle_tracks": [],
   "login_warning": true,
-  "processed_at": "2026-07-11T15:44:09+00:00"
+  "processed_at": "2026-07-12T02:55:57+00:00"
 }
