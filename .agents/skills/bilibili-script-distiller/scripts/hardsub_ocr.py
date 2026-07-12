@@ -81,7 +81,7 @@ def srt_to_markdown(segments: list[dict]) -> str:
 
 def crop_for(position: str, overrides: dict[str, float | None]) -> dict[str, float]:
     presets = {
-        "bottom": {"top": 0.62, "bottom": 0.96, "left": 0.0, "right": 1.0},
+        "bottom": {"top": 0.50, "bottom": 0.92, "left": 0.06, "right": 0.96},
         "top": {"top": 0.02, "bottom": 0.30, "left": 0.0, "right": 1.0},
     }
     region = dict(presets.get(position, presets["bottom"]))
@@ -94,11 +94,48 @@ def crop_for(position: str, overrides: dict[str, float | None]) -> dict[str, flo
 
 
 def speaker_crop_regions() -> dict[str, dict[str, float]]:
-    """Scan only dialogue-box name areas, never the top watermark band."""
+    """Cover the three observed name-label layouts without scanning watermarks."""
     return {
-        "left": {"top": 0.55, "bottom": 0.82, "left": 0.05, "right": 0.45},
-        "center": {"top": 0.52, "bottom": 0.80, "left": 0.30, "right": 0.70},
+        "left_upper": {"top": 0.54, "bottom": 0.68, "left": 0.14, "right": 0.42},
+        "left_lower": {"top": 0.62, "bottom": 0.76, "left": 0.06, "right": 0.30},
+        "center": {"top": 0.62, "bottom": 0.76, "left": 0.38, "right": 0.64},
     }
+
+
+def crop_frame(source_path: Path, region: dict[str, float], output_path: Path) -> None:
+    """Crop a relative region from one already-extracted full frame."""
+    from PIL import Image
+
+    with Image.open(source_path) as source:
+        width, height = source.size
+        box = (
+            round(width * region["left"]), round(height * region["top"]),
+            round(width * region["right"]), round(height * region["bottom"]),
+        )
+        source.crop(box).save(output_path)
+
+
+def crop_dialogue_body(source_path: Path, body_region: dict[str, float],
+                       name_regions: dict[str, dict[str, float]], output_path: Path) -> None:
+    """Crop dialogue and mask the known name-label zones before body OCR."""
+    from PIL import Image, ImageDraw
+
+    with Image.open(source_path).convert("RGB") as source:
+        width, height = source.size
+        left = round(width * body_region["left"])
+        top = round(height * body_region["top"])
+        right = round(width * body_region["right"])
+        bottom = round(height * body_region["bottom"])
+        body = source.crop((left, top, right, bottom))
+        draw = ImageDraw.Draw(body)
+        for region in name_regions.values():
+            x1 = max(0, round(width * region["left"]) - left)
+            y1 = max(0, round(height * region["top"]) - top)
+            x2 = min(body.width, round(width * region["right"]) - left)
+            y2 = min(body.height, round(height * region["bottom"]) - top)
+            if x1 < x2 and y1 < y2:
+                draw.rectangle((x1, y1, x2, y2), fill="white")
+        body.save(output_path)
 
 
 def build_ocr_engine() -> tuple[object, str]:
@@ -234,7 +271,7 @@ def choose_speaker_candidate(candidates: list[dict], dictionary: dict) -> dict:
     }
 
 
-def extract_ocr_lines(image: Path, ocr, min_body_y_ratio: float = 0.22) -> tuple[str, float, int]:
+def extract_ocr_lines(image: Path, ocr, min_body_y_ratio: float = 0.08) -> tuple[str, float, int]:
     from PIL import Image
 
     result, _elapsed = ocr(str(image))
@@ -290,10 +327,14 @@ def ocr_name_region(image: Path, ocr, region: str) -> tuple[list[dict], int]:
     return candidates, calls
 
 
-def detect_speaker(left_image: Path, center_image: Path, ocr, dictionary: dict) -> tuple[dict, int]:
-    left_candidates, left_calls = ocr_name_region(left_image, ocr, "left")
-    center_candidates, center_calls = ocr_name_region(center_image, ocr, "center")
-    return choose_speaker_candidate(left_candidates + center_candidates, dictionary), left_calls + center_calls
+def detect_speaker(name_images: dict[str, Path], ocr, dictionary: dict) -> tuple[dict, int]:
+    candidates: list[dict] = []
+    calls = 0
+    for region, image in name_images.items():
+        region_candidates, region_calls = ocr_name_region(image, ocr, region)
+        candidates.extend(region_candidates)
+        calls += region_calls
+    return choose_speaker_candidate(candidates, dictionary), calls
 
 
 def resolve_speaker_for_frame(
@@ -316,11 +357,10 @@ def resolve_speaker_for_frame(
 
 def save_speaker_debug_sample(
     *,
-    video: Path,
+    original_image: Path,
     time_seconds: float,
     body_image: Path,
-    left_image: Path,
-    center_image: Path,
+    name_images: dict[str, Path],
     detection: dict,
     resolved_speaker: str,
     regions: dict,
@@ -333,23 +373,15 @@ def save_speaker_debug_sample(
     sample_dir = output_root / f"sample_{index:02d}_{time_seconds:010.3f}"
     sample_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(body_image, sample_dir / "dialogue-body.png")
-    shutil.copy2(left_image, sample_dir / "speaker-left.png")
-    shutil.copy2(center_image, sample_dir / "speaker-center.png")
+    for name, image in name_images.items():
+        shutil.copy2(image, sample_dir / f"speaker-{name}.png")
     original = sample_dir / "original-frame.png"
-    subprocess.run(
-        [
-            "ffmpeg", "-hide_banner", "-loglevel", "error",
-            "-ss", str(time_seconds), "-i", str(video),
-            "-frames:v", "1", "-y", str(original),
-        ],
-        check=True,
-        timeout=60,
-    )
+    shutil.copy2(original_image, original)
     with Image.open(original).convert("RGB") as source:
         draw = ImageDraw.Draw(source)
         width, height = source.size
-        colors = {"left": "#ff4fa3", "center": "#48b6ff"}
-        for name in ("left", "center"):
+        colors = {"left_upper": "#ff4fa3", "left_lower": "#ff9f43", "center": "#48b6ff"}
+        for name in name_images:
             region = regions[name]
             draw.rectangle(
                 (
@@ -396,6 +428,7 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
         "crop_region": None,
         "speaker_crop_regions": None,
         "sample_fps": sample_fps,
+        "sample_interval_seconds": 1 / sample_fps,
         "ocr_language": language,
         "ocr_engine": "rapidocr_onnxruntime",
         "average_confidence": 0.0,
@@ -413,11 +446,14 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             "video_resolution": None,
             "frame_count": 0,
             "left_speaker_frame_count": 0,
+            "left_lower_speaker_frame_count": 0,
             "center_speaker_frame_count": 0,
+            "ffmpeg_frame_extraction_passes": 1,
             "ocr_call_count": 0,
             "ocr_reused_frame_count": 0,
             "speaker_ocr_call_count": 0,
             "left_speaker_reused_frame_count": 0,
+            "left_lower_speaker_reused_frame_count": 0,
             "center_speaker_reused_frame_count": 0,
             "speaker_identified_frame_count": 0,
             "speaker_debug_sample_count": 0,
@@ -437,12 +473,10 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             temp = Path(temp_name)
             video_dir = temp / "video"
             frames = temp / "frames"
-            left_speaker_frames = temp / "left_speaker_frames"
-            center_speaker_frames = temp / "center_speaker_frames"
+            crops = temp / "crops"
             video_dir.mkdir()
             frames.mkdir()
-            left_speaker_frames.mkdir()
-            center_speaker_frames.mkdir()
+            crops.mkdir()
             download = ["BBDown", url, "--video-only", "--skip-mux", "-q", "360P 流畅,480P 清晰", "--work-dir", str(video_dir)]
             result = subprocess.run(download, text=True, capture_output=True, timeout=600, check=False)
             if result.returncode != 0:
@@ -460,7 +494,6 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
                 status["diagnostics"]["video_resolution"] = f"{stream.get('width')}x{stream.get('height')}"
             print(f"OCR video path: {videos[0]}", flush=True)
             print(f"OCR video resolution: {status['diagnostics']['video_resolution']}", flush=True)
-            vf = f"fps={sample_fps},crop=iw*{region['right']-region['left']}:ih*{region['bottom']-region['top']}:iw*{region['left']}:ih*{region['top']}"
             frames_cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error"]
             if start_time is not None:
                 frames_cmd += ["-ss", str(start_time)]
@@ -470,35 +503,18 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
                 if duration <= 0:
                     raise ValueError("end_time must be greater than start_time")
                 frames_cmd += ["-t", str(duration)]
-            frames_cmd += ["-vf", vf, str(frames / "frame_%08d.png")]
+            frames_cmd += ["-vf", f"fps={sample_fps}", str(frames / "frame_%08d.png")]
             subprocess.run(frames_cmd, check=True, timeout=600)
-            for name, target in (
-                ("left", left_speaker_frames),
-                ("center", center_speaker_frames),
-            ):
-                name_region = name_regions[name]
-                name_vf = f"fps={sample_fps},crop=iw*{name_region['right']-name_region['left']}:ih*{name_region['bottom']-name_region['top']}:iw*{name_region['left']}:ih*{name_region['top']}"
-                name_cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error"]
-                if start_time is not None:
-                    name_cmd += ["-ss", str(start_time)]
-                name_cmd += ["-i", str(videos[0])]
-                if end_time is not None:
-                    name_cmd += ["-t", str(end_time - (start_time or 0))]
-                name_cmd += ["-vf", name_vf, str(target / "frame_%08d.png")]
-                subprocess.run(name_cmd, check=True, timeout=600)
             images = sorted(frames.glob("*.png"))
-            left_speaker_images = sorted(left_speaker_frames.glob("*.png"))
-            center_speaker_images = sorted(center_speaker_frames.glob("*.png"))
             status["diagnostics"]["frame_count"] = len(images)
-            status["diagnostics"]["left_speaker_frame_count"] = len(left_speaker_images)
-            status["diagnostics"]["center_speaker_frame_count"] = len(center_speaker_images)
+            status["diagnostics"]["left_speaker_frame_count"] = len(images)
+            status["diagnostics"]["left_lower_speaker_frame_count"] = len(images)
+            status["diagnostics"]["center_speaker_frame_count"] = len(images)
             print(f"OCR crop region: {region}", flush=True)
-            print(f"Left speaker crop region: {name_regions['left']}", flush=True)
-            print(f"Center speaker crop region: {name_regions['center']}", flush=True)
+            for name, name_region in name_regions.items():
+                print(f"Speaker crop region {name}: {name_region}", flush=True)
             print(f"OCR extracted frames: {len(images)}", flush=True)
-            if not images or not (
-                len(images) == len(left_speaker_images) == len(center_speaker_images)
-            ):
+            if not images:
                 raise RuntimeError("FFmpeg completed, but produced no subtitle-region frames")
             ocr, engine_name = build_ocr_engine()
             status["ocr_engine"] = engine_name
@@ -507,8 +523,7 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
             samples = []
             previous_signature = None
             previous_result = None
-            previous_left_signature = None
-            previous_center_signature = None
+            previous_name_signatures: dict[str, bytes] = {}
             previous_detection: dict | None = None
             previous_speaker = None
             previous_text = None
@@ -521,35 +536,43 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
                 / re.sub(r"[^0-9A-Za-z_-]+", "_", bvid)
             )
             similarity_threshold = status["diagnostics"]["frame_similarity_threshold"]
-            for index, (image, left_image, center_image) in enumerate(
-                zip(images, left_speaker_images, center_speaker_images)
-            ):
-                signature = frame_signature(image)
+            for index, image in enumerate(images):
+                body_image = crops / "dialogue-body.png"
+                crop_dialogue_body(image, region, name_regions, body_image)
+                name_images = {
+                    name: crops / f"speaker-{name}.png"
+                    for name in name_regions
+                }
+                for name, name_image in name_images.items():
+                    crop_frame(image, name_regions[name], name_image)
+                signature = frame_signature(body_image)
                 if should_reuse_ocr(previous_signature, signature, similarity_threshold) and previous_result:
                     text, confidence, raw_count = previous_result
                     status["diagnostics"]["ocr_reused_frame_count"] += 1
                 else:
-                    text, confidence, raw_count = extract_ocr_lines(image, ocr)
+                    text, confidence, raw_count = extract_ocr_lines(body_image, ocr)
                     previous_result = (text, confidence, raw_count)
                     status["diagnostics"]["ocr_call_count"] += 1
                     status["diagnostics"]["raw_ocr_result_count"] += raw_count
                 previous_signature = signature
-                left_signature = frame_signature(left_image)
-                center_signature = frame_signature(center_image)
-                reuse_left = should_reuse_ocr(previous_left_signature, left_signature, similarity_threshold)
-                reuse_center = should_reuse_ocr(previous_center_signature, center_signature, similarity_threshold)
-                if reuse_left and reuse_center and previous_detection is not None:
+                name_signatures = {
+                    name: frame_signature(name_image)
+                    for name, name_image in name_images.items()
+                }
+                reuse_names = bool(previous_name_signatures) and all(
+                    should_reuse_ocr(previous_name_signatures.get(name), signature, similarity_threshold)
+                    for name, signature in name_signatures.items()
+                )
+                if reuse_names and previous_detection is not None:
                     detection = previous_detection
                     status["diagnostics"]["left_speaker_reused_frame_count"] += 1
+                    status["diagnostics"]["left_lower_speaker_reused_frame_count"] += 1
                     status["diagnostics"]["center_speaker_reused_frame_count"] += 1
                 else:
-                    detection, speaker_calls = detect_speaker(
-                        left_image, center_image, ocr, dictionary
-                    )
+                    detection, speaker_calls = detect_speaker(name_images, ocr, dictionary)
                     previous_detection = detection
                     status["diagnostics"]["speaker_ocr_call_count"] += speaker_calls
-                previous_left_signature = left_signature
-                previous_center_signature = center_signature
+                previous_name_signatures = name_signatures
                 detected_labels.extend(detection["detected"])
                 rejected_candidates.extend(detection["rejected"])
                 speaker, speaker_confidence, frames_since_label = resolve_speaker_for_frame(
@@ -573,11 +596,10 @@ def run_hardsub_ocr(*, bvid: str, title: str | None, url: str, output_dir: Path,
                     and status["diagnostics"]["speaker_debug_sample_count"] < 20
                 ):
                     save_speaker_debug_sample(
-                        video=videos[0],
+                        original_image=image,
                         time_seconds=offset + index / sample_fps,
-                        body_image=image,
-                        left_image=left_image,
-                        center_image=center_image,
+                        body_image=body_image,
+                        name_images=name_images,
                         detection=detection,
                         resolved_speaker=speaker,
                         regions=name_regions,
