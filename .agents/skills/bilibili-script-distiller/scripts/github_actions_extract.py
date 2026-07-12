@@ -27,6 +27,12 @@ from hardsub_ocr import run_hardsub_ocr
 BV_RE = re.compile(r"\b(BV[0-9A-Za-z]{10})\b")
 AV_RE = re.compile(r"\b(?:av|AV)(\d+)\b")
 SUPPORTED = {".srt", ".vtt", ".ass", ".ssa", ".json", ".xml"}
+NON_DIALOGUE_CUE_RE = re.compile(
+    r"^[\s♪♫♬🎵🎶【】\[\]（）()<>—–\-_.:：,，]*"
+    r"(?:音乐|music|bgm|soundtrack|纯音乐)"
+    r"[\s♪♫♬🎵🎶【】\[\]（）()<>—–\-_.:：,，]*$",
+    re.I,
+)
 NUMBER_PREFIX_RE = re.compile(
     r"^\s*(?:(?:\d+)\s*[.．、)）:]|[（(]\s*\d+\s*[）)])\s*"
 )
@@ -183,6 +189,51 @@ def convert_track(path: Path) -> str:
     return srt_or_vtt_to_markdown(text)
 
 
+def dialogue_cue_counts(markdown: str) -> tuple[int, int]:
+    """Return total timed cues and cues that contain dialogue rather than music/SFX labels."""
+    cue_re = re.compile(
+        r"^\[[^\]]+?\s*-->\s*[^\]]+?\]\n(?P<payload>.*?)(?=^\[[^\]]+?\s*-->|\Z)",
+        re.M | re.S,
+    )
+    total = usable = 0
+    for match in cue_re.finditer(markdown):
+        payload = re.sub(r"<!--.*?-->", "", match.group("payload"), flags=re.S)
+        payload = re.sub(r"\s+", "", payload)
+        if not payload:
+            continue
+        total += 1
+        if not NON_DIALOGUE_CUE_RE.fullmatch(payload):
+            usable += 1
+    return total, usable
+
+
+def run_hardsub_fallback(status: dict, *, final_url: str, result_dir: Path, fallback: str,
+                         hardsub: dict) -> None:
+    """Use OCR only when a downloaded subtitle track has no usable dialogue."""
+    print("No usable dialogue subtitle track; starting enabled hard-subtitle OCR fallback", flush=True)
+    ocr_status = run_hardsub_ocr(
+        bvid=status["bvid"] or safe_name(fallback),
+        title=status["title"],
+        url=final_url,
+        output_dir=result_dir,
+        sample_fps=hardsub["sample_fps"],
+        position=hardsub["position"],
+        language=hardsub["language"],
+        start_time=hardsub["start_time"],
+        end_time=hardsub["end_time"],
+        crop_overrides=hardsub["crop_overrides"],
+    )
+    status["source_type"] = "hardcoded_subtitle_ocr"
+    if ocr_status["success"]:
+        status["success"] = True
+        status["failure_reason"] = None
+        status["subtitle_files_found"] = ["subtitle-ocr.srt"]
+        status["selected_subtitle_file"] = "subtitle-ocr.srt"
+        status["subtitle_language"] = hardsub["language"]
+    else:
+        status["failure_reason"] = ocr_status["failure_reason"] or status["failure_reason"]
+
+
 def json_to_markdown(text: str) -> str:
     data = json.loads(text)
     cues = data.get("body", data) if isinstance(data, dict) else data
@@ -264,6 +315,9 @@ def run_one(raw_input: str, output_root: Path, *, hardsub: dict | None = None, c
         "subtitle_files_found": [],
         "selected_subtitle_file": None,
         "subtitle_language": None,
+        "subtitle_cue_count": 0,
+        "dialogue_cue_count": 0,
+        "rejected_subtitle_tracks": [],
         "login_warning": False,
         "processed_at": now_iso(),
     }
@@ -314,38 +368,38 @@ def run_one(raw_input: str, output_root: Path, *, hardsub: dict | None = None, c
             if not ranked:
                 status["failure_reason"] = "BBDown completed, but no subtitle file was produced."
                 if hardsub and hardsub["enabled"]:
-                    print("No subtitle track found; starting enabled hard-subtitle OCR fallback", flush=True)
-                    ocr_status = run_hardsub_ocr(
-                        bvid=status["bvid"] or safe_name(resolved_id or fallback),
-                        title=status["title"],
-                        url=final_url,
-                        output_dir=result_dir,
-                        sample_fps=hardsub["sample_fps"],
-                        position=hardsub["position"],
-                        language=hardsub["language"],
-                        start_time=hardsub["start_time"],
-                        end_time=hardsub["end_time"],
-                        crop_overrides=hardsub["crop_overrides"],
+                    run_hardsub_fallback(
+                        status, final_url=final_url, result_dir=result_dir,
+                        fallback=fallback, hardsub=hardsub,
                     )
-                    if ocr_status["success"]:
-                        status["source_type"] = "hardcoded_subtitle_ocr"
-                        status["success"] = True
-                        status["failure_reason"] = None
-                        status["subtitle_files_found"] = ["subtitle-ocr.srt"]
-                        status["selected_subtitle_file"] = "subtitle-ocr.srt"
-                        status["subtitle_language"] = hardsub["language"]
-                    else:
-                        status["source_type"] = "hardcoded_subtitle_ocr"
-                        status["failure_reason"] = ocr_status["failure_reason"] or status["failure_reason"]
                 else:
                     status["source_type"] = "no_subtitle_track_user_not_enabled"
                     print("No subtitle track found; hard-subtitle OCR not enabled", flush=True)
                 return status | {"result_dir": str(result_dir)}
             score, selected = ranked[0]
             print(f"Selected subtitle file: {selected.name}", flush=True)
-            (result_dir / "subtitle-raw.md").write_text(convert_track(selected), encoding="utf-8")
+            converted = convert_track(selected)
+            cue_count, dialogue_count = dialogue_cue_counts(converted)
+            status["subtitle_cue_count"] = cue_count
+            status["dialogue_cue_count"] = dialogue_count
             status["selected_subtitle_file"] = str(selected.relative_to(temp))
             status["subtitle_language"] = score[2]
+            print(f"Usable dialogue cues: {dialogue_count}/{cue_count}", flush=True)
+            if dialogue_count == 0:
+                status["failure_reason"] = (
+                    "Selected subtitle track contained only non-dialogue cues (e.g. music)."
+                )
+                status["rejected_subtitle_tracks"] = [status["selected_subtitle_file"]]
+                if hardsub and hardsub["enabled"]:
+                    run_hardsub_fallback(
+                        status, final_url=final_url, result_dir=result_dir,
+                        fallback=fallback, hardsub=hardsub,
+                    )
+                else:
+                    status["source_type"] = "no_usable_dialogue_track_user_not_enabled"
+                    print("Selected subtitle track has no dialogue; hard-subtitle OCR not enabled", flush=True)
+                return status | {"result_dir": str(result_dir)}
+            (result_dir / "subtitle-raw.md").write_text(converted, encoding="utf-8")
             status["success"] = True
             return status | {"result_dir": str(result_dir)}
     except Exception as exc:
