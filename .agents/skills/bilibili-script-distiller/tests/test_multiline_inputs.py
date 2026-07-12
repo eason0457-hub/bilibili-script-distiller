@@ -98,7 +98,7 @@ class MultilineInputTests(unittest.TestCase):
         self.assertEqual(MODULE.parse_time_value("03:00"), 180.0)
         self.assertEqual(MODULE.parse_time_value("00:03:00"), 180.0)
 
-    def test_hardsub_ocr_defaults_to_one_frame_per_second(self):
+    def test_hardsub_ocr_defaults_to_one_frame_per_second_for_accuracy(self):
         raw = "BV1uknVz9EeN"
         with tempfile.TemporaryDirectory() as temp:
             argv = [
